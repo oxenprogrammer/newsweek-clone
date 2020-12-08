@@ -5,6 +5,16 @@ $secondary: #f4f5f6;
 $primary: #f72210;
 
 // Custom.scss
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+$roboto-font: 'Roboto Condensed', sans-serif;
+@mixin h2-style {
+  font-family: $roboto-font;
+  line-height: 16px;
+  font-size: 32px;
+  letter-spacing: normal;
+  color: #030303;
+}
+
 // Option B: Include parts of Bootstrap
 
 // Required
@@ -17,13 +27,29 @@ $primary: #f72210;
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 
-.d-flex {
-  display: flex;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.space-between {
-  justify-content: space-between;
+html,
+body {
+  font-size: 62.5%;
+  width: 100%;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  overflow-x: hidden;
+  max-width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+
