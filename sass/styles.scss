@@ -46,7 +46,7 @@ $roboto-font: "Roboto Condensed", sans-serif;
 	font-size: 2.4rem;
 	letter-spacing: normal;
 	color: #7e7d7d;
-	margin-bottom: 1rem;
+	margin: 1rem 0;
 }
 
 @mixin h3-style {
@@ -57,8 +57,20 @@ $roboto-font: "Roboto Condensed", sans-serif;
   font-weight: bolder;
   z-index: 2;
   position: relative;
-  top: -3.6rem;
+  top: -4rem;
   text-align: center;
+}
+
+@mixin h4-style {
+	color: #000;
+	font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+@mixin paragraph {
+	color: rgb(95, 93, 93);
+	font-size: 1.2rem;
+  font-weight: lighter;
 }
 
 .main {
@@ -66,6 +78,7 @@ $roboto-font: "Roboto Condensed", sans-serif;
 	max-width: 100%;
 	font-size: 1.6rem;
 	padding: 1rem;
+	background-color: #fff;
 }
 
 .d-flex {
@@ -95,6 +108,23 @@ $roboto-font: "Roboto Condensed", sans-serif;
 		}
 		.caption {
 			@include h3-style();
+		}
+		h4 {
+			@include h4-style();
+		}
+		.paragraph {
+			@include paragraph();
+		}
+		.top-story-sub header {
+			padding: 0.5rem;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			h5 {
+				font-size: 1.6rem;
+				font-weight: bold;
+			}
 		}
 	}
 }

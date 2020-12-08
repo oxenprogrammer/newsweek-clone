@@ -1105,7 +1105,8 @@ mark,
   overflow-x: hidden;
   max-width: 100%;
   font-size: 1.6rem;
-  padding: 1rem; }
+  padding: 1rem;
+  background-color: #fff; }
 
 .d-flex {
   display: flex; }
@@ -1127,7 +1128,7 @@ mark,
   font-size: 2.4rem;
   letter-spacing: normal;
   color: #7e7d7d;
-  margin-bottom: 1rem; }
+  margin: 1rem 0; }
 
 .scrollable .featured-story .featured-story-articles,
 .scrollable .top-story .featured-story-articles {
@@ -1142,5 +1143,29 @@ mark,
   font-weight: bolder;
   z-index: 2;
   position: relative;
-  top: -3.6rem;
+  top: -4rem;
   text-align: center; }
+
+.scrollable .featured-story h4,
+.scrollable .top-story h4 {
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: bolder; }
+
+.scrollable .featured-story .paragraph,
+.scrollable .top-story .paragraph {
+  color: #5f5d5d;
+  font-size: 1.2rem;
+  font-weight: lighter; }
+
+.scrollable .featured-story .top-story-sub header,
+.scrollable .top-story .top-story-sub header {
+  padding: 0.5rem; }
+  .scrollable .featured-story .top-story-sub header img,
+  .scrollable .top-story .top-story-sub header img {
+    width: 100%;
+    height: auto; }
+  .scrollable .featured-story .top-story-sub header h5,
+  .scrollable .top-story .top-story-sub header h5 {
+    font-size: 1.6rem;
+    font-weight: bold; }
