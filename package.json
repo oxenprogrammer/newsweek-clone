@@ -1,36 +1,41 @@
 {
-  "name": "newsweek-clone",
-  "version": "1.0.0",
-  "description": "html5 css grid flexbox bootstrap responsiveness microverse",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oxenprogrammer/newsweek-clone.git"
-  },
-  "keywords": [
-    "bootstrap5",
-    "gulp",
-    "sass",
-    "html5",
-    "css"
-  ],
-  "author": "emanuel okello",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oxenprogrammer/newsweek-clone/issues"
-  },
-  "homepage": "https://github.com/oxenprogrammer/newsweek-clone#readme",
-  "devDependencies": {
-    "browser-sync": "^2.26.13",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.0.0-alpha3",
-    "bootstrap-icons": "^1.1.0",
-    "popper.js": "^1.16.1"
-  }
+	"name": "newsweek-clone",
+	"version": "1.0.0",
+	"description": "html5 css grid flexbox bootstrap responsiveness microverse",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oxenprogrammer/newsweek-clone.git"
+	},
+	"keywords": [
+		"bootstrap5",
+		"gulp",
+		"sass",
+		"html5",
+		"css"
+	],
+	"author": "emanuel okello",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/oxenprogrammer/newsweek-clone/issues"
+	},
+	"homepage": "https://github.com/oxenprogrammer/newsweek-clone#readme",
+	"devDependencies": {
+		"browser-sync": "^2.26.13",
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.1.0",
+		"hint": "^6.0.7",
+		"stylelint": "^13.8.0",
+		"stylelint-config-standard": "^20.0.0",
+		"stylelint-csstree-validator": "^1.9.0",
+		"stylelint-scss": "^3.18.0"
+	},
+	"dependencies": {
+		"bootstrap": "^5.0.0-alpha3",
+		"bootstrap-icons": "^1.1.0",
+		"popper.js": "^1.16.1"
+	}
 }
