@@ -35,7 +35,9 @@ $primary: #f72210;
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/grid";
 
-// Custom.scss
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// Custom
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 $roboto-font: "Roboto Condensed", sans-serif;
 
@@ -81,16 +83,8 @@ $roboto-font: "Roboto Condensed", sans-serif;
 	background-color: #fff;
 }
 
-.d-flex {
-	display: flex;
-}
-
 .d-block {
 	display: block;
-}
-
-.space-between {
-	justify-content: space-between;
 }
 
 .d-grid {
@@ -102,9 +96,6 @@ $roboto-font: "Roboto Condensed", sans-serif;
 	.top-story {
 		.top-story-h2 {
 			@include h2-style();
-		}
-		.featured-story-articles {
-			flex-direction: column;
 		}
 		.caption {
 			@include h3-style();

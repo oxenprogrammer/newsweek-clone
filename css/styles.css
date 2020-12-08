@@ -1,3 +1,4 @@
+@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 * {
   padding: 0;
@@ -1108,14 +1109,8 @@ mark,
   padding: 1rem;
   background-color: #fff; }
 
-.d-flex {
-  display: flex; }
-
 .d-block {
   display: block; }
-
-.space-between {
-  justify-content: space-between; }
 
 .d-grid {
   display: grid; }
@@ -1129,10 +1124,6 @@ mark,
   letter-spacing: normal;
   color: #7e7d7d;
   margin: 1rem 0; }
-
-.scrollable .featured-story .featured-story-articles,
-.scrollable .top-story .featured-story-articles {
-  flex-direction: column; }
 
 .scrollable .featured-story .caption,
 .scrollable .top-story .caption {
