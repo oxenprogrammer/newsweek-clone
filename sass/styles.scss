@@ -256,4 +256,21 @@ $bg-color: #fff;
 	article[class*="sponsored-"] p {
 		padding: 0 2rem;
 	}
+
+	.my-turn,
+	.culture {
+		@include section-spacing();
+		h2 {
+			@include h2-style();
+		}
+		p {
+			@include paragraph();
+			font-weight: bold;
+			color: gray;
+			padding: 1rem 0;
+		}
+		h3 {
+			@include h3-style();
+		}
+	}
 }
