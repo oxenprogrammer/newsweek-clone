@@ -1378,3 +1378,19 @@ progress {
     .scrollable .opinion header h4, .scrollable .opinion header .h4 {
       font-weight: bold;
       font-size: 1.6rem; }
+
+.scrollable .more {
+  margin: 1rem 0;
+  background-color: #fff;
+  padding: 1rem; }
+  .scrollable .more .content {
+    grid-template-columns: 30% 70%; }
+  .scrollable .more header {
+    margin-left: 1rem; }
+    .scrollable .more header h4, .scrollable .more header .h4 {
+      font-weight: bold;
+      font-size: 1.6rem; }
+    .scrollable .more header p {
+      color: #5f5d5d;
+      font-size: 1.2rem;
+      font-weight: lighter; }
