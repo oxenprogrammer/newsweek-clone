@@ -303,3 +303,19 @@ $bg-color: #fff;
 		}
 	}
 }
+
+.editor-pick {
+	@include section-spacing();
+	h2 {
+		@include h2-style();
+	}
+	h3 {
+		@include h3-style();
+	}
+	h4 {
+		@include h4-style();
+	}
+	.paragraph {
+		@include paragraph();
+	}
+}
