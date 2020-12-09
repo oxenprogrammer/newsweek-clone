@@ -5,6 +5,10 @@
   margin: 0;
   box-sizing: border-box; }
 
+::before,
+::after {
+  box-sizing: inherit; }
+
 html,
 body {
   font-size: 62.5%;
@@ -1561,3 +1565,65 @@ progress {
     color: #5f5d5d;
     font-size: 1.2rem;
     font-weight: lighter; }
+
+@media only screen and (min-width: 1024px) {
+  .scrollable {
+    position: relative;
+    float: left;
+    max-width: max-content;
+    max-height: max-content;
+    z-index: 5;
+    grid-template-areas: "featured top-story debate" "sponsored-left my-turn opinion" ". culture sponsored-right" ". more-story ."; }
+    .scrollable .top-story {
+      grid-area: top-story; }
+    .scrollable .featured-story {
+      grid-area: featured; }
+    .scrollable .debate {
+      grid-area: debate; }
+    .scrollable .opinion {
+      grid-area: opinion;
+      position: relative;
+      top: -195rem;
+      z-index: 3; }
+    .scrollable .sponsored-left {
+      grid-area: sponsored-left;
+      position: relative; }
+    .scrollable .more {
+      grid-area: more-story;
+      position: relative;
+      top: -905rem;
+      z-index: 3; }
+    .scrollable .my-turn {
+      grid-area: my-turn;
+      position: relative;
+      top: -155rem; }
+    .scrollable .culture {
+      grid-area: culture;
+      position: relative;
+      top: -525rem; }
+    .scrollable .sponsored-right {
+      grid-area: sponsored-right;
+      position: relative;
+      top: -530rem;
+      z-index: 6; }
+  .scrollable::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .magazine {
+    position: relative;
+    top: -570rem; }
+  .magazine::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .editor-pick {
+    position: relative;
+    top: -570rem; }
+  .editor-pick::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .sports {
+    position: relative;
+    top: -570rem; } }

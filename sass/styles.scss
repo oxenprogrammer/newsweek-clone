@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+::before,
+::after {
+	box-sizing: inherit;
+}
+
 html,
 body {
 	font-size: 62.5%;
@@ -92,6 +97,12 @@ $bg-color: #fff;
 	color: rgb(95, 93, 93);
 	font-size: 1.2rem;
 	font-weight: lighter;
+}
+
+@mixin clearfix {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .main {
@@ -317,5 +328,88 @@ $bg-color: #fff;
 	}
 	.paragraph {
 		@include paragraph();
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.scrollable {
+		position: relative;
+		float: left;
+		max-width: max-content;
+		max-height: max-content;
+		z-index: 5;
+		grid-template-areas:
+			"featured top-story debate"
+			"sponsored-left my-turn opinion"
+			". culture sponsored-right"
+			". more-story .";
+		.top-story {
+			grid-area: top-story;
+		}
+		.featured-story {
+			grid-area: featured;
+		}
+		.debate {
+			grid-area: debate;
+		}
+		.opinion {
+			grid-area: opinion;
+			position: relative;
+			top: -195rem;
+			z-index: 3;
+		}
+		.sponsored-left {
+			grid-area: sponsored-left;
+			position: relative;
+		}
+		.more {
+			grid-area: more-story;
+			position: relative;
+			top: -905rem;
+			z-index: 3;
+		}
+		.my-turn {
+			grid-area: my-turn;
+			position: relative;
+			top: -155rem;
+		}
+		.culture {
+			grid-area: culture;
+			position: relative;
+			top: -525rem;
+		}
+		.sponsored-right {
+			grid-area: sponsored-right;
+			position: relative;
+			top: -530rem;
+			z-index: 6;
+		}
+	}
+	.scrollable::after {
+		@include clearfix();
+	}
+
+	.magazine {
+		position: relative;
+		top: -570rem;
+		// z-index: 10;
+	}
+
+	.magazine::after {
+		@include clearfix();
+	}
+
+	.editor-pick {
+		position: relative;
+		top: -570rem;
+	}
+
+	.editor-pick::after {
+		@include clearfix();
+	}
+
+	.sports {
+		position: relative;
+		top: -570rem;
 	}
 }
