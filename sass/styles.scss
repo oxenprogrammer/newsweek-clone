@@ -1,19 +1,41 @@
+// global resets
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	font-size: 62.5%;
+	width: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body {
+	overflow-x: hidden;
+}
+
 // Variables
 $body-bg: #f4f5f6;
 $body-color: #111;
 $secondary: #f4f5f6;
 $primary: #f72210;
+$bg-primary: #f72210;
 
-// Custom.scss
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
-$roboto-font: 'Roboto Condensed', sans-serif;
-@mixin h2-style {
-  font-family: $roboto-font;
-  line-height: 16px;
-  font-size: 32px;
-  letter-spacing: normal;
-  color: #030303;
-}
+// theming
+$theme-colors: (
+	primary: #f72210,
+);
 
 // Option B: Include parts of Bootstrap
 
@@ -29,27 +51,562 @@ $roboto-font: 'Roboto Condensed', sans-serif;
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/grid";
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+// Custom
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+$roboto-font: "Roboto Condensed", sans-serif;
+$bg-color: #fff;
+
+@mixin section-spacing {
+	margin: 1rem 0;
+	background-color: $bg-color;
+	padding: 1rem;
 }
 
-html,
-body {
-  font-size: 62.5%;
-  width: 100%;
+@mixin h2-style {
+	font-family: $roboto-font;
+	line-height: 1.6rem;
+	font-weight: bold;
+	font-size: 2.4rem;
+	letter-spacing: normal;
+	color: #7e7d7d;
+	margin: 1rem 0;
 }
 
-body {
-  overflow-x: hidden;
+@mixin h3-style {
+	color: $primary;
+	background-color: #e8e6e6;
+	width: max-content;
+	padding: 1rem;
+	font-weight: bolder;
+	z-index: 2;
+	position: relative;
+	top: -3.8rem;
+	text-align: center;
+	opacity: 0.9;
+}
+
+@mixin h4-style {
+	color: #000;
+	font-size: 2.2rem;
+	font-weight: bolder;
+}
+
+@mixin paragraph {
+	color: rgb(95, 93, 93);
+	font-size: 1.2rem;
+	font-weight: lighter;
+}
+
+@mixin clearfix {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .main {
-  overflow-x: hidden;
-  max-width: 100%;
-  font-size: 1.6rem;
-  padding: 1rem;
+	overflow-x: hidden;
+	max-width: 100%;
+	font-size: 1.6rem;
+	padding: 1rem;
 }
 
+.d-block {
+	display: block;
+}
 
+.d-grid {
+	display: grid;
+}
+
+.scrollable {
+	.featured-story,
+	.sponsored-left,
+	.sponsored-right,
+	.top-story {
+		@include section-spacing();
+
+		.top-story-h2 {
+			@include h2-style();
+		}
+
+		.caption {
+			@include h3-style();
+		}
+
+		h4 {
+			@include h4-style();
+		}
+
+		.paragraph {
+			@include paragraph();
+		}
+
+		.top-story-sub {
+			grid-template-columns: auto auto;
+
+			header {
+				padding: 0 1rem;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+
+				h5 {
+					font-size: 1.6rem;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.debate {
+
+		@include section-spacing();
+		header {
+
+			h4 {
+				font-weight: bold;
+				font-size: 1.6rem;
+			}
+		}
+
+		.verses {
+			color: $body-bg;
+			font-size: 2rem;
+			font-weight: bold;
+			text-align: center;
+			background-color: $body-color;
+			width: 5rem;
+			padding: 1rem;
+			border-radius: 100%;
+			position: relative;
+			top: -3.5rem;
+			left: 14rem;
+		}
+		.content-1 {
+			header {
+				position: relative;
+				left: 4rem;
+			}
+		}
+		.content-2 {
+			position: relative;
+			top: -3rem;
+		}
+	}
+	.opinion {
+		@include section-spacing();
+
+		.content {
+			grid-template-columns: auto auto;
+
+			header {
+				padding: 0 1rem;
+
+				h4 {
+					font-weight: bold;
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+
+	.more {
+		@include section-spacing();
+
+		.content {
+			grid-template-columns: auto auto;
+		}
+
+		header {
+			padding: 0 1rem;
+
+			h4 {
+				font-weight: bold;
+				font-size: 1.6rem;
+			}
+
+			p {
+				@include paragraph();
+			}
+		}
+	}
+
+	.sponsored-right {
+
+		.form {
+			background-color: #f4f5f6;
+			padding: 2rem;
+
+			.form-icon {
+				flex: none;
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: auto;
+				display: block;
+				width: 29px;
+				height: 28px;
+				background: url(https://g.newsweek.com/www/images/logo-n1.svg)
+					center/contain no-repeat #f72210;
+				background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
+				background-position-x: center;
+				background-position-y: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-attachment: initial;
+				background-origin: initial;
+				background-clip: initial;
+				background-color: rgb(247, 34, 16);
+				margin-right: 10px;
+			}
+
+			form {
+				input,
+				button {
+					padding: 1rem;
+				}
+
+				.btn-primary {
+					font-size: 2rem;
+					background-color: $bg-primary;
+					border: 0;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	article[class*="sponsored-"] {
+
+		.story {
+			border: 1px solid $body-bg;
+			margin: 1rem 0;
+		}
+	}
+
+	article[class*="sponsored-"] h4,
+	article[class*="sponsored-"] p {
+		padding: 0 2rem;
+	}
+
+	.my-turn,
+	.culture {
+		@include section-spacing();
+
+		h2 {
+			@include h2-style();
+		}
+
+		p {
+			@include paragraph();
+			font-weight: bold;
+			color: gray;
+			padding: 1rem 0;
+		}
+
+		h3 {
+			@include h3-style();
+		}
+	}
+}
+
+.magazine {
+	@include section-spacing();
+
+	.magazine-article {
+
+		h4 {
+			@include h4-style();
+			font-size: 1.6rem;
+		}
+
+		h3 {
+			@include h3-style();
+		}
+
+		.feature {
+			font-size: 2rem;
+			border: 0;
+			font-weight: bold;
+		}
+
+		.caption {
+			width: max-content;
+			padding: 1rem 1rem 1rem 0;
+			font-weight: bold;
+			color: $bg-primary;
+
+			span {
+				background-color: $bg-primary;
+				color: #fff;
+				padding: 0.5rem;
+			}
+		}
+	}
+}
+
+.editor-pick {
+	@include section-spacing();
+
+	h2 {
+		@include h2-style();
+	}
+
+	h3 {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+	}
+
+	.paragraph {
+		@include paragraph();
+	}
+}
+
+.news-nav {
+	background: gray;
+}
+
+#body-container {
+	background: red;
+}
+
+#temperature {
+	color: #ffff;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+
+#date {
+	color: #ffff;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	font-weight: 600;
+}
+
+#navbarSupportedContent {
+	display: none !important;
+	background: #ffff !important;
+}
+
+#newsweek {
+	font-size: 5rem;
+	color: #ffff;
+}
+
+#login {
+	font-size: 1.3rem;
+	color: #ffff;
+	cursor: pointer;
+	line-height: 1rem;
+	font-weight: 700;
+}
+
+#subscribe {
+	background: gold;
+	font-size: 1.3rem;
+	padding: 1px 12px;
+	font-weight: 600;
+	border-radius: 1.5rem;
+	border: 1px solid gold;
+}
+
+#right-nav {
+	width: 20%;
+}
+
+.nav-link {
+	color: black !important;
+}
+
+#nav-bottom {
+	width: 100vw !important;
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+	/* background: #ffff; */
+}
+
+#bignav-cover {
+	background: white;
+	border-top-right-radius: 15px;
+	display: flex;
+}
+
+#bignav-item {
+	list-style: none;
+	border-right: 1px solid black;
+}
+
+#bignav-link {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+@media (max-width: 799px) {
+	#temperature-date {
+		display: none;
+	}
+
+	#bignav-item {
+		display: none;
+	}
+
+	#newsweek {
+		font-size: 1.5rem;
+	}
+
+	#login {
+		display: none;
+	}
+
+	#subscribe {
+		font-size: 0.6rem;
+		padding: 1px 8px;
+		border-radius: 1rem;
+	}
+
+	#navbarSupportedContent {
+		display: run-in !important;
+	}
+}
+
+.footer {
+	display: flex;
+
+	p {
+		font-size: 10px;
+		color: grey;
+		.footer-top-right {
+			float: right;
+		}
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.scrollable {
+		position: relative;
+		float: left;
+		max-width: max-content;
+		max-height: max-content;
+		z-index: 5;
+		grid-template-areas:
+			"featured top-story debate"
+			"sponsored-left my-turn opinion"
+			". culture sponsored-right"
+			". more-story .";
+
+		.top-story {
+			grid-area: top-story;
+		}
+
+		.featured-story {
+			grid-area: featured;
+		}
+
+		.debate {
+			grid-area: debate;
+		}
+
+		.opinion {
+			grid-area: opinion;
+			position: relative;
+			top: -195rem;
+			z-index: 3;
+		}
+
+		.sponsored-left {
+			grid-area: sponsored-left;
+			position: relative;
+		}
+
+		.more {
+			grid-area: more-story;
+			position: relative;
+			top: -905rem;
+			z-index: 3;
+		}
+
+		.my-turn {
+			grid-area: my-turn;
+			position: relative;
+			top: -155rem;
+		}
+
+		.culture {
+			grid-area: culture;
+			position: relative;
+			top: -525rem;
+		}
+
+		.sponsored-right {
+			grid-area: sponsored-right;
+			position: relative;
+			top: -530rem;
+			z-index: 6;
+		}
+	}
+
+	.scrollable::after {
+		@include clearfix();
+	}
+
+	.magazine {
+		position: relative;
+		top: -570rem;
+		// z-index: 10;
+	}
+
+	.magazine::after {
+		@include clearfix();
+	}
+
+	.editor-pick {
+		position: relative;
+		top: -570rem;
+	}
+
+	.editor-pick::after {
+		@include clearfix();
+	}
+
+	.sports {
+		position: relative;
+		top: -570rem;
+	}
+
+	.sports::after {
+		@include clearfix();
+	}
+
+	.rest {
+		position: relative;
+		top: -570rem;
+	}
+
+	.rest::after {
+		@include clearfix();
+	}
+
+	.contact {
+		position: relative;
+		top: -570rem;
+	}
+
+	.contact::after {
+		@include clearfix();
+	}
+
+	.footer {
+		position: relative;
+		top: -570rem;
+	}
+
+	.footer::after {
+		@include clearfix();
+	}
+}
