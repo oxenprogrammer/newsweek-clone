@@ -25,6 +25,12 @@ $body-bg: #f4f5f6;
 $body-color: #111;
 $secondary: #f4f5f6;
 $primary: #f72210;
+$bg-primary: #f72210;
+
+// theming
+$theme-colors: (
+	primary: #f72210,
+);
 
 // Option B: Include parts of Bootstrap
 
@@ -199,15 +205,55 @@ $bg-color: #fff;
 		}
 	}
 
-	article[class*='sponsored-'] {
+	.sponsored-right {
+		.form {
+			background-color: #f4f5f6;
+			padding: 2rem;
+			.form-icon {
+				flex: none;
+				flex-grow: 0;
+				flex-shrink: 0;
+				flex-basis: auto;
+				display: block;
+				width: 29px;
+				height: 28px;
+				background: url(https://g.newsweek.com/www/images/logo-n1.svg)
+					center/contain no-repeat #f72210;
+				background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
+				background-position-x: center;
+				background-position-y: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-attachment: initial;
+				background-origin: initial;
+				background-clip: initial;
+				background-color: rgb(247, 34, 16);
+				margin-right: 10px;
+			}
+			form {
+				input,
+				button {
+					padding: 1rem;
+				}
+				.btn-primary {
+					font-size: 2rem;
+					background-color: $bg-primary;
+					border: 0;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	article[class*="sponsored-"] {
 		.story {
 			border: 1px solid $body-bg;
 			margin: 1rem 0;
 		}
 	}
 
-	article[class*='sponsored-'] h4,
-	article[class*='sponsored-'] p {
+	article[class*="sponsored-"] h4,
+	article[class*="sponsored-"] p {
 		padding: 0 2rem;
 	}
 }

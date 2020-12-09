@@ -32,13 +32,6 @@ body {
   --bs-gray: #6c757d;
   --bs-gray-dark: #343a40;
   --bs-primary: #f72210;
-  --bs-secondary: #f4f5f6;
-  --bs-success: #198754;
-  --bs-info: #0dcaf0;
-  --bs-warning: #ffc107;
-  --bs-danger: #dc3545;
-  --bs-light: #f8f9fa;
-  --bs-dark: #212529;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)); }
@@ -1427,10 +1420,41 @@ progress {
       font-size: 1.2rem;
       font-weight: lighter; }
 
-.scrollable article[class*='sponsored-'] .story {
+.scrollable .sponsored-right .form {
+  background-color: #f4f5f6;
+  padding: 2rem; }
+  .scrollable .sponsored-right .form .form-icon {
+    flex: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: block;
+    width: 29px;
+    height: 28px;
+    background: url(https://g.newsweek.com/www/images/logo-n1.svg) center/contain no-repeat #f72210;
+    background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #f72210;
+    margin-right: 10px; }
+  .scrollable .sponsored-right .form form input,
+  .scrollable .sponsored-right .form form button {
+    padding: 1rem; }
+  .scrollable .sponsored-right .form form .btn-primary {
+    font-size: 2rem;
+    background-color: #f72210;
+    border: 0;
+    font-weight: bold; }
+
+.scrollable article[class*="sponsored-"] .story {
   border: 1px solid #f4f5f6;
   margin: 1rem 0; }
 
-.scrollable article[class*='sponsored-'] h4, .scrollable article[class*='sponsored-'] .h4,
-.scrollable article[class*='sponsored-'] p {
+.scrollable article[class*="sponsored-"] h4, .scrollable article[class*="sponsored-"] .h4,
+.scrollable article[class*="sponsored-"] p {
   padding: 0 2rem; }
