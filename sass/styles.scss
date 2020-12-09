@@ -274,3 +274,32 @@ $bg-color: #fff;
 		}
 	}
 }
+
+.magazine {
+	@include section-spacing();
+	.magazine-article {
+		h4 {
+			@include h4-style();
+			font-size: 1.6rem;
+		}
+		h3 {
+			@include h3-style();
+		}
+		.feature {
+			font-size: 2rem;
+			border: 0;
+			font-weight: bold;
+		}
+		.caption {
+			width: max-content;
+			padding: 1rem 1rem 1rem 0;
+			font-weight: bold;
+			color: $bg-primary;
+			span {
+				background-color: $bg-primary;
+				color: #fff;
+				padding: 0.5rem;
+			}
+		}
+	}
+}

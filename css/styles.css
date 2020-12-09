@@ -1495,3 +1495,37 @@ progress {
     top: -3.8rem;
     text-align: center;
     opacity: 0.9; }
+
+.magazine {
+  margin: 1rem 0;
+  background-color: #fff;
+  padding: 1rem; }
+  .magazine .magazine-article h4, .magazine .magazine-article .h4 {
+    color: #000;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    font-size: 1.6rem; }
+  .magazine .magazine-article h3, .magazine .magazine-article .h3 {
+    color: #f72210;
+    background-color: #e8e6e6;
+    width: max-content;
+    padding: 1rem;
+    font-weight: bolder;
+    z-index: 2;
+    position: relative;
+    top: -3.8rem;
+    text-align: center;
+    opacity: 0.9; }
+  .magazine .magazine-article .feature {
+    font-size: 2rem;
+    border: 0;
+    font-weight: bold; }
+  .magazine .magazine-article .caption {
+    width: max-content;
+    padding: 1rem 1rem 1rem 0;
+    font-weight: bold;
+    color: #f72210; }
+    .magazine .magazine-article .caption span {
+      background-color: #f72210;
+      color: #fff;
+      padding: 0.5rem; }
