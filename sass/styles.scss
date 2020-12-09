@@ -126,26 +126,34 @@ $bg-color: #fff;
 	.sponsored-right,
 	.top-story {
 		@include section-spacing();
+
 		.top-story-h2 {
 			@include h2-style();
 		}
+
 		.caption {
 			@include h3-style();
 		}
+
 		h4 {
 			@include h4-style();
 		}
+
 		.paragraph {
 			@include paragraph();
 		}
+
 		.top-story-sub {
 			grid-template-columns: auto auto;
+
 			header {
 				padding: 0 1rem;
+
 				img {
 					width: 100%;
 					height: auto;
 				}
+
 				h5 {
 					font-size: 1.6rem;
 					font-weight: bold;
@@ -154,13 +162,16 @@ $bg-color: #fff;
 		}
 	}
 	.debate {
+
 		@include section-spacing();
 		header {
+
 			h4 {
 				font-weight: bold;
 				font-size: 1.6rem;
 			}
 		}
+
 		.verses {
 			color: $body-bg;
 			font-size: 2rem;
@@ -187,10 +198,13 @@ $bg-color: #fff;
 	}
 	.opinion {
 		@include section-spacing();
+
 		.content {
 			grid-template-columns: auto auto;
+
 			header {
 				padding: 0 1rem;
+
 				h4 {
 					font-weight: bold;
 					font-size: 1.6rem;
@@ -201,15 +215,19 @@ $bg-color: #fff;
 
 	.more {
 		@include section-spacing();
+
 		.content {
 			grid-template-columns: auto auto;
 		}
+
 		header {
 			padding: 0 1rem;
+
 			h4 {
 				font-weight: bold;
 				font-size: 1.6rem;
 			}
+
 			p {
 				@include paragraph();
 			}
@@ -217,9 +235,11 @@ $bg-color: #fff;
 	}
 
 	.sponsored-right {
+
 		.form {
 			background-color: #f4f5f6;
 			padding: 2rem;
+
 			.form-icon {
 				flex: none;
 				flex-grow: 0;
@@ -241,11 +261,13 @@ $bg-color: #fff;
 				background-color: rgb(247, 34, 16);
 				margin-right: 10px;
 			}
+
 			form {
 				input,
 				button {
 					padding: 1rem;
 				}
+
 				.btn-primary {
 					font-size: 2rem;
 					background-color: $bg-primary;
@@ -257,6 +279,7 @@ $bg-color: #fff;
 	}
 
 	article[class*="sponsored-"] {
+
 		.story {
 			border: 1px solid $body-bg;
 			margin: 1rem 0;
@@ -271,15 +294,18 @@ $bg-color: #fff;
 	.my-turn,
 	.culture {
 		@include section-spacing();
+
 		h2 {
 			@include h2-style();
 		}
+
 		p {
 			@include paragraph();
 			font-weight: bold;
 			color: gray;
 			padding: 1rem 0;
 		}
+
 		h3 {
 			@include h3-style();
 		}
@@ -288,24 +314,30 @@ $bg-color: #fff;
 
 .magazine {
 	@include section-spacing();
+
 	.magazine-article {
+
 		h4 {
 			@include h4-style();
 			font-size: 1.6rem;
 		}
+
 		h3 {
 			@include h3-style();
 		}
+
 		.feature {
 			font-size: 2rem;
 			border: 0;
 			font-weight: bold;
 		}
+
 		.caption {
 			width: max-content;
 			padding: 1rem 1rem 1rem 0;
 			font-weight: bold;
 			color: $bg-primary;
+
 			span {
 				background-color: $bg-primary;
 				color: #fff;
@@ -317,121 +349,135 @@ $bg-color: #fff;
 
 .editor-pick {
 	@include section-spacing();
+
 	h2 {
 		@include h2-style();
 	}
+
 	h3 {
 		@include h3-style();
 	}
+
 	h4 {
 		@include h4-style();
 	}
+
 	.paragraph {
 		@include paragraph();
 	}
 }
 
-.news-nav  {
- background: gray;
+.news-nav {
+	background: gray;
 }
-#body-container  {
-	 background: red;
+
+#body-container {
+	background: red;
 }
-#temperature    {
+
+#temperature {
 	color: #ffff;
 	font-size: 1rem;
 	line-height: 1.5rem;
 	font-weight: 700;
 }
 
-#date   {
+#date {
 	color: #ffff;
 	font-size: 1rem;
 	line-height: 2.5rem;
 	font-weight: 600;
 }
-#navbarSupportedContent   {
+
+#navbarSupportedContent {
 	display: none !important;
 	background: #ffff !important;
 }
-#newsweek   {
-	font-size: 5rem ;
+
+#newsweek {
+	font-size: 5rem;
 	color: #ffff;
 }
 
-#login  {
+#login {
 	font-size: 1.3rem;
 	color: #ffff;
 	cursor: pointer;
 	line-height: 1rem;
 	font-weight: 700;
 }
-#subscribe  {
+
+#subscribe {
 	background: gold;
 	font-size: 1.3rem;
-	padding: 1px 12px ;
+	padding: 1px 12px;
 	font-weight: 600;
 	border-radius: 1.5rem;
 	border: 1px solid gold;
 }
 
 #right-nav {
-
-width: 20%;
-
+	width: 20%;
 }
-.nav-link   {
+
+.nav-link {
 	color: black !important;
 }
 
 #nav-bottom {
-	 width: 100vw !important;
-	 margin-right: -15px !important;
-	 margin-left: -15px !important;
-	 /* background: #ffff; */
-	
+	width: 100vw !important;
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+	/* background: #ffff; */
 }
-#bignav-cover   {
+
+#bignav-cover {
 	background: white;
 	border-top-right-radius: 15px;
 	display: flex;
- 
 }
-#bignav-item   {
+
+#bignav-item {
 	list-style: none;
 	border-right: 1px solid black;
 }
-#bignav-link    {
+
+#bignav-link {
 	font-size: 1rem;
 	font-weight: 700;
 }
 
-@media (max-width: 799px)   {
-	#temperature-date   {
-			display: none;
+@media (max-width: 799px) {
+	#temperature-date {
+		display: none;
 	}
+
 	#bignav-item {
-			display: none;
+		display: none;
 	}
-	#newsweek   {
-			font-size: 1.5rem;
+
+	#newsweek {
+		font-size: 1.5rem;
 	}
-	#login  {
-			display: none;
+
+	#login {
+		display: none;
 	}
-	#subscribe  {
-			font-size: 0.6rem;
-			padding: 1px 8px ;
-			border-radius: 1rem;
+
+	#subscribe {
+		font-size: 0.6rem;
+		padding: 1px 8px;
+		border-radius: 1rem;
 	}
-	#navbarSupportedContent   {
-			display: run-in !important;
-			
+
+	#navbarSupportedContent {
+		display: run-in !important;
 	}
 }
 
 .footer {
 	display: flex;
+
 	p {
 		font-size: 10px;
 		color: grey;
@@ -453,41 +499,50 @@ width: 20%;
 			"sponsored-left my-turn opinion"
 			". culture sponsored-right"
 			". more-story .";
+
 		.top-story {
 			grid-area: top-story;
 		}
+
 		.featured-story {
 			grid-area: featured;
 		}
+
 		.debate {
 			grid-area: debate;
 		}
+
 		.opinion {
 			grid-area: opinion;
 			position: relative;
 			top: -195rem;
 			z-index: 3;
 		}
+
 		.sponsored-left {
 			grid-area: sponsored-left;
 			position: relative;
 		}
+
 		.more {
 			grid-area: more-story;
 			position: relative;
 			top: -905rem;
 			z-index: 3;
 		}
+
 		.my-turn {
 			grid-area: my-turn;
 			position: relative;
 			top: -155rem;
 		}
+
 		.culture {
 			grid-area: culture;
 			position: relative;
 			top: -525rem;
 		}
+
 		.sponsored-right {
 			grid-area: sponsored-right;
 			position: relative;
@@ -495,6 +550,7 @@ width: 20%;
 			z-index: 6;
 		}
 	}
+
 	.scrollable::after {
 		@include clearfix();
 	}
@@ -522,5 +578,35 @@ width: 20%;
 		position: relative;
 		top: -570rem;
 	}
-}
 
+	.sports::after {
+		@include clearfix();
+	}
+
+	.rest {
+		position: relative;
+		top: -570rem;
+	}
+
+	.rest::after {
+		@include clearfix();
+	}
+
+	.contact {
+		position: relative;
+		top: -570rem;
+	}
+
+	.contact::after {
+		@include clearfix();
+	}
+
+	.footer {
+		position: relative;
+		top: -570rem;
+	}
+
+	.footer::after {
+		@include clearfix();
+	}
+}
