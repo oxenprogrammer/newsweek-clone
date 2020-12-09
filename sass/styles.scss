@@ -40,6 +40,7 @@ $primary: #f72210;
 // Custom
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 $roboto-font: "Roboto Condensed", sans-serif;
+$bg-color: #fff;
 
 @mixin h2-style {
 	font-family: $roboto-font;
@@ -80,7 +81,6 @@ $roboto-font: "Roboto Condensed", sans-serif;
 	max-width: 100%;
 	font-size: 1.6rem;
 	padding: 1rem;
-	background-color: #fff;
 }
 
 .d-block {
@@ -94,6 +94,9 @@ $roboto-font: "Roboto Condensed", sans-serif;
 .scrollable {
 	.featured-story,
 	.top-story {
+		background-color: $bg-color;
+		padding: 1rem;
+		margin: 1rem 0;
 		.top-story-h2 {
 			@include h2-style();
 		}
@@ -116,6 +119,40 @@ $roboto-font: "Roboto Condensed", sans-serif;
 				font-size: 1.6rem;
 				font-weight: bold;
 			}
+		}
+	}
+	.debate {
+		margin: 1rem 0;
+		background-color: $bg-color;
+		padding: 1rem;
+		header {
+			h4 {
+				font-weight: bold;
+				font-size: 1.6rem;
+			}
+		}
+		.verses {
+			color: $body-bg;
+			font-size: 2rem;
+			font-weight: bold;
+			text-align: center;
+			background-color: $body-color;
+			width: 5rem;
+			padding: 1rem;
+			border-radius: 100%;
+			position: relative;
+			top: -3.5rem;
+			left: 16rem;
+		}
+		.content-1 {
+			header {
+				position: relative;
+				left: 4rem;
+			}
+		}
+		.content-2 {
+			position: relative;
+			top: -3rem;
 		}
 	}
 }
