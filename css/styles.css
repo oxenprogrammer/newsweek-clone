@@ -10,6 +10,10 @@ body {
   font-size: 62.5%;
   width: 100%; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 body {
   overflow-x: hidden; }
 
@@ -1296,12 +1300,14 @@ progress {
 
 .scrollable .featured-story,
 .scrollable .sponsored-left,
+.scrollable .sponsored-right,
 .scrollable .top-story {
   margin: 1rem 0;
   background-color: #fff;
   padding: 1rem; }
   .scrollable .featured-story .top-story-h2,
   .scrollable .sponsored-left .top-story-h2,
+  .scrollable .sponsored-right .top-story-h2,
   .scrollable .top-story .top-story-h2 {
     font-family: "Roboto Condensed", sans-serif;
     line-height: 1.6rem;
@@ -1312,6 +1318,7 @@ progress {
     margin: 1rem 0; }
   .scrollable .featured-story .caption,
   .scrollable .sponsored-left .caption,
+  .scrollable .sponsored-right .caption,
   .scrollable .top-story .caption {
     color: #f72210;
     background-color: #e8e6e6;
@@ -1326,6 +1333,8 @@ progress {
   .scrollable .featured-story h4, .scrollable .featured-story .h4,
   .scrollable .sponsored-left h4,
   .scrollable .sponsored-left .h4,
+  .scrollable .sponsored-right h4,
+  .scrollable .sponsored-right .h4,
   .scrollable .top-story h4,
   .scrollable .top-story .h4 {
     color: #000;
@@ -1333,26 +1342,32 @@ progress {
     font-weight: bolder; }
   .scrollable .featured-story .paragraph,
   .scrollable .sponsored-left .paragraph,
+  .scrollable .sponsored-right .paragraph,
   .scrollable .top-story .paragraph {
     color: #5f5d5d;
     font-size: 1.2rem;
     font-weight: lighter; }
   .scrollable .featured-story .top-story-sub,
   .scrollable .sponsored-left .top-story-sub,
+  .scrollable .sponsored-right .top-story-sub,
   .scrollable .top-story .top-story-sub {
     grid-template-columns: auto auto; }
     .scrollable .featured-story .top-story-sub header,
     .scrollable .sponsored-left .top-story-sub header,
+    .scrollable .sponsored-right .top-story-sub header,
     .scrollable .top-story .top-story-sub header {
       padding: 0 1rem; }
       .scrollable .featured-story .top-story-sub header img,
       .scrollable .sponsored-left .top-story-sub header img,
+      .scrollable .sponsored-right .top-story-sub header img,
       .scrollable .top-story .top-story-sub header img {
         width: 100%;
         height: auto; }
       .scrollable .featured-story .top-story-sub header h5, .scrollable .featured-story .top-story-sub header .h5,
       .scrollable .sponsored-left .top-story-sub header h5,
       .scrollable .sponsored-left .top-story-sub header .h5,
+      .scrollable .sponsored-right .top-story-sub header h5,
+      .scrollable .sponsored-right .top-story-sub header .h5,
       .scrollable .top-story .top-story-sub header h5,
       .scrollable .top-story .top-story-sub header .h5 {
         font-size: 1.6rem;
@@ -1411,3 +1426,11 @@ progress {
       color: #5f5d5d;
       font-size: 1.2rem;
       font-weight: lighter; }
+
+.scrollable article[class*='sponsored-'] .story {
+  border: 1px solid #f4f5f6;
+  margin: 1rem 0; }
+
+.scrollable article[class*='sponsored-'] h4, .scrollable article[class*='sponsored-'] .h4,
+.scrollable article[class*='sponsored-'] p {
+  padding: 0 2rem; }

@@ -11,6 +11,11 @@ body {
 	width: 100%;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 body {
 	overflow-x: hidden;
 }
@@ -101,6 +106,7 @@ $bg-color: #fff;
 .scrollable {
 	.featured-story,
 	.sponsored-left,
+	.sponsored-right,
 	.top-story {
 		@include section-spacing();
 		.top-story-h2 {
@@ -191,5 +197,17 @@ $bg-color: #fff;
 				@include paragraph();
 			}
 		}
+	}
+
+	article[class*='sponsored-'] {
+		.story {
+			border: 1px solid $body-bg;
+			margin: 1rem 0;
+		}
+	}
+
+	article[class*='sponsored-'] h4,
+	article[class*='sponsored-'] p {
+		padding: 0 2rem;
 	}
 }
