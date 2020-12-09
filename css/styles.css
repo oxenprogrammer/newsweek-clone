@@ -1330,18 +1330,21 @@ progress {
     color: #5f5d5d;
     font-size: 1.2rem;
     font-weight: lighter; }
-  .scrollable .featured-story .top-story-sub header,
-  .scrollable .top-story .top-story-sub header {
-    padding: 0.5rem; }
-    .scrollable .featured-story .top-story-sub header img,
-    .scrollable .top-story .top-story-sub header img {
-      width: 100%;
-      height: auto; }
-    .scrollable .featured-story .top-story-sub header h5, .scrollable .featured-story .top-story-sub header .h5,
-    .scrollable .top-story .top-story-sub header h5,
-    .scrollable .top-story .top-story-sub header .h5 {
-      font-size: 1.6rem;
-      font-weight: bold; }
+  .scrollable .featured-story .top-story-sub,
+  .scrollable .top-story .top-story-sub {
+    grid-template-columns: auto auto; }
+    .scrollable .featured-story .top-story-sub header,
+    .scrollable .top-story .top-story-sub header {
+      padding: 0 1rem; }
+      .scrollable .featured-story .top-story-sub header img,
+      .scrollable .top-story .top-story-sub header img {
+        width: 100%;
+        height: auto; }
+      .scrollable .featured-story .top-story-sub header h5, .scrollable .featured-story .top-story-sub header .h5,
+      .scrollable .top-story .top-story-sub header h5,
+      .scrollable .top-story .top-story-sub header .h5 {
+        font-size: 1.6rem;
+        font-weight: bold; }
 
 .scrollable .debate {
   margin: 1rem 0;
@@ -1373,20 +1376,22 @@ progress {
   margin: 1rem 0;
   background-color: #fff;
   padding: 1rem; }
-  .scrollable .opinion header {
-    margin-left: 2rem; }
-    .scrollable .opinion header h4, .scrollable .opinion header .h4 {
-      font-weight: bold;
-      font-size: 1.6rem; }
+  .scrollable .opinion .content {
+    grid-template-columns: auto auto; }
+    .scrollable .opinion .content header {
+      padding: 0 1rem; }
+      .scrollable .opinion .content header h4, .scrollable .opinion .content header .h4 {
+        font-weight: bold;
+        font-size: 1.6rem; }
 
 .scrollable .more {
   margin: 1rem 0;
   background-color: #fff;
   padding: 1rem; }
   .scrollable .more .content {
-    grid-template-columns: 30% 70%; }
+    grid-template-columns: auto auto; }
   .scrollable .more header {
-    margin-left: 1rem; }
+    padding: 0 1rem; }
     .scrollable .more header h4, .scrollable .more header .h4 {
       font-weight: bold;
       font-size: 1.6rem; }

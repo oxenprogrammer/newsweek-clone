@@ -42,6 +42,12 @@ $primary: #f72210;
 $roboto-font: "Roboto Condensed", sans-serif;
 $bg-color: #fff;
 
+@mixin section-spacing {
+	margin: 1rem 0;
+	background-color: $bg-color;
+	padding: 1rem;
+}
+
 @mixin h2-style {
 	font-family: $roboto-font;
 	line-height: 1.6rem;
@@ -57,23 +63,23 @@ $bg-color: #fff;
 	background-color: #e8e6e6;
 	max-width: 12rem;
 	padding: 1rem;
-  font-weight: bolder;
-  z-index: 2;
-  position: relative;
-  top: -4rem;
-  text-align: center;
+	font-weight: bolder;
+	z-index: 2;
+	position: relative;
+	top: -4rem;
+	text-align: center;
 }
 
 @mixin h4-style {
 	color: #000;
 	font-size: 2.2rem;
-  font-weight: bolder;
+	font-weight: bolder;
 }
 
 @mixin paragraph {
 	color: rgb(95, 93, 93);
 	font-size: 1.2rem;
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
 .main {
@@ -109,22 +115,23 @@ $bg-color: #fff;
 		.paragraph {
 			@include paragraph();
 		}
-		.top-story-sub header {
-			padding: 0.5rem;
-			img {
-				width: 100%;
-				height: auto;
-			}
-			h5 {
-				font-size: 1.6rem;
-				font-weight: bold;
+		.top-story-sub {
+			grid-template-columns: auto auto;
+			header {
+				padding: 0 1rem;
+				img {
+					width: 100%;
+					height: auto;
+				}
+				h5 {
+					font-size: 1.6rem;
+					font-weight: bold;
+				}
 			}
 		}
 	}
 	.debate {
-		margin: 1rem 0;
-		background-color: $bg-color;
-		padding: 1rem;
+		@include section-spacing();
 		header {
 			h4 {
 				font-weight: bold;
@@ -156,27 +163,26 @@ $bg-color: #fff;
 		}
 	}
 	.opinion {
-		margin: 1rem 0;
-		background-color: $bg-color;
-		padding: 1rem;
-		header {
-			margin-left: 2rem;
-			h4 {
-				font-weight: bold;
-				font-size: 1.6rem;
+		@include section-spacing();
+		.content {
+			grid-template-columns: auto auto;
+			header {
+				padding: 0 1rem;
+				h4 {
+					font-weight: bold;
+					font-size: 1.6rem;
+				}
 			}
 		}
 	}
 
 	.more {
-		margin: 1rem 0;
-		background-color: $bg-color;
-		padding: 1rem;
+		@include section-spacing();
 		.content {
-			grid-template-columns: 30% 70%;
+			grid-template-columns: auto auto;
 		}
 		header {
-			margin-left: 1rem;
+			padding: 0 1rem;
 			h4 {
 				font-weight: bold;
 				font-size: 1.6rem;
