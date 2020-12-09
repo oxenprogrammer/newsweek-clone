@@ -256,4 +256,66 @@ $bg-color: #fff;
 	article[class*="sponsored-"] p {
 		padding: 0 2rem;
 	}
+
+	.my-turn,
+	.culture {
+		@include section-spacing();
+		h2 {
+			@include h2-style();
+		}
+		p {
+			@include paragraph();
+			font-weight: bold;
+			color: gray;
+			padding: 1rem 0;
+		}
+		h3 {
+			@include h3-style();
+		}
+	}
+}
+
+.magazine {
+	@include section-spacing();
+	.magazine-article {
+		h4 {
+			@include h4-style();
+			font-size: 1.6rem;
+		}
+		h3 {
+			@include h3-style();
+		}
+		.feature {
+			font-size: 2rem;
+			border: 0;
+			font-weight: bold;
+		}
+		.caption {
+			width: max-content;
+			padding: 1rem 1rem 1rem 0;
+			font-weight: bold;
+			color: $bg-primary;
+			span {
+				background-color: $bg-primary;
+				color: #fff;
+				padding: 0.5rem;
+			}
+		}
+	}
+}
+
+.editor-pick {
+	@include section-spacing();
+	h2 {
+		@include h2-style();
+	}
+	h3 {
+		@include h3-style();
+	}
+	h4 {
+		@include h4-style();
+	}
+	.paragraph {
+		@include paragraph();
+	}
 }
