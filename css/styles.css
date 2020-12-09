@@ -1295,11 +1295,13 @@ progress {
   display: grid; }
 
 .scrollable .featured-story,
+.scrollable .sponsored-left,
 .scrollable .top-story {
+  margin: 1rem 0;
   background-color: #fff;
-  padding: 1rem;
-  margin: 1rem 0; }
+  padding: 1rem; }
   .scrollable .featured-story .top-story-h2,
+  .scrollable .sponsored-left .top-story-h2,
   .scrollable .top-story .top-story-h2 {
     font-family: "Roboto Condensed", sans-serif;
     line-height: 1.6rem;
@@ -1309,38 +1311,48 @@ progress {
     color: #7e7d7d;
     margin: 1rem 0; }
   .scrollable .featured-story .caption,
+  .scrollable .sponsored-left .caption,
   .scrollable .top-story .caption {
     color: #f72210;
     background-color: #e8e6e6;
-    max-width: 12rem;
+    width: max-content;
     padding: 1rem;
     font-weight: bolder;
     z-index: 2;
     position: relative;
-    top: -4rem;
-    text-align: center; }
+    top: -3.8rem;
+    text-align: center;
+    opacity: 0.9; }
   .scrollable .featured-story h4, .scrollable .featured-story .h4,
+  .scrollable .sponsored-left h4,
+  .scrollable .sponsored-left .h4,
   .scrollable .top-story h4,
   .scrollable .top-story .h4 {
     color: #000;
     font-size: 2.2rem;
     font-weight: bolder; }
   .scrollable .featured-story .paragraph,
+  .scrollable .sponsored-left .paragraph,
   .scrollable .top-story .paragraph {
     color: #5f5d5d;
     font-size: 1.2rem;
     font-weight: lighter; }
   .scrollable .featured-story .top-story-sub,
+  .scrollable .sponsored-left .top-story-sub,
   .scrollable .top-story .top-story-sub {
     grid-template-columns: auto auto; }
     .scrollable .featured-story .top-story-sub header,
+    .scrollable .sponsored-left .top-story-sub header,
     .scrollable .top-story .top-story-sub header {
       padding: 0 1rem; }
       .scrollable .featured-story .top-story-sub header img,
+      .scrollable .sponsored-left .top-story-sub header img,
       .scrollable .top-story .top-story-sub header img {
         width: 100%;
         height: auto; }
       .scrollable .featured-story .top-story-sub header h5, .scrollable .featured-story .top-story-sub header .h5,
+      .scrollable .sponsored-left .top-story-sub header h5,
+      .scrollable .sponsored-left .top-story-sub header .h5,
       .scrollable .top-story .top-story-sub header h5,
       .scrollable .top-story .top-story-sub header .h5 {
         font-size: 1.6rem;

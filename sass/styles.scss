@@ -61,13 +61,14 @@ $bg-color: #fff;
 @mixin h3-style {
 	color: $primary;
 	background-color: #e8e6e6;
-	max-width: 12rem;
+	width: max-content;
 	padding: 1rem;
 	font-weight: bolder;
 	z-index: 2;
 	position: relative;
-	top: -4rem;
+	top: -3.8rem;
 	text-align: center;
+	opacity: 0.9;
 }
 
 @mixin h4-style {
@@ -99,10 +100,9 @@ $bg-color: #fff;
 
 .scrollable {
 	.featured-story,
+	.sponsored-left,
 	.top-story {
-		background-color: $bg-color;
-		padding: 1rem;
-		margin: 1rem 0;
+		@include section-spacing();
 		.top-story-h2 {
 			@include h2-style();
 		}
