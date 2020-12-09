@@ -155,4 +155,16 @@ $bg-color: #fff;
 			top: -3rem;
 		}
 	}
+	.opinion {
+		margin: 1rem 0;
+		background-color: $bg-color;
+		padding: 1rem;
+		header {
+			margin-left: 2rem;
+			h4 {
+				font-weight: bold;
+				font-size: 1.6rem;
+			}
+		}
+	}
 }

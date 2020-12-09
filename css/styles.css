@@ -1368,3 +1368,13 @@ progress {
   .scrollable .debate .content-2 {
     position: relative;
     top: -3rem; }
+
+.scrollable .opinion {
+  margin: 1rem 0;
+  background-color: #fff;
+  padding: 1rem; }
+  .scrollable .opinion header {
+    margin-left: 2rem; }
+    .scrollable .opinion header h4, .scrollable .opinion header .h4 {
+      font-weight: bold;
+      font-size: 1.6rem; }
