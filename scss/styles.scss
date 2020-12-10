@@ -395,21 +395,111 @@ $bg-color: #fff;
 	}
 }
 
-.news-nav {
-}
+.contact {
+	padding: 4rem;
+	.subscribe {
+		h2 {
+			color: $primary;
+			font-weight: bolder;
+			font-size: 1.8rem;
+		}
+		.subscribe-content {
+			background-color: #f4f5f6;
+			padding: 4rem;
+			.subscribe-text {
+				h4 {
+					font-weight: bolder;
+					color: $body-color;
+					font-size: 3rem;
+				}
+				.btn-subscribe {
+					background-color: $bg-primary !important;
+					padding: 0.5rem 1rem;
+					color: #fff;
+					font-size: 1.5rem;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+	.newsletter {
+		h2 {
+			color: $primary;
+			font-weight: bolder;
+			font-size: 1.8rem;
+		}
+		.newsletter-content {
+			border: 1px solid $body-bg;
+			img {
+				height: 320px;
+			}
+			.letter-text {
+				margin: 3rem;
+				h4 {
+					font-weight: bolder;
+					color: $body-color;
+					font-size: 3rem;
+					overflow-wrap: break-word;
+				}
+				p {
+					overflow-wrap: break-word;
+				}
 
-
-.footer {
-	display: flex;
-
-	p {
-		font-size: 10px;
-		color: grey;
-		.footer-top-right {
-			float: right;
+				form input,
+				form button {
+					width: 16rem;
+				}
+				form button {
+					background-color: $bg-primary !important;
+					padding: 0.5rem 1rem;
+					color: #fff;
+					font-size: 1.5rem;
+					font-weight: bolder;
+				}
+			}
 		}
 	}
 }
+
+.footer-left {
+	.p-footer {
+		position: relative;
+		top: 2rem;
+	}
+}
+
+.footer-right {
+	position: relative;
+	top: 1rem;
+	.fa {
+		padding: 0.5rem;
+		font-size: 2.5rem;
+		color: rgb(39, 37, 37);
+	}
+}
+
+.footer-bottom-top a:not(:first-child)::before,
+.footer-bottom-last a:not(:first-child)::before {
+	content: " |  ";
+	color: gray;
+}
+
+.footer-bottom-top a,
+.footer-bottom-last a {
+	color: gray;
+	padding: 0 0.5rem;
+	text-decoration: none;
+}
+
+.footer-bottom-last a {
+	padding-left: 0;
+}
+
+.footer-bottom-top a:hover,
+.footer-bottom-last a:hover {
+	color: #000;
+}
+
 // Nav Menu
 header {
 nav {
@@ -520,177 +610,12 @@ nav {
 
 
 @media only screen and (min-width: 1024px) {
-	// .main {
-	// 	max-width: 85%;
-	// }
-	// .scrollable {
-	// 	min-height: 0;
-
-	// 	.top {
-	// 		position: fixed;
-	// 		top: 0;
-	// 	}
-
-	// 	.feature,
-	// 	.argument {
-	// 		height: calc(100vh - 110px);
-	// 		overflow-y: scroll;
-	// 	}
-	// }
+	.main {
+		max-width: 85%;
+	}
 }
 
 // header
 .nav-menu {
 	background: $bg-primary;
-// 	nav {
-// 	background: $bg-primary;
-// 	// border: 1px solid black;
-// 	height: 70px;
-// 	 ul {
-// 		 width: 100%;
-// 		display: flex;
-// 		list-style: none;
-// 		justify-content: space-between;
-
-// 		li {
-// 			font-size: 2rem;
-// 			color: #fff;
-// 		}
-// 		i {
-// 			font-size: 2rem;
-//     color: rgb(204, 196, 196);
-// 		}
-// 		button {
-// 			background-color: yellow;
-// 			color: black;
-// 			font-size: 1.4rem;
-// 			font-weight: bold;
-// 			border-radius: 15px;
-// 			// padding: 8px;
-// 			width: 100px;
-// 		}
-// 	}
-// }
 }
-// @media only screen and (min-width: 1024px) {
-//  	.scrollable {
-// 			position: relative;
-// 			float: left;
-// 			max-width: max-content;
-// 			max-height: max-content;
-// 			z-index: 5;
-// 			grid-template-areas:
-// 			"featured top-story debate"
-// 			"sponsored-left my-turn opinion"
-// 			". culture sponsored-right"
-// 			". more-story .";
-// 			.top-story {
-// 			grid-area: top-story;
-// 		}
-
-// 		.featured-story {
-// 			grid-area: featured;
-// 		}
-
-// 		.debate {
-// 			grid-area: debate;
-// 		}
-
-// 		.opinion {
-// 			grid-area: opinion;
-// 			position: relative;
-// 			top: -195rem;
-// 			z-index: 3;
-// 		}
-
-// 		.sponsored-left {
-// 			grid-area: sponsored-left;
-// 			position: relative;
-// 		}
-
-// 		.more {
-// 			grid-area: more-story;
-// 			position: relative;
-// 			top: -905rem;
-// 			z-index: 3;
-// 		}
-
-// 		.my-turn {
-// 			grid-area: my-turn;
-// 			position: relative;
-// 			top: -155rem;
-// 		}
-
-// 		.culture {
-// 			grid-area: culture;
-// 			position: relative;
-// 			top: -525rem;
-// 		}
-
-// 		.sponsored-right {
-// 			grid-area: sponsored-right;
-// 			position: relative;
-// 			top: -530rem;
-// 			z-index: 6;
-// 		}
-// 	}
-
-// 	.scrollable::after {
-// 		@include clearfix();
-// 	}
-
-// 	.magazine {
-// 		position: relative;
-// 		top: -570rem;
-// 		// z-index: 10;
-// 	}
-
-// 	.magazine::after {
-// 		@include clearfix();
-// 	}
-
-// 	.editor-pick {
-// 		position: relative;
-// 		top: -570rem;
-// 	}
-
-// 	.editor-pick::after {
-// 		@include clearfix();
-// 	}
-
-// 	.sports {
-// 		position: relative;
-// 		top: -570rem;
-// 	}
-
-// 	.sports::after {
-// 		@include clearfix();
-// 	}
-
-// 	.rest {
-// 		position: relative;
-// 		top: -570rem;
-// 	}
-
-// 	.rest::after {
-// 		@include clearfix();
-// 	}
-
-// 	.contact {
-// 		position: relative;
-// 		top: -570rem;
-// 	}
-
-// 	.contact::after {
-// 		@include clearfix();
-// 	}
-
-// 	.footer {
-// 		position: relative;
-// 		top: -570rem;
-// 	}
-
-// 	.footer::after {
-// 		@include clearfix();
-// 	}
-// }
