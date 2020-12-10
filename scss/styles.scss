@@ -14,6 +14,7 @@ html,
 body {
 	font-size: 62.5%;
 	width: 100%;
+	height: 100%;
 }
 
 img {
@@ -517,6 +518,20 @@ $bg-color: #fff;
 @media only screen and (min-width: 1024px) {
 	.main {
 		max-width: 85%;
+	}
+	.scrollable {
+		min-height: 0;
+
+		.top {
+			position: fixed;
+			top: 0;
+		}
+
+		.feature,
+		.argument {
+			height: calc(100vh - 110px);
+			overflow-y: scroll;
+		}
 	}
 }
 
