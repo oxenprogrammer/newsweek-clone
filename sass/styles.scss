@@ -319,3 +319,136 @@ $bg-color: #fff;
 		@include paragraph();
 	}
 }
+
+.sports {
+	@include section-spacing()
+.us-rows {
+}
+
+}
+
+// Header
+
+// *   {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
+
+.news-nav  {
+ background: gray;
+}
+#body-container  {
+	 background: red;
+	/* padding-top: 0 !important; */
+	/* padding-bottom: 0 !important; */
+}
+#temperature-date   {
+
+}
+#temperature    {
+	color: #ffff;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+
+#date   {
+	color: #ffff;
+	font-size: 1rem;
+	line-height: 2.5rem;
+	font-weight: 600;
+}
+#navbarSupportedContent   {
+	display: none !important;
+	background: #ffff !important;
+}
+#newsweek   {
+	font-size: 5rem ;
+	color: #ffff;
+}
+
+#login  {
+	font-size: 1.3rem;
+	color: #ffff;
+	cursor: pointer;
+	line-height: 1rem;
+	font-weight: 700;
+}
+#subscribe  {
+	background: gold;
+	font-size: 1.3rem;
+	padding: 1px 12px ;
+	font-weight: 600;
+	border-radius: 1.5rem;
+	border: 1px solid gold;
+}
+
+#right-nav {
+
+width: 20%;
+
+}
+.nav-link   {
+	color: black !important;
+}
+
+#nav-bottom {
+	 width: 100vw !important;
+	 margin-right: -15px !important;
+	 margin-left: -15px !important;
+	 /* background: #ffff; */
+	
+}
+#bignav-cover   {
+	background: white;
+	border-top-right-radius: 15px;
+	display: flex;
+ 
+}
+#bignav-item   {
+	list-style: none;
+	border-right: 1px solid black;
+}
+#bignav-link    {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+@media (max-width: 799px)   {
+	#temperature-date   {
+			display: none;
+	}
+	#bignav-item {
+			display: none;
+	}
+	#newsweek   {
+			font-size: 1.5rem;
+	}
+	#login  {
+			display: none;
+	}
+	#subscribe  {
+			font-size: 0.6rem;
+			padding: 1px 8px ;
+			border-radius: 1rem;
+	}
+	#navbarSupportedContent   {
+			display: run-in !important;
+			
+	}
+}
+
+.footer {
+	display: flex;
+	// .footer > div:nth-child(2) {
+	// 	flex: 1;
+	// }
+	p {
+		font-size: 10px;
+		color: grey;
+		.footer-top-right {
+			float: right;
+		}
+	}
+}
