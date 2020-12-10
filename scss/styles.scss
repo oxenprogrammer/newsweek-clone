@@ -395,6 +395,35 @@ $bg-color: #fff;
 	}
 }
 
+.contact {
+	padding: 4rem;
+	.subscribe {
+		h2 {
+			color: $primary;
+			font-weight: bolder;
+			font-size: 1.8rem;
+		}
+		.subscribe-content {
+			background-color: #F4F5F6;
+			padding: 4rem;
+			.subscribe-text {
+				h4 {
+					font-weight: bolder;
+					color: $body-color;
+					font-size: 3rem;
+				}
+				.btn-subscribe {
+					background-color: $bg-primary !important;
+					padding: 0.5rem 1rem;
+					color: #fff;
+					font-size: 1.5rem;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+}
+
 .footer-left {
 	.p-footer {
 		position: relative;
@@ -403,14 +432,17 @@ $bg-color: #fff;
 }
 
 .footer-right {
+	position: relative;
+	top: 1rem;
 	.fa {
 		padding: 0.5rem;
-		font-size: 3rem;
+		font-size: 2.5rem;
+		color: rgb(39, 37, 37);
 	}
 }
 
 .footer-bottom-top a:not(:first-child)::before,
-.footer-bottom-last a:not(:first-child)::before{
+.footer-bottom-last a:not(:first-child)::before {
 	content: " |  ";
 	color: gray;
 }

@@ -116,10 +116,10 @@
 			</section>
 		</header>
 		<!-- </nav> -->
-		<main class="container-fluid h-100 d-flex flex-column main">
-			<section class="row flex-fill scrollable">
+		<main class="container-fluid d-flex flex-column main">
+			<section class="row scrollable">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-4 mh-100 order-md-2 order-lg-2 top">
-          <article class="top-story">
+          <article class="top-story sticky-top">
             <h2 class="top-story-h2">TOP STORY</h2>
             <img
               src="https://d.newsweek.com/en/full/1682046/stimulus-deal-check-congress-covid-jobs-unemployment.jpg?w=591&h=364&f=359f6047dd43aefe438b2f16bd04a6d0"
@@ -1473,41 +1473,35 @@
 				</article>
 				<hr />
 			</section>
-			<section class="contact">
-				<article>
-					<div class="row">
-						<div class="col-8">
-							<h2 class="text-danger">SUBSCRIBE</h2>
-							<div class="row d-flex justify-content">
-								<div class="col-6">
-								<img
-									src="https://d.newsweek.com/en/full/1675581/cover-december-04-11-2020.jpg?w=170&q=95&f=b831bcfec318510363b4a65a51bc2b6a"
-								/>
-							</div>
-							<div class="col-6">
-								<h4>
-									In-depth Stories You Don't See Elsewhere About Topics You Want
-									to Read!
-								</h4>
-								<p>
-									All Access + Weekly Delivery. Choose A Membership That's
-									Perfect for You!
-								</p>
-								<button class="btn btn-danger">SUBSCRIBE ></button>
-							</div>
-							<div>
-								<h2>NEWSLETTER</h2>
-								<div></div>
-								<div>
-									<h4>The Starting 5</h4>
-									<p>
-										See why nearly a quarter of a million subscribers begin
-										their day with the Starting 5.
-									</p>
-									<input type="email" placeholder="Email Address" />
-									<button class="btn btn-default">FREE SIGN UP ></button>
-								</div>
-							</div>
+			<section class="row contact">
+				<article class="col-12 col-md-12 col-lg-7 subscribe">
+					<h2>SUBSCRIBE</h2>
+					<div class="row subscribe-content">
+						<div class="col-5 col-md-5 col-lg-5 subscribe-image">
+							<img src="https://d.newsweek.com/en/full/1683391/cover-december-18-2020.jpg?w=170&q=95&f=e1f2c45a14354ef38b88aed621a70ef7" alt="brain power">
+						</div>
+						<div class="col-7 col-md-7 col-lg-7 subscribe-text">
+							<h4>
+								In-depth Stories You Don't See Elsewhere About Topics You Want to Read!
+							</h4>
+							<p>All Access + Weekly Delivery.<br>Choose A Membership That's Perfect for You!</p>
+							<button class="btn btn-subscribe">SUBSCRIBE <span>></span></button>
+						</div>
+					</div>
+				</article>
+				<article class="col-12 col-md-12 col-lg-5 newsletter">
+					<h2>NEWSLETTER</h2>
+					<div class="d-flex">
+						<div class="letter-image">
+							<img src="./img/newsletter.png" alt="my image">
+						</div>
+						<div class="letter-text">
+							<h4>The Starting 5</h4>
+							<p>See why nearly a quarter of a million subscribers begin their day with the Starting 5.</p>
+							<form class="letter-form d-flex flex-column">
+								<input type="email" name="email" id="email">
+								<button type="submit">FREE SIGN UP ></button>
+							</form>
 						</div>
 					</div>
 				</article>
