@@ -404,7 +404,7 @@ $bg-color: #fff;
 			font-size: 1.8rem;
 		}
 		.subscribe-content {
-			background-color: #F4F5F6;
+			background-color: #f4f5f6;
 			padding: 4rem;
 			.subscribe-text {
 				h4 {
@@ -413,6 +413,43 @@ $bg-color: #fff;
 					font-size: 3rem;
 				}
 				.btn-subscribe {
+					background-color: $bg-primary !important;
+					padding: 0.5rem 1rem;
+					color: #fff;
+					font-size: 1.5rem;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+	.newsletter {
+		h2 {
+			color: $primary;
+			font-weight: bolder;
+			font-size: 1.8rem;
+		}
+		.newsletter-content {
+			border: 1px solid $body-bg;
+			img {
+				height: 320px;
+			}
+			.letter-text {
+				margin: 3rem;
+				h4 {
+					font-weight: bolder;
+					color: $body-color;
+					font-size: 3rem;
+					overflow-wrap: break-word;
+				}
+				p {
+					overflow-wrap: break-word;
+				}
+
+				form input,
+				form button {
+					width: 16rem;
+				}
+				form button {
 					background-color: $bg-primary !important;
 					padding: 0.5rem 1rem;
 					color: #fff;
