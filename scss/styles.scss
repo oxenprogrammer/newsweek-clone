@@ -32,26 +32,6 @@ $secondary: #f4f5f6;
 $primary: #f72210;
 $bg-primary: #f72210;
 
-// theming
-$theme-colors: (
-	primary: #f72210,
-);
-
-// Option B: Include parts of Bootstrap
-
-// Required
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
-
-// Optional
-@import "../node_modules/bootstrap/scss/root";
-@import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/type";
-@import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/grid";
-
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 // Custom
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
@@ -487,126 +467,126 @@ $bg-color: #fff;
 	}
 }
 
-@media only screen and (min-width: 1024px) {
-	.scrollable {
-		position: relative;
-		float: left;
-		max-width: max-content;
-		max-height: max-content;
-		z-index: 5;
-		grid-template-areas:
-			"featured top-story debate"
-			"sponsored-left my-turn opinion"
-			". culture sponsored-right"
-			". more-story .";
+// @media only screen and (min-width: 1024px) {
+// 	.scrollable {
+// 		position: relative;
+// 		float: left;
+// 		max-width: max-content;
+// 		max-height: max-content;
+// 		z-index: 5;
+// 		grid-template-areas:
+// 			"featured top-story debate"
+// 			"sponsored-left my-turn opinion"
+// 			". culture sponsored-right"
+// 			". more-story .";
 
-		.top-story {
-			grid-area: top-story;
-		}
+// 		.top-story {
+// 			grid-area: top-story;
+// 		}
 
-		.featured-story {
-			grid-area: featured;
-		}
+// 		.featured-story {
+// 			grid-area: featured;
+// 		}
 
-		.debate {
-			grid-area: debate;
-		}
+// 		.debate {
+// 			grid-area: debate;
+// 		}
 
-		.opinion {
-			grid-area: opinion;
-			position: relative;
-			top: -195rem;
-			z-index: 3;
-		}
+// 		.opinion {
+// 			grid-area: opinion;
+// 			position: relative;
+// 			top: -195rem;
+// 			z-index: 3;
+// 		}
 
-		.sponsored-left {
-			grid-area: sponsored-left;
-			position: relative;
-		}
+// 		.sponsored-left {
+// 			grid-area: sponsored-left;
+// 			position: relative;
+// 		}
 
-		.more {
-			grid-area: more-story;
-			position: relative;
-			top: -905rem;
-			z-index: 3;
-		}
+// 		.more {
+// 			grid-area: more-story;
+// 			position: relative;
+// 			top: -905rem;
+// 			z-index: 3;
+// 		}
 
-		.my-turn {
-			grid-area: my-turn;
-			position: relative;
-			top: -155rem;
-		}
+// 		.my-turn {
+// 			grid-area: my-turn;
+// 			position: relative;
+// 			top: -155rem;
+// 		}
 
-		.culture {
-			grid-area: culture;
-			position: relative;
-			top: -525rem;
-		}
+// 		.culture {
+// 			grid-area: culture;
+// 			position: relative;
+// 			top: -525rem;
+// 		}
 
-		.sponsored-right {
-			grid-area: sponsored-right;
-			position: relative;
-			top: -530rem;
-			z-index: 6;
-		}
-	}
+// 		.sponsored-right {
+// 			grid-area: sponsored-right;
+// 			position: relative;
+// 			top: -530rem;
+// 			z-index: 6;
+// 		}
+// 	}
 
-	.scrollable::after {
-		@include clearfix();
-	}
+// 	.scrollable::after {
+// 		@include clearfix();
+// 	}
 
-	.magazine {
-		position: relative;
-		top: -570rem;
-		// z-index: 10;
-	}
+// 	.magazine {
+// 		position: relative;
+// 		top: -570rem;
+// 		// z-index: 10;
+// 	}
 
-	.magazine::after {
-		@include clearfix();
-	}
+// 	.magazine::after {
+// 		@include clearfix();
+// 	}
 
-	.editor-pick {
-		position: relative;
-		top: -570rem;
-	}
+// 	.editor-pick {
+// 		position: relative;
+// 		top: -570rem;
+// 	}
 
-	.editor-pick::after {
-		@include clearfix();
-	}
+// 	.editor-pick::after {
+// 		@include clearfix();
+// 	}
 
-	.sports {
-		position: relative;
-		top: -570rem;
-	}
+// 	.sports {
+// 		position: relative;
+// 		top: -570rem;
+// 	}
 
-	.sports::after {
-		@include clearfix();
-	}
+// 	.sports::after {
+// 		@include clearfix();
+// 	}
 
-	.rest {
-		position: relative;
-		top: -570rem;
-	}
+// 	.rest {
+// 		position: relative;
+// 		top: -570rem;
+// 	}
 
-	.rest::after {
-		@include clearfix();
-	}
+// 	.rest::after {
+// 		@include clearfix();
+// 	}
 
-	.contact {
-		position: relative;
-		top: -570rem;
-	}
+// 	.contact {
+// 		position: relative;
+// 		top: -570rem;
+// 	}
 
-	.contact::after {
-		@include clearfix();
-	}
+// 	.contact::after {
+// 		@include clearfix();
+// 	}
 
-	.footer {
-		position: relative;
-		top: -570rem;
-	}
+// 	.footer {
+// 		position: relative;
+// 		top: -570rem;
+// 	}
 
-	.footer::after {
-		@include clearfix();
-	}
-}
+// 	.footer::after {
+// 		@include clearfix();
+// 	}
+// }
