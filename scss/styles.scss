@@ -32,7 +32,6 @@ $secondary: #f4f5f6;
 $primary: #f72210;
 $bg-primary: #f72210;
 
-
 // Custom
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 $roboto-font: "Roboto Condensed", sans-serif;
@@ -100,105 +99,194 @@ $bg-color: #fff;
 	display: grid;
 }
 
-.scrollable {
-	.featured-story,
-	.sponsored-left,
-	.sponsored-right,
-	.top-story {
-		@include section-spacing();
+.top-story {
+	@include section-spacing();
 
-		.top-story-h2 {
-			@include h2-style();
-		}
-
-		.caption {
-			@include h3-style();
-		}
-
-		h4 {
-			@include h4-style();
-		}
-
-		.paragraph {
-			@include paragraph();
-		}
-
-		.top-story-sub {
-			grid-template-columns: auto auto;
-
-			header {
-				padding: 0 1rem;
-
-				img {
-					width: 100%;
-					height: auto;
-				}
-
-				h5 {
-					font-size: 1.6rem;
-					font-weight: bold;
-				}
-			}
-		}
+	.top-story-h2 {
+		@include h2-style();
 	}
-	.debate {
 
-		@include section-spacing();
+	.caption {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+	}
+
+	.paragraph {
+		@include paragraph();
+	}
+
+	.top-story-sub {
+		grid-template-columns: auto auto;
+
 		header {
+			padding: 0 1rem;
 
-			h4 {
-				font-weight: bold;
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			h5 {
 				font-size: 1.6rem;
+				font-weight: bold;
 			}
 		}
+	}
+}
 
-		.verses {
-			color: $body-bg;
-			font-size: 2rem;
+.featured-story {
+	@include section-spacing();
+
+	.top-story-h2 {
+		@include h2-style();
+	}
+
+	.caption {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+	}
+
+	.paragraph {
+		@include paragraph();
+	}
+}
+
+.sponsored-left {
+	@include section-spacing();
+	.story {
+		border: 1px solid $body-bg;
+		margin: 1rem 0;
+	}
+	.top-story-h2 {
+		@include h2-style();
+	}
+
+	.caption {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+		padding: 0 2rem;
+	}
+
+	.paragraph {
+		@include paragraph();
+		padding: 0 2rem;
+	}
+}
+
+.sponsored-right {
+	@include section-spacing();
+	.story {
+		border: 1px solid $body-bg;
+		margin: 1rem 0;
+	}
+	.top-story-h2 {
+		@include h2-style();
+	}
+
+	.caption {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+		padding: 0 2rem;
+	}
+
+	.paragraph {
+		@include paragraph();
+		padding: 0 2rem;
+	}
+
+	.form {
+		background-color: #f4f5f6;
+		padding: 2rem;
+
+		.form-icon {
+			flex: none;
+			flex-grow: 0;
+			flex-shrink: 0;
+			flex-basis: auto;
+			display: block;
+			width: 29px;
+			height: 28px;
+			background: url(https://g.newsweek.com/www/images/logo-n1.svg)
+				center/contain no-repeat #f72210;
+			background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
+			background-position-x: center;
+			background-position-y: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-attachment: initial;
+			background-origin: initial;
+			background-clip: initial;
+			background-color: rgb(247, 34, 16);
+			margin-right: 10px;
+		}
+
+		form {
+			input,
+			button {
+				padding: 1rem;
+			}
+
+			.btn-primary {
+				font-size: 2rem;
+				background-color: $bg-primary;
+				border: 0;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.debate {
+	@include section-spacing();
+	header {
+		h4 {
 			font-weight: bold;
-			text-align: center;
-			background-color: $body-color;
-			width: 5rem;
-			padding: 1rem;
-			border-radius: 100%;
-			position: relative;
-			top: -3.5rem;
-			left: 14rem;
-		}
-		.content-1 {
-			header {
-				position: relative;
-				left: 4rem;
-			}
-		}
-		.content-2 {
-			position: relative;
-			top: -3rem;
-		}
-	}
-	.opinion {
-		@include section-spacing();
-
-		.content {
-			grid-template-columns: auto auto;
-
-			header {
-				padding: 0 1rem;
-
-				h4 {
-					font-weight: bold;
-					font-size: 1.6rem;
-				}
-			}
+			font-size: 1.6rem;
 		}
 	}
 
-	.more {
-		@include section-spacing();
-
-		.content {
-			grid-template-columns: auto auto;
+	.verses {
+		color: $body-bg;
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		background-color: $body-color;
+		width: 5rem;
+		padding: 1rem;
+		border-radius: 100%;
+		position: relative;
+		top: -3.5rem;
+		left: 14rem;
+	}
+	.content-1 {
+		header {
+			position: relative;
+			left: 4rem;
 		}
+	}
+	.content-2 {
+		position: relative;
+		top: -3rem;
+	}
+}
+
+.opinion {
+	@include section-spacing();
+
+	.content {
+		grid-template-columns: auto auto;
 
 		header {
 			padding: 0 1rem;
@@ -207,88 +295,48 @@ $bg-color: #fff;
 				font-weight: bold;
 				font-size: 1.6rem;
 			}
-
-			p {
-				@include paragraph();
-			}
 		}
 	}
+}
 
-	.sponsored-right {
+.more {
+	@include section-spacing();
 
-		.form {
-			background-color: #f4f5f6;
-			padding: 2rem;
-
-			.form-icon {
-				flex: none;
-				flex-grow: 0;
-				flex-shrink: 0;
-				flex-basis: auto;
-				display: block;
-				width: 29px;
-				height: 28px;
-				background: url(https://g.newsweek.com/www/images/logo-n1.svg)
-					center/contain no-repeat #f72210;
-				background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
-				background-position-x: center;
-				background-position-y: center;
-				background-size: contain;
-				background-repeat: no-repeat;
-				background-attachment: initial;
-				background-origin: initial;
-				background-clip: initial;
-				background-color: rgb(247, 34, 16);
-				margin-right: 10px;
-			}
-
-			form {
-				input,
-				button {
-					padding: 1rem;
-				}
-
-				.btn-primary {
-					font-size: 2rem;
-					background-color: $bg-primary;
-					border: 0;
-					font-weight: bold;
-				}
-			}
-		}
+	.content {
+		grid-template-columns: auto auto;
 	}
 
-	article[class*="sponsored-"] {
+	header {
+		padding: 0 1rem;
 
-		.story {
-			border: 1px solid $body-bg;
-			margin: 1rem 0;
-		}
-	}
-
-	article[class*="sponsored-"] h4,
-	article[class*="sponsored-"] p {
-		padding: 0 2rem;
-	}
-
-	.my-turn,
-	.culture {
-		@include section-spacing();
-
-		h2 {
-			@include h2-style();
+		h4 {
+			font-weight: bold;
+			font-size: 1.6rem;
 		}
 
 		p {
 			@include paragraph();
-			font-weight: bold;
-			color: gray;
-			padding: 1rem 0;
 		}
+	}
+}
 
-		h3 {
-			@include h3-style();
-		}
+.my-turn,
+.culture {
+	@include section-spacing();
+
+	h2 {
+		@include h2-style();
+	}
+
+	p {
+		@include paragraph();
+		font-weight: bold;
+		color: gray;
+		padding: 1rem 0;
+	}
+
+	h3 {
+		@include h3-style();
 	}
 }
 
@@ -296,7 +344,6 @@ $bg-color: #fff;
 	@include section-spacing();
 
 	.magazine-article {
-
 		h4 {
 			@include h4-style();
 			font-size: 1.6rem;
@@ -468,9 +515,9 @@ $bg-color: #fff;
 }
 
 @media only screen and (min-width: 1024px) {
-  .main {
-    max-width: 85%;
-  }
+	.main {
+		max-width: 85%;
+	}
 }
 
 // @media only screen and (min-width: 1024px) {
