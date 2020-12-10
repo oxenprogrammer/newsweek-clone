@@ -610,19 +610,19 @@ header {
 }
 
 /** media query for tablet (md) **/
-@media screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
 	.content {
 		grid-template-columns: 20% auto;
 		gap: 2rem;
 	}
 	.debate {
 		.verses {
-			left: 43rem;
+			left: 32rem;
 		}
 	}
-}
+} 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
 	.main {
 		max-width: 85%;
 	}
@@ -633,6 +633,6 @@ header {
 		}
 	}
 	.verses {
-		left: 20rem;
+		left: 10rem;
 	}
 }
