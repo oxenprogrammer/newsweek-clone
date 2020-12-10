@@ -90,6 +90,12 @@ $bg-color: #fff;
 	max-width: 100%;
 	font-size: 1.6rem;
 	padding: 1rem;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+.main::-webkit-scrollbar {
+	display: none;
 }
 
 .d-block {
@@ -100,10 +106,13 @@ $bg-color: #fff;
 	display: grid;
 }
 
-.top-story {
-	@include section-spacing();
+.top {
 	position: sticky;
 	top: 0;
+}
+
+.top-story {
+	@include section-spacing();
 	.top-story-h2 {
 		@include h2-style();
 	}
@@ -620,7 +629,7 @@ header {
 			left: 32rem;
 		}
 	}
-} 
+}
 
 @media only screen and (min-width: 992px) {
 	.main {
