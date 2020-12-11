@@ -96,16 +96,11 @@ $bg-color: #fff;
   max-width: 100%;
   font-size: 1.6rem;
   padding: 1rem;
-
-  // height: 100vh;
-  // overflow-y: scroll;
-  // -ms-overflow-style: none;
-  // scrollbar-width: none;
 }
 
-// .main::-webkit-scrollbar {
-// 	display: none;
-// }
+.main::-webkit-scrollbar {
+  display: none;
+}
 
 .d-block {
   display: block;
@@ -773,14 +768,5 @@ $bg-color: #fff;
       width: 550px;
       height: 70px;
     }
-  }
-
-  .top {
-    position: sticky;
-    top: 0;
-  }
-
-  .verses {
-    left: 10rem;
   }
 }
