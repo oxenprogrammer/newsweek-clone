@@ -1,29 +1,29 @@
 // global resets
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 ::before,
 ::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html,
 body {
-	font-size: 62.5%;
-	width: 100%;
-	height: 100%;
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 // Variables
@@ -39,589 +39,636 @@ $roboto-font: "Roboto Condensed", sans-serif;
 $bg-color: #fff;
 
 @mixin section-spacing {
-	margin: 1rem 0;
-	background-color: $bg-color;
-	padding: 1rem;
+  margin: 1rem 0;
+  background-color: $bg-color;
+  padding: 1rem;
 }
 
 @mixin h2-style {
-	font-family: $roboto-font;
-	line-height: 1.6rem;
-	font-weight: bold;
-	font-size: 2.4rem;
-	letter-spacing: normal;
-	color: #7e7d7d;
-	margin: 1rem 0;
+  font-family: $roboto-font;
+  line-height: 1.6rem;
+  font-weight: bold;
+  font-size: 2.4rem;
+  letter-spacing: normal;
+  color: #7e7d7d;
+  margin: 1rem 0;
 }
 
 @mixin h3-style {
-	color: $primary;
-	background-color: #e8e6e6;
-	width: max-content;
-	padding: 1rem;
-	font-weight: bolder;
-	z-index: 2;
-	position: relative;
-	top: -3.8rem;
-	text-align: center;
-	opacity: 0.9;
+  color: $primary;
+  background-color: #e8e6e6;
+  width: max-content;
+  padding: 1rem;
+  font-weight: bolder;
+  z-index: 2;
+  position: relative;
+  top: -3.8rem;
+  text-align: center;
+  opacity: 0.9;
 }
 
 @mixin h4-style {
-	color: #000;
-	font-size: 2.2rem;
-	font-weight: bolder;
+  color: #000;
+  font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 @mixin paragraph {
-	color: rgb(95, 93, 93);
-	font-size: 1.2rem;
-	font-weight: lighter;
+  color: rgb(95, 93, 93);
+  font-size: 1.2rem;
+  font-weight: lighter;
 }
 
 @mixin clearfix {
-	content: "";
-	display: table;
-	clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .main {
-	overflow-x: hidden;
+  overflow-x: hidden;
 	max-width: 100%;
 	font-size: 1.6rem;
 	padding: 1rem;
+
+	// height: 100vh;
+	// overflow-y: scroll;
+	// -ms-overflow-style: none;
+	// scrollbar-width: none;
+	
 }
 
-.main::-webkit-scrollbar {
-	display: none;
-}
+// .main::-webkit-scrollbar {
+// 	display: none;
+// }
 
 .d-block {
-	display: block;
+  display: block;
 }
 
 .d-grid {
-	display: grid;
-}
-
-.top-story {
-	@include section-spacing();
-	.top-story-h2 {
-		@include h2-style();
-	}
-
-	.caption {
-		@include h3-style();
-	}
-
-	h4 {
-		@include h4-style();
-	}
-
-	h4:hover {
-		text-decoration-color: $primary;
-		cursor: pointer;
-	}
-
-	.paragraph {
-		@include paragraph();
-	}
-
-	.top-story-sub {
-		grid-template-columns: auto auto;
-
-		header {
-			padding: 0 1rem;
-
-			img {
-				width: 100%;
-				height: auto;
-			}
-
-			h5 {
-				font-size: 1.6rem;
-				font-weight: bold;
-			}
-		}
-	}
+  display: grid;
 }
 
 .featured-story {
-	@include section-spacing();
+  @include section-spacing();
 
-	.top-story-h2 {
-		@include h2-style();
-	}
+  .top-story-h2 {
+    @include h2-style();
+  }
 
-	.caption {
-		@include h3-style();
-	}
+  .caption {
+    @include h3-style();
+  }
 
-	h4 {
-		@include h4-style();
-	}
+  h4 {
+    @include h4-style();
+  }
 
-	.paragraph {
-		@include paragraph();
-	}
-}
-
-.sponsored-left {
-	// @include section-spacing();
-	.story {
-		border: 1px solid $body-bg;
-		margin: 1rem 0;
-	}
-	.top-story-h2 {
-		@include h2-style();
-	}
-
-	.caption {
-		@include h3-style();
-	}
-
-	h4 {
-		@include h4-style();
-		padding: 0 2rem;
-	}
-
-	.paragraph {
-		@include paragraph();
-		padding: 0 2rem;
-	}
-}
-
-.sponsored-right {
-	// @include section-spacing();
-	.story {
-		border: 1px solid $body-bg;
-		margin: 1rem 0;
-	}
-	.top-story-h2 {
-		@include h2-style();
-	}
-
-	.caption {
-		@include h3-style();
-	}
-
-	h4 {
-		@include h4-style();
-		padding: 0 2rem;
-	}
-
-	.paragraph {
-		@include paragraph();
-		padding: 0 2rem;
-	}
-
-	.form {
-		background-color: #f4f5f6;
-		padding: 2rem;
-
-		.form-icon {
-			flex: none;
-			flex-grow: 0;
-			flex-shrink: 0;
-			flex-basis: auto;
-			display: block;
-			width: 29px;
-			height: 28px;
-			background: url(https://g.newsweek.com/www/images/logo-n1.svg)
-				center/contain no-repeat #f72210;
-			background-image: url(https://g.newsweek.com/www/images/logo-n1.svg);
-			background-position-x: center;
-			background-position-y: center;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-attachment: initial;
-			background-origin: initial;
-			background-clip: initial;
-			background-color: rgb(247, 34, 16);
-			margin-right: 10px;
-		}
-
-		form {
-			input,
-			button {
-				padding: 1rem;
-			}
-
-			.btn-primary {
-				font-size: 2rem;
-				background-color: $bg-primary;
-				border: 0;
-				font-weight: bold;
-			}
-		}
-	}
-}
-
-.debate {
-	@include section-spacing();
-	header {
-		h4 {
-			font-weight: bold;
-			font-size: 1.6rem;
-		}
-	}
-
-	.verses {
-		color: $body-bg;
-		font-size: 2rem;
-		font-weight: bold;
-		text-align: center;
-		background-color: $body-color;
-		width: 5rem;
-		padding: 1rem;
-		border-radius: 100%;
-		position: relative;
-		top: -3.5rem;
-		left: 14rem;
-	}
-	.content-1 {
-		header {
-			position: relative;
-			left: 4rem;
-		}
-	}
-	.content-2 {
-		position: relative;
-		top: -3rem;
-	}
-}
-
-.opinion {
-	// @include section-spacing();
-
-	.content {
-		grid-template-columns: auto auto;
-
-		header {
-			padding: 0 1rem;
-
-			h4 {
-				font-weight: bold;
-				font-size: 1.6rem;
-			}
-		}
-	}
-}
-
-.more {
-	// @include section-spacing();
-
-	.content {
-		grid-template-columns: auto auto;
-	}
-
-	header {
-		padding: 0 1rem;
-
-		h4 {
-			font-weight: bold;
-			font-size: 1.6rem;
-		}
-
-		p {
-			@include paragraph();
-		}
-	}
+  .paragraph {
+    @include paragraph();
+  }
 }
 
 .my-turn,
 .culture {
-	// @include section-spacing();
+  // @include section-spacing();
 
-	h2 {
-		@include h2-style();
-	}
+  h2 {
+    @include h2-style();
+  }
 
-	p {
-		@include paragraph();
-		font-weight: bold;
-		color: gray;
-		padding: 1rem 0;
-	}
+  p {
+    @include paragraph();
 
-	h3 {
-		@include h3-style();
-	}
-}
+    font-weight: bold;
+    color: gray;
+    padding: 1rem 0;
+  }
 
-.magazine {
-	@include section-spacing();
-
-	.magazine-article {
-		h4 {
-			@include h4-style();
-			font-size: 1.6rem;
-		}
-
-		h3 {
-			@include h3-style();
-		}
-
-		.feature {
-			font-size: 2rem;
-			border: 0;
-			font-weight: bold;
-		}
-
-		.caption {
-			width: max-content;
-			padding: 1rem 1rem 1rem 0;
-			font-weight: bold;
-			color: $bg-primary;
-
-			span {
-				background-color: $bg-primary;
-				color: #fff;
-				padding: 0.5rem;
-			}
-		}
-	}
+  h3 {
+    @include h3-style();
+  }
 }
 
 .editor-pick {
-	@include section-spacing();
+  @include section-spacing();
 
-	h2 {
-		@include h2-style();
-	}
+  h2 {
+    @include h2-style();
+  }
 
-	h3 {
-		@include h3-style();
-	}
+  h3 {
+    @include h3-style();
+  }
 
-	h4 {
-		@include h4-style();
-	}
+  h4 {
+    @include h4-style();
+  }
 
-	.paragraph {
-		@include paragraph();
-	}
+  .paragraph {
+    @include paragraph();
+  }
+}
+
+.more {
+  // @include section-spacing();
+
+  .content {
+    grid-template-columns: auto auto;
+  }
+
+  header {
+    padding: 0 1rem;
+
+    h4 {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    p {
+      @include paragraph();
+    }
+  }
+}
+
+.top-story {
+  @include section-spacing();
+
+  position: sticky;
+  top: 0;
+
+  .top-story-h2 {
+    @include h2-style();
+  }
+
+  .caption {
+    @include h3-style();
+  }
+
+  h4 {
+    @include h4-style();
+  }
+
+  h4:hover {
+    text-decoration-color: $primary;
+    cursor: pointer;
+  }
+
+  .paragraph {
+    @include paragraph();
+  }
+
+  .top-story-sub {
+    grid-template-columns: auto auto;
+
+    header {
+      padding: 0 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h5 {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+.debate {
+  @include section-spacing();
+
+  header {
+    h4 {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+  }
+
+  .verses {
+    color: $body-bg;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: $body-color;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 100%;
+    position: relative;
+    top: -3.5rem;
+    left: 14rem;
+  }
+
+  .content-1 {
+    header {
+      position: relative;
+      left: 4rem;
+    }
+  }
+
+  .content-2 {
+    position: relative;
+    top: -3rem;
+  }
+}
+
+.sponsored-left {
+  // @include section-spacing();
+  .story {
+    border: 1px solid $body-bg;
+    margin: 1rem 0;
+  }
+
+  .top-story-h2 {
+    @include h2-style();
+  }
+
+  .caption {
+    @include h3-style();
+  }
+
+  h4 {
+    @include h4-style();
+
+    padding: 0 2rem;
+  }
+
+  .paragraph {
+    @include paragraph();
+
+    padding: 0 2rem;
+  }
+}
+
+.sponsored-right {
+  // @include section-spacing();
+  .story {
+    border: 1px solid $body-bg;
+    margin: 1rem 0;
+  }
+
+  .top-story-h2 {
+    @include h2-style();
+  }
+
+  .caption {
+    @include h3-style();
+  }
+
+  h4 {
+    @include h4-style();
+
+    padding: 0 2rem;
+  }
+
+  .paragraph {
+    @include paragraph();
+
+    padding: 0 2rem;
+  }
+
+  .form {
+    background-color: #f4f5f6;
+    padding: 2rem;
+
+    .form-icon {
+      flex: none;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      display: block;
+      width: 29px;
+      height: 28px;
+      background: url("https://g.newsweek.com/www/images/logo-n1.svg")
+        center/contain no-repeat #f72210;
+      // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+      background-position-x: center;
+      background-position-y: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;
+      background-color: rgb(247, 34, 16);
+      margin-right: 10px;
+    }
+
+    form {
+      input,
+      button {
+        padding: 1rem;
+      }
+
+      .btn-primary {
+        font-size: 2rem;
+        background-color: $bg-primary;
+        border: 0;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.magazine {
+  @include section-spacing();
+
+  .magazine-article {
+    h4 {
+      @include h4-style();
+
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      @include h3-style();
+    }
+
+    .feature {
+      font-size: 2rem;
+      border: 0;
+      font-weight: bold;
+    }
+
+    .caption {
+      width: max-content;
+      padding: 1rem 1rem 1rem 0;
+      font-weight: bold;
+      color: $bg-primary;
+
+      span {
+        background-color: $bg-primary;
+        color: #fff;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+.opinion {
+  // @include section-spacing();
+
+  .content {
+    grid-template-columns: auto auto;
+
+    header {
+      padding: 0 1rem;
+
+      h4 {
+        font-weight: bold;
+        font-size: 1.6rem;
+      }
+    }
+  }
 }
 
 .contact {
-	padding: 4rem;
-	.subscribe {
-		h2 {
-			color: $primary;
-			font-weight: bolder;
-			font-size: 1.8rem;
-		}
-		.subscribe-content {
-			background-color: #f4f5f6;
-			padding: 4rem;
-			.subscribe-text {
-				h4 {
-					font-weight: bolder;
-					color: $body-color;
-					font-size: 3rem;
-				}
-				.btn-subscribe {
-					background-color: $bg-primary !important;
-					padding: 0.5rem 1rem;
-					color: #fff;
-					font-size: 1.5rem;
-					font-weight: bolder;
-				}
-			}
-		}
-	}
-	.newsletter {
-		h2 {
-			color: $primary;
-			font-weight: bolder;
-			font-size: 1.8rem;
-		}
-		.newsletter-content {
-			border: 1px solid $body-bg;
-			img {
-				height: 320px;
-			}
-			.letter-text {
-				margin: 3rem;
-				h4 {
-					font-weight: bolder;
-					color: $body-color;
-					font-size: 3rem;
-					overflow-wrap: break-word;
-				}
-				p {
-					overflow-wrap: break-word;
-				}
+  padding: 4rem;
 
-				form input,
-				form button {
-					width: 16rem;
-				}
-				form button {
-					background-color: $bg-primary !important;
-					padding: 0.5rem 1rem;
-					color: #fff;
-					font-size: 1.5rem;
-					font-weight: bolder;
-				}
-			}
-		}
-	}
+  .subscribe {
+    h2 {
+      color: $primary;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+
+    .subscribe-content {
+      background-color: #f4f5f6;
+      padding: 4rem;
+
+      .subscribe-text {
+        h4 {
+          font-weight: bolder;
+          color: $body-color;
+          font-size: 3rem;
+        }
+
+        .btn-subscribe {
+          background-color: $bg-primary !important;
+          padding: 0.5rem 1rem;
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    h2 {
+      color: $primary;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+
+    .newsletter-content {
+      border: 1px solid $body-bg;
+
+      img {
+        height: 320px;
+      }
+
+      .letter-text {
+        margin: 3rem;
+
+        h4 {
+          font-weight: bolder;
+          color: $body-color;
+          font-size: 3rem;
+          overflow-wrap: break-word;
+        }
+
+        p {
+          overflow-wrap: break-word;
+        }
+
+        form input,
+        form button {
+          width: 16rem;
+        }
+
+        form button {
+          background-color: $bg-primary !important;
+          padding: 0.5rem 1rem;
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
 }
 
 .footer-left {
-	.p-footer {
-		position: relative;
-		top: 2rem;
-	}
+  .p-footer {
+    position: relative;
+    top: 2rem;
+  }
 }
 
 .footer-right {
-	position: relative;
-	top: 1rem;
-	.fa {
-		padding: 0.5rem;
-		font-size: 2.5rem;
-		color: rgb(39, 37, 37);
-	}
+  position: relative;
+  top: 1rem;
+
+  .fa {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    color: rgb(39, 37, 37);
+  }
 }
 
 .footer-bottom-top a:not(:first-child)::before,
 .footer-bottom-last a:not(:first-child)::before {
-	content: " |  ";
-	color: gray;
+  content: " |  ";
+  color: gray;
 }
 
 .footer-bottom-top a,
 .footer-bottom-last a {
-	color: gray;
-	padding: 0 0.5rem;
-	text-decoration: none;
+  color: gray;
+  padding: 0 0.5rem;
+  text-decoration: none;
 }
 
 .footer-bottom-last a {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 .footer-bottom-top a:hover,
 .footer-bottom-last a:hover {
-	color: #000;
+  color: #000;
 }
 
 // Nav Menu
 // header
 .nav-menu {
-	background: $bg-primary;
-}
+  background: $bg-primary;
 
-header {
-	nav {
-		font-size: 2rem;
-		color: rgb(235, 228, 228);
-		position: fixed;
-		svg {
-			fill: white;
-			width: 132px;
-			height: 20px;
-		}
-		.sub {
-			background: yellow;
-			border-radius: 15px;
-			font-weight: bolder;
-			border: none;
-		}
-		.navbar-toggler {
-			color: rgb(235, 228, 228) !important;
-		}
-		.login {
-			background: none;
-			font-weight: 900;
-			font-size: 2rem;
-		}
-		.temp {
-			color: #fff;
-			position: relative;
-			margin-left: 30px;
-			margin-right: 30px;
-			h3 {
-				margin-top: 20px;
-			}
-		}
-	}
-	.nav-second {
-		font-weight: bolder;
-		height: 40px;
-		margin-top: 20px;
-		overflow: hidden;
-		.border-between {
-			height: 25px;
-			border-right: 1px solid black;
-			margin-top: 5px;
-			// margin-right: 4px;
-		}
-		.shift {
-			margin-left: -50px;
-		}
-		.shift-two {
-			margin-left: -40px;
-			margin-right: 10px;
-		}
-		.shift-three {
-			margin-left: 10px;
-		}
-		div {
-			a {
-				color: black;
-				text-decoration: none;
-				font-size: 2rem;
-			}
-			a:hover {
-				color: red;
-				transition: 0.4s all ease;
-			}
-		}
-		input {
-			padding: 0px;
-			width: 5px;
-			border: none;
-		}
-	}
-	.nav-bottom {
-		font-weight: bolder;
-		height: 40px;
-		margin-top: 20px;
-		.other-link {
-			color: grey;
-			text-decoration: none;
-			font-size: 1.5rem;
-		}
-		.other-link:hover {
-			color: red;
-			transition: 0.4s all ease;
-		}
-		#black-link {
-			color: black !important;
-			text-decoration: none;
-			font-size: 1.5rem;
-			:hover {
-				color: red;
-				transition: 0.4s all ease;
-			}
-		}
-	}
+  nav {
+    font-size: 2rem;
+    color: rgb(235, 228, 228);
+    position: fixed;
+
+    svg {
+      fill: white;
+      width: 132px;
+      height: 20px;
+    }
+
+    .sub {
+      background: yellow;
+      border-radius: 15px;
+      font-weight: bolder;
+      border: none;
+    }
+
+    .navbar-toggler {
+      color: rgb(235, 228, 228) !important;
+    }
+
+    .login {
+      background: none;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+
+    .temp {
+      color: #fff;
+      position: relative;
+      margin-left: 30px;
+      margin-right: 30px;
+
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .nav-second {
+    font-weight: bolder;
+    height: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+
+    .border-between {
+      height: 25px;
+      border-right: 1px solid black;
+      margin-top: 5px;
+      // margin-right: 4px;
+    }
+
+    .shift {
+      margin-left: -50px;
+    }
+
+    .shift-two {
+      margin-left: -40px;
+      margin-right: 10px;
+    }
+
+    .shift-three {
+      margin-left: 10px;
+    }
+
+    div {
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 2rem;
+
+        &:hover {
+          color: red;
+          transition: 0.4s all ease;
+        }
+      }
+    }
+  }
+
+  .nav-bottom {
+    font-weight: bolder;
+    height: 40px;
+    margin-top: 20px;
+
+    .other-link {
+      color: grey;
+      text-decoration: none;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: red;
+        transition: 0.4s all ease;
+      }
+    }
+
+    #black-link {
+      color: black !important;
+      text-decoration: none;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: red;
+        transition: 0.4s all ease;
+      }
+    }
+  }
 }
 
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
-	.content {
-		grid-template-columns: 20% auto;
-		gap: 2rem;
-	}
-	.debate {
-		.verses {
-			left: 32rem;
-		}
-	}
+  .content {
+    grid-template-columns: 20% auto;
+    gap: 2rem;
+  }
+
+  .debate {
+    .verses {
+      left: 32rem;
+    }
+  }
 }
 
 @media only screen and (min-width: 992px) {
