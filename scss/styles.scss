@@ -91,6 +91,120 @@ $bg-color: #fff;
   clear: both;
 }
 
+// header
+.nav-menu {
+  background: $bg-primary;
+}
+
+nav {
+  font-size: 2rem;
+  color: rgb(235, 228, 228);
+  position: fixed;
+
+  svg {
+    fill: white;
+    width: 132px;
+    height: 20px;
+  }
+
+  .sub {
+    background: yellow;
+    border-radius: 15px;
+    font-weight: bolder;
+    border: none;
+  }
+
+  .navbar-toggler {
+    color: rgb(235, 228, 228) !important;
+  }
+
+  .login {
+    background: none;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  .temp {
+    color: #fff;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    h3 {
+      margin-top: 20px;
+    }
+  }
+}
+
+.nav-second {
+  font-weight: bolder;
+  height: 40px;
+  margin-top: 20px;
+  overflow: hidden;
+
+  .border-between {
+    height: 25px;
+    border-right: 1px solid black;
+    margin-top: 5px;
+    // margin-right: 4px;
+  }
+
+  .shift {
+    margin-left: -50px;
+  }
+
+  .shift-two {
+    margin-left: -40px;
+    margin-right: 10px;
+  }
+
+  .shift-three {
+    margin-left: 10px;
+  }
+
+  div {
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 2rem;
+
+      &:hover {
+        color: red;
+        transition: 0.4s all ease;
+      }
+    }
+  }
+}
+
+.nav-bottom {
+  font-weight: bolder;
+  height: 40px;
+  margin-top: 20px;
+
+  .other-link {
+    color: grey;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: red;
+      transition: 0.4s all ease;
+    }
+  }
+
+  #black-link {
+    color: black !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: red;
+      transition: 0.4s all ease;
+    }
+  }
+}
+//End of header
+
 .main {
   overflow-x: hidden;
   max-width: 100%;
@@ -109,6 +223,61 @@ $bg-color: #fff;
 .d-grid {
   display: grid;
 }
+
+// top story
+
+.top-story {
+  @include section-spacing();
+
+  h4 {
+    @include h4-style();
+  }
+
+  h4:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+    text-decoration-color: $primary;
+  }
+
+  .paragraph {
+    @include paragraph();
+
+    padding: 0 2rem;
+  }
+
+  .top-story-h2 {
+    @include h2-style();
+  }
+
+  .caption {
+    @include h3-style();
+  }
+
+  // h4:hover {
+  //   text-decoration-color: $primary;
+  //   cursor: pointer;
+  // }
+
+  .top-story-sub {
+    grid-template-columns: auto auto;
+
+    header {
+      padding: 0 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h5 {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// End of top story
 
 .featured-story {
   @include section-spacing();
@@ -205,56 +374,6 @@ $bg-color: #fff;
     h4 {
       font-weight: bold;
       font-size: 1.6rem;
-    }
-  }
-}
-
-.top-story {
-  @include section-spacing();
-
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
-  .paragraph {
-    @include paragraph();
-
-    padding: 0 2rem;
-  }
-
-  .top-story-h2 {
-    @include h2-style();
-  }
-
-  .caption {
-    @include h3-style();
-  }
-
-  h4 {
-    @include h4-style();
-  }
-
-  h4:hover {
-    text-decoration-color: $primary;
-    cursor: pointer;
-  }
-
-  .top-story-sub {
-    grid-template-columns: auto auto;
-
-    header {
-      padding: 0 1rem;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      h5 {
-        font-size: 1.6rem;
-        font-weight: bold;
-      }
     }
   }
 }
@@ -380,8 +499,7 @@ $bg-color: #fff;
       display: block;
       width: 29px;
       height: 28px;
-      background:
-        url("https://g.newsweek.com/www/images/logo-n1.svg")
+      background: url("https://g.newsweek.com/www/images/logo-n1.svg")
         center/contain no-repeat #f72210;
       // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
       background-position-x: center;
@@ -455,6 +573,7 @@ $bg-color: #fff;
   }
 }
 
+<<<<<<< HEAD
 .icon-text {
   font-weight: bolder;
 
@@ -467,6 +586,12 @@ $bg-color: #fff;
     width: 2.9rem;
     height: 2.8rem;
 	}
+=======
+.news-image {
+  background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+  color: $primary;
+  background-size: contain;
+>>>>>>> fix/friday
 }
 
 .opinion {
@@ -635,117 +760,6 @@ $bg-color: #fff;
 
 // Nav Menu
 // header
-.nav-menu {
-  background: $bg-primary;
-
-  nav {
-    font-size: 2rem;
-    color: rgb(235, 228, 228);
-    position: fixed;
-
-    svg {
-      fill: white;
-      width: 132px;
-      height: 20px;
-    }
-
-    .sub {
-      background: yellow;
-      border-radius: 15px;
-      font-weight: bolder;
-      border: none;
-    }
-
-    .navbar-toggler {
-      color: rgb(235, 228, 228) !important;
-    }
-
-    .login {
-      background: none;
-      font-weight: 900;
-      font-size: 2rem;
-    }
-
-    .temp {
-      color: #fff;
-      position: relative;
-      margin-left: 30px;
-      margin-right: 30px;
-
-      h3 {
-        margin-top: 20px;
-      }
-    }
-  }
-
-  .nav-second {
-    font-weight: bolder;
-    height: 40px;
-    margin-top: 20px;
-    overflow: hidden;
-
-    .border-between {
-      height: 25px;
-      border-right: 1px solid black;
-      margin-top: 5px;
-      // margin-right: 4px;
-    }
-
-    .shift {
-      margin-left: -50px;
-    }
-
-    .shift-two {
-      margin-left: -40px;
-      margin-right: 10px;
-    }
-
-    .shift-three {
-      margin-left: 10px;
-    }
-
-    div {
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 2rem;
-
-        &:hover {
-          color: red;
-          transition: 0.4s all ease;
-        }
-      }
-    }
-  }
-
-  .nav-bottom {
-    font-weight: bolder;
-    height: 40px;
-    margin-top: 20px;
-
-    .other-link {
-      color: grey;
-      text-decoration: none;
-      font-size: 1.5rem;
-
-      &:hover {
-        color: red;
-        transition: 0.4s all ease;
-      }
-    }
-
-    #black-link {
-      color: black !important;
-      text-decoration: none;
-      font-size: 1.5rem;
-
-      &:hover {
-        color: red;
-        transition: 0.4s all ease;
-      }
-    }
-  }
-}
 
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
@@ -772,3 +786,5 @@ $bg-color: #fff;
     }
   }
 }
+
+// header
