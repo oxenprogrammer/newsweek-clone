@@ -74,9 +74,9 @@ $bg-color: #fff;
 }
 
 @mixin h5-style {
-	color: #000;
-	font-size: 1.4rem;
-	font-weight: bold;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 @mixin paragraph {
@@ -91,22 +91,130 @@ $bg-color: #fff;
   clear: both;
 }
 
-.main {
-  overflow-x: hidden;
-	max-width: 100%;
-	font-size: 1.6rem;
-	padding: 1rem;
-
-	// height: 100vh;
-	// overflow-y: scroll;
-	// -ms-overflow-style: none;
-	// scrollbar-width: none;
-	
+// header
+.nav-menu {
+  background: $bg-primary;
 }
 
-// .main::-webkit-scrollbar {
-// 	display: none;
-// }
+nav {
+  font-size: 2rem;
+  color: rgb(235, 228, 228);
+  position: fixed;
+
+  svg {
+    fill: white;
+    width: 132px;
+    height: 20px;
+  }
+
+  .sub {
+    background: yellow;
+    border-radius: 15px;
+    font-weight: bolder;
+    border: none;
+  }
+
+  .navbar-toggler {
+    color: rgb(235, 228, 228) !important;
+  }
+
+  .login {
+    background: none;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+
+  .temp {
+    color: #fff;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+
+    h3 {
+      margin-top: 20px;
+    }
+  }
+}
+
+.nav-second {
+  font-weight: bolder;
+  height: 40px;
+  margin-top: 20px;
+  overflow: hidden;
+
+  .border-between {
+    height: 25px;
+    border-right: 1px solid black;
+    margin-top: 5px;
+    // margin-right: 4px;
+  }
+
+  .shift {
+    margin-left: -50px;
+  }
+
+  .shift-two {
+    margin-left: -40px;
+    margin-right: 10px;
+  }
+
+  .shift-three {
+    margin-left: 10px;
+  }
+
+  div {
+    a {
+      color: black;
+      text-decoration: none;
+      font-size: 2rem;
+
+      &:hover {
+        color: red;
+        transition: 0.4s all ease;
+      }
+    }
+  }
+}
+
+.nav-bottom {
+  font-weight: bolder;
+  height: 40px;
+  margin-top: 20px;
+
+  .other-link {
+    color: grey;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: red;
+      transition: 0.4s all ease;
+    }
+  }
+
+  #black-link {
+    color: black !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: red;
+      transition: 0.4s all ease;
+    }
+  }
+}
+//End of header
+
+.main {
+  overflow-x: hidden;
+  max-width: 100%;
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
 
 .d-block {
   display: block;
@@ -115,6 +223,61 @@ $bg-color: #fff;
 .d-grid {
   display: grid;
 }
+
+// top story
+
+.top-story {
+  @include section-spacing();
+
+  h4 {
+    @include h4-style();
+  }
+
+  h4:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+    text-decoration-color: $primary;
+  }
+
+  .paragraph {
+    @include paragraph();
+
+    padding: 0 2rem;
+  }
+
+  .top-story-h2 {
+    @include h2-style();
+  }
+
+  .caption {
+    @include h3-style();
+  }
+
+  // h4:hover {
+  //   text-decoration-color: $primary;
+  //   cursor: pointer;
+  // }
+
+  .top-story-sub {
+    grid-template-columns: auto auto;
+
+    header {
+      padding: 0 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h5 {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// End of top story
 
 .featured-story {
   @include section-spacing();
@@ -127,15 +290,15 @@ $bg-color: #fff;
     @include h3-style();
   }
 
-	h4:hover {
-		text-decoration: underline $primary;
-		cursor: pointer;
-	}
-  
+  h4:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+  }
+
   h4 {
     @include h4-style();
   }
-  
+
   .paragraph {
     @include paragraph();
   }
@@ -177,15 +340,14 @@ $bg-color: #fff;
     @include h4-style();
   }
 
-	h4:hover {
-		text-decoration: underline $primary;
-		cursor: pointer;
-	}
+  h4:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+  }
 
-	.paragraph {
-		@include paragraph();
-	}
-  
+  .paragraph {
+    @include paragraph();
+  }
 }
 
 .more {
@@ -197,6 +359,7 @@ $bg-color: #fff;
 
   header {
     padding: 0 1rem;
+
     h4:hover {
       text-decoration: underline $primary;
       cursor: pointer;
@@ -204,62 +367,16 @@ $bg-color: #fff;
 
     .paragraph {
       @include paragraph();
+
       padding: 0 2rem;
     }
-    
-     h4 {
+
+    h4 {
       font-weight: bold;
       font-size: 1.6rem;
     }
+  }
 }
-
-.top-story {
-  @include section-spacing();
-
-	h4:hover {
-		text-decoration: underline $primary;
-		cursor: pointer;
-	}
-
-	.paragraph {
-		@include paragraph();
-		padding: 0 2rem;
-	}
-  
-  .top-story-h2 {
-    @include h2-style();
-  }
-
-  .caption {
-    @include h3-style();
-  }
-
-  h4 {
-    @include h4-style();
-  }
-
-  h4:hover {
-    text-decoration-color: $primary;
-    cursor: pointer;
-  }
-
-  .top-story-sub {
-    grid-template-columns: auto auto;
-
-    header {
-      padding: 0 1rem;
-
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      h5 {
-        font-size: 1.6rem;
-        font-weight: bold;
-      }
-    }
-  }
 
 .debate {
   @include section-spacing();
@@ -282,7 +399,7 @@ $bg-color: #fff;
     border-radius: 100%;
     position: relative;
     top: -3.5rem;
-    left: 14rem;
+    left: 45%;
   }
 
   .content-1 {
@@ -304,15 +421,15 @@ $bg-color: #fff;
     border: 1px solid $body-bg;
     margin: 1rem 0;
   }
-  
+
   .top-story-h2 {
     @include h2-style();
   }
-  
+
   h4:hover {
-			text-decoration: underline $primary;
-			cursor: pointer;
-		}
+    text-decoration: underline $primary;
+    cursor: pointer;
+  }
 
   p {
     @include paragraph();
@@ -328,14 +445,14 @@ $bg-color: #fff;
     padding: 0 2rem;
   }
 
-	p:hover {
-		cursor: pointer;
-	}
+  p:hover {
+    cursor: pointer;
+  }
 
-	h3 {
-		@include h3-style();
-	}
-  
+  h3 {
+    @include h3-style();
+  }
+
   .paragraph {
     @include paragraph();
 
@@ -370,65 +487,72 @@ $bg-color: #fff;
     padding: 0 2rem;
   }
 
-  .form {
-    background-color: #f4f5f6;
-    padding: 2rem;
-
-    .form-icon {
-      flex: none;
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: auto;
-      display: block;
-      width: 29px;
-      height: 28px;
-      background: url("https://g.newsweek.com/www/images/logo-n1.svg")
-        center/contain no-repeat #f72210;
-      // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
-      background-position-x: center;
-      background-position-y: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-attachment: initial;
-      background-origin: initial;
-      background-clip: initial;
-      background-color: rgb(247, 34, 16);
-      margin-right: 10px;
-    }
-
-    form {
-      input,
-      button {
-        padding: 1rem;
-      }
-
-      .btn-primary {
-        font-size: 2rem;
-        background-color: $bg-primary;
-        border: 0;
-        font-weight: bold;
-      }
-    }
 }
 
+
+.form {
+  background-color: #f4f5f6;
+  padding: 2rem;
+
+  .form-icon {
+    flex: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: block;
+    width: 29px;
+    height: 28px;
+    background: url("https://g.newsweek.com/www/images/logo-n1.svg")
+      center/contain no-repeat #f72210;
+    // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(247, 34, 16);
+    margin-right: 10px;
+  }
+}
+
+form {
+  input,
+  button {
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 2rem;
+    background-color: $bg-primary;
+    border: 0;
+    font-weight: bold;
+  }
+}
+
+.see-all {
+  background: lightgray;
+  margin-bottom: 0;
+}
 .magazine {
   @include section-spacing();
 
   .magazine-article {
     h4 {
       @include h4-style();
+
       font-size: 1.6rem;
 
-		h4:hover {
-			text-decoration: underline $primary;
-			cursor: pointer;
-		}
+      h4:hover {
+        text-decoration: underline $primary;
+        cursor: pointer;
+      }
 
-		h3 {
-			@include h3-style();
-		}
-
-  }
+      h3 {
+        @include h3-style();
+      }
+    }
 
     h3 {
       @include h3-style();
@@ -455,50 +579,80 @@ $bg-color: #fff;
   }
 }
 
-.opinion {
-  // @include section-spacing();
+.icon-text {
+  font-weight: bolder;
 
-  .content {
-    grid-template-columns: auto auto;
-
-	h4:hover {
-		text-decoration: underline $primary;
-		cursor: pointer;
-	}
-
-	.paragraph {
-		@include paragraph();
+  .news-image {
+    background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+    display: block;
+    background-color: $primary;
+    background-size: contain;
+    margin-right: 0.8rem;
+    width: 2.9rem;
+    height: 2.8rem;
 	}
 }
 
+.opinion {
+  // @include section-spacing();
+  .opinion-text {
+    text-align: left;
+    // border: 1px solid black
+  }
+  .content {
+    grid-template-columns: 10% 85%;
+    grid-gap: 5%;
+  }
+
+  h4:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+  }
+
+  .paragraph {
+    @include paragraph();
+  }
+}
+
 .sports {
-	@include section-spacing();
+  @include section-spacing();
 
-	h2 {
-		@include h2-style();
-	}
+  h2 {
+    @include h2-style();
 
-	h3 {
-		@include h3-style();
-	}
+    color: $primary;
+  }
 
-	h4 {
-		@include h4-style();
-	}
+  h3 {
+    @include h3-style();
+  }
 
-	h4:hover,
-	h5:hover {
-		text-decoration: underline $primary;
-		cursor: pointer;
-	}
+  h4 {
+    @include h4-style();
+  }
 
-	h5 {
-		@include h5-style();
-	}
+  h4:hover,
+  h5:hover {
+    text-decoration: underline $primary;
+    cursor: pointer;
+  }
 
-	.paragraph {
-		@include paragraph();
-	}
+  h5 {
+    @include h5-style();
+  }
+
+  .paragraph {
+    @include paragraph();
+  }
+  .fixed-height {
+    height: 25rem;
+  }
+
+  .fixed-image {
+    min-width: 13rem;
+    max-width: 13rem;
+    height: 13rem;
+  }
 }
 
 .contact {
@@ -519,7 +673,7 @@ $bg-color: #fff;
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
         }
 
         .btn-subscribe {
@@ -543,17 +697,26 @@ $bg-color: #fff;
     .newsletter-content {
       border: 1px solid $body-bg;
 
-      img {
-        height: 320px;
+      // img {
+      //   height: 320px;
+      // }
+
+      .my-image {
+        background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        text-align: center;
+        height: 305px;
       }
 
       .letter-text {
-        margin: 3rem;
+        margin: 2rem 5.5rem 2rem 1rem;
 
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
           overflow-wrap: break-word;
         }
 
@@ -563,15 +726,16 @@ $bg-color: #fff;
 
         form input,
         form button {
-          width: 16rem;
+          width: 12rem;
+          height: 4rem;
+          padding: 0.5rem;
         }
 
         form button {
           background-color: $bg-primary !important;
-          padding: 0.5rem 1rem;
           color: #fff;
-          font-size: 1.5rem;
-          font-weight: bolder;
+          font-size: 1.2rem;
+          font-weight: bold;
         }
       }
     }
@@ -579,15 +743,24 @@ $bg-color: #fff;
 }
 
 .footer-left {
+  // border: 1px solid black;
   .p-footer {
     position: relative;
-    top: 2rem;
+    // margin-left: -10px;
+    font-size: 12px;
+    // top: 2rem;
+  }
+  svg {
+    fill: $primary;
+    width: 200px;
+    height: 50px;
+    // border: 1px solid black;
   }
 }
 
 .footer-right {
   position: relative;
-  top: 1rem;
+  // top: 1rem;
 
   .fa {
     padding: 0.5rem;
@@ -620,153 +793,45 @@ $bg-color: #fff;
 
 // Nav Menu
 // header
-.nav-menu {
-  background: $bg-primary;
-
-  nav {
-    font-size: 2rem;
-    color: rgb(235, 228, 228);
-    position: fixed;
-
-    svg {
-      fill: white;
-      width: 132px;
-      height: 20px;
-    }
-
-    .sub {
-      background: yellow;
-      border-radius: 15px;
-      font-weight: bolder;
-      border: none;
-    }
-
-    .navbar-toggler {
-      color: rgb(235, 228, 228) !important;
-    }
-
-    .login {
-      background: none;
-      font-weight: 900;
-      font-size: 2rem;
-    }
-
-    .temp {
-      color: #fff;
-      position: relative;
-      margin-left: 30px;
-      margin-right: 30px;
-
-      h3 {
-        margin-top: 20px;
-      }
-    }
-  }
-
-  .nav-second {
-    font-weight: bolder;
-    height: 40px;
-    margin-top: 20px;
-    overflow: hidden;
-
-    .border-between {
-      height: 25px;
-      border-right: 1px solid black;
-      margin-top: 5px;
-      // margin-right: 4px;
-    }
-
-    .shift {
-      margin-left: -50px;
-    }
-
-    .shift-two {
-      margin-left: -40px;
-      margin-right: 10px;
-    }
-
-    .shift-three {
-      margin-left: 10px;
-    }
-
-    div {
-      a {
-        color: black;
-        text-decoration: none;
-        font-size: 2rem;
-
-        &:hover {
-          color: red;
-          transition: 0.4s all ease;
-        }
-      }
-    }
-  }
-
-  .nav-bottom {
-    font-weight: bolder;
-    height: 40px;
-    margin-top: 20px;
-
-    .other-link {
-      color: grey;
-      text-decoration: none;
-      font-size: 1.5rem;
-
-      &:hover {
-        color: red;
-        transition: 0.4s all ease;
-      }
-    }
-
-    #black-link {
-      color: black !important;
-      text-decoration: none;
-      font-size: 1.5rem;
-
-      &:hover {
-        color: red;
-        transition: 0.4s all ease;
-      }
-    }
-  }
-}
 
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
-	.content {
-		grid-template-columns: 20% auto;
-		gap: 2rem;
-	}
-	.debate {
-		.verses {
-			left: 32rem;
-		}
-	}
+  .content {
+    grid-template-columns: 20% auto;
+    gap: 2rem;
+  }
 }
 
+/** large screen ***/
 @media only screen and (min-width: 992px) {
-	.main {
-		max-width: 85%;
-		height: 100vh;
-		overflow-y: scroll;
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-  }
-  
-	.navbar-brand {
-		svg {
-			width: 550px;
-			height: 70px;
-		}
-  }
-  
-  .top {
-    position: sticky;
-    top: 0;
+  .main {
+    max-width: 85%;
+    height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
-	.verses {
-		left: 10rem;
-	}
+  .navbar-brand {
+    svg {
+      width: 550px;
+      height: 70px;
+    }
+  }
+  .footer-left {
+    svg {
+      width: 400px;
+      height: 70px;
+    }
+  .p-footer {
+    margin-top: 4.5rem;
+  }
+  }
+  .opinion {
+  .content {
+    grid-template-columns: auto auto;
+  }
 }
+}
+
+// header
