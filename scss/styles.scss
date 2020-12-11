@@ -455,10 +455,18 @@ $bg-color: #fff;
   }
 }
 
-.news-image {
-  background-image: url('https://g.newsweek.com/www/images/logo-n1.svg');
-  color: $primary;
-  background-size: contain;
+.icon-text {
+  font-weight: bolder;
+
+  .news-image {
+    background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+    display: block;
+    background-color: $primary;
+    background-size: contain;
+    margin-right: 0.8rem;
+    width: 2.9rem;
+    height: 2.8rem;
+	}
 }
 
 .opinion {
