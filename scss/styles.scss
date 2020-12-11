@@ -110,11 +110,6 @@ $bg-color: #fff;
   display: grid;
 }
 
-.top {
-	position: sticky;
-	top: 0;
-}
-
 .featured-story {
   @include section-spacing();
 
@@ -664,17 +659,6 @@ $bg-color: #fff;
 
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
-<<<<<<< HEAD
-	.content {
-		grid-template-columns: 20% auto;
-		gap: 2rem;
-	}
-	.debate {
-		.verses {
-			left: 32rem;
-		}
-	}
-=======
   .content {
     grid-template-columns: 20% auto;
     gap: 2rem;
@@ -685,22 +669,30 @@ $bg-color: #fff;
       left: 32rem;
     }
   }
->>>>>>> develop
 }
 
 @media only screen and (min-width: 992px) {
-  .main {
-    max-width: 85%;
+	.main {
+		max-width: 85%;
+		height: 100vh;
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+  }
+  
+	.navbar-brand {
+		svg {
+			width: 550px;
+			height: 70px;
+		}
+  }
+  
+  .top {
+    position: sticky;
+    top: 0;
   }
 
-  .navbar-brand {
-    svg {
-      width: 550px;
-      height: 70px;
-    }
-  }
-
-  .verses {
-    left: 10rem;
-  }
+	.verses {
+		left: 10rem;
+	}
 }
