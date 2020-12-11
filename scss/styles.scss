@@ -87,10 +87,20 @@ $bg-color: #fff;
 
 .main {
   overflow-x: hidden;
-  max-width: 100%;
-  font-size: 1.6rem;
-  padding: 1rem;
+	max-width: 100%;
+	font-size: 1.6rem;
+	padding: 1rem;
+
+	// height: 100vh;
+	// overflow-y: scroll;
+	// -ms-overflow-style: none;
+	// scrollbar-width: none;
+	
 }
+
+// .main::-webkit-scrollbar {
+// 	display: none;
+// }
 
 .d-block {
   display: block;
@@ -98,6 +108,11 @@ $bg-color: #fff;
 
 .d-grid {
   display: grid;
+}
+
+.top {
+	position: sticky;
+	top: 0;
 }
 
 .featured-story {
@@ -649,6 +664,17 @@ $bg-color: #fff;
 
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
+<<<<<<< HEAD
+	.content {
+		grid-template-columns: 20% auto;
+		gap: 2rem;
+	}
+	.debate {
+		.verses {
+			left: 32rem;
+		}
+	}
+=======
   .content {
     grid-template-columns: 20% auto;
     gap: 2rem;
@@ -659,6 +685,7 @@ $bg-color: #fff;
       left: 32rem;
     }
   }
+>>>>>>> develop
 }
 
 @media only screen and (min-width: 992px) {
