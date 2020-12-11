@@ -3,7 +3,7 @@ A replica of the www.newsweek.com website for www.microverse.org html and css we
 
 ### Mobile version
 
-![screenshot](./newsweek-mobile.jpg)
+![screenshot](./DesktopVersion.png)
 
 Additional description about the project and its features.
 
