@@ -609,6 +609,8 @@ nav {
 
   h2 {
     @include h2-style();
+
+    color: $primary;
   }
 
   h3 {
@@ -631,6 +633,15 @@ nav {
 
   .paragraph {
     @include paragraph();
+  }
+  .fixed-height {
+    height: 25rem;
+  }
+
+  .fixed-image {
+    min-width: 13rem;
+    max-width: 13rem;
+    height: 13rem;
   }
 }
 
