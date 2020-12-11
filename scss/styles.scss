@@ -121,6 +121,10 @@ h5:hover {
   padding: 0 2rem;
 }
 
+.body-bg {
+  background-color: rgb(255, 251, 251);
+}
+
 // header
 .nav-menu {
   background: $bg-primary;
@@ -260,10 +264,6 @@ nav {
   padding: 1rem;
 }
 
-.main::-webkit-scrollbar {
-  display: none;
-}
-
 .d-block {
   display: block;
 }
@@ -315,8 +315,6 @@ nav {
 
 .my-turn,
 .culture {
-  // @include section-spacing();
-
   h2 {
     @include h2-style();
   }
@@ -339,8 +337,6 @@ nav {
 }
 
 .more {
-  // @include section-spacing();
-
   .content {
     grid-template-columns: auto auto;
   }
@@ -355,16 +351,20 @@ nav {
 
   .verses {
     color: $body-bg;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
     background-color: $body-color;
-    width: 5rem;
+    width: 3.5rem;
     padding: 1rem;
     border-radius: 100%;
     position: relative;
-    top: -3.5rem;
+    top: -3rem;
     left: 45%;
+  }
+
+  .spenser {
+    height: 7rem;
   }
 
   .content-1 {
@@ -381,7 +381,6 @@ nav {
 }
 
 .sponsored-left {
-  // @include section-spacing();
   .story {
     border: 1px solid $body-bg;
     margin: 1rem 0;
@@ -411,7 +410,6 @@ nav {
 }
 
 .sponsored-right {
-  // @include section-spacing();
   .story {
     border: 1px solid $body-bg;
     margin: 1rem 0;
@@ -447,7 +445,6 @@ nav {
     background:
       url("https://g.newsweek.com/www/images/logo-n1.svg")
       center/contain no-repeat #f72210;
-    // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
     background-position-x: center;
     background-position-y: center;
     background-size: contain;
@@ -519,10 +516,8 @@ form {
 }
 
 .opinion {
-  // @include section-spacing();
   .opinion-text {
     text-align: left;
-    // border: 1px solid black
   }
 
   .content {
@@ -593,10 +588,6 @@ form {
     .newsletter-content {
       border: 1px solid $body-bg;
 
-      // img {
-      //   height: 320px;
-      // }
-
       .my-image {
         background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5");
         background-size: cover;
@@ -639,19 +630,15 @@ form {
 }
 
 .footer-left {
-  // border: 1px solid black;
   .p-footer {
     position: relative;
-    // margin-left: -10px;
     font-size: 12px;
-    // top: 2rem;
   }
 
   svg {
     fill: $primary;
     width: 200px;
     height: 50px;
-    // border: 1px solid black;
   }
 }
 
@@ -666,9 +653,6 @@ form {
   }
 }
 
-// Nav Menu
-// header
-
 /** media query for tablet (md) **/
 @media only screen and (min-width: 768px) {
   .content {
@@ -681,10 +665,6 @@ form {
 @media only screen and (min-width: 992px) {
   .main {
     max-width: 85%;
-    height: 100vh;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 
   .navbar-brand {
