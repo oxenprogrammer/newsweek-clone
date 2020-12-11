@@ -280,7 +280,7 @@ $bg-color: #fff;
     border-radius: 100%;
     position: relative;
     top: -3.5rem;
-    left: 14rem;
+    left: 45%;
   }
 
   .content-1 {
@@ -744,12 +744,6 @@ $bg-color: #fff;
   .content {
     grid-template-columns: 20% auto;
     gap: 2rem;
-  }
-
-  .debate {
-    .verses {
-      left: 32rem;
-    }
   }
 }
 
