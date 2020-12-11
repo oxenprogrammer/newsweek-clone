@@ -652,7 +652,7 @@ nav {
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
         }
 
         .btn-subscribe {
@@ -676,8 +676,17 @@ nav {
     .newsletter-content {
       border: 1px solid $body-bg;
 
-      img {
-        height: 320px;
+      // img {
+      //   height: 320px;
+      // }
+
+      .my-image {
+        background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        text-align: center;
+        height: 305px;
       }
 
       .letter-text {
@@ -686,7 +695,7 @@ nav {
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
           overflow-wrap: break-word;
         }
 
