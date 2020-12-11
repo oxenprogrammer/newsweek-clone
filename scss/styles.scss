@@ -102,15 +102,15 @@ h4 {
   @include h4-style();
 }
 
+h5 {
+  @include h5-style();
+}
+
 h4:hover,
 h5:hover {
   text-decoration: underline $primary;
   cursor: pointer;
   text-decoration-color: $primary;
-}
-
-h5 {
-  @include h5-style();
 }
 
 .paragraph {
@@ -162,6 +162,28 @@ nav {
   }
 }
 
+.footer-bottom-top a:not(:first-child)::before,
+.footer-bottom-last a:not(:first-child)::before {
+  content: " |  ";
+  color: gray;
+}
+
+.footer-bottom-top a,
+.footer-bottom-last a {
+  color: gray;
+  padding: 0 0.5rem;
+  text-decoration: none;
+}
+
+.footer-bottom-last a {
+  padding-left: 0;
+}
+
+.footer-bottom-top a:hover,
+.footer-bottom-last a:hover {
+  color: #000;
+}
+
 .nav-second {
   font-weight: bolder;
   height: 40px;
@@ -189,7 +211,7 @@ nav {
   }
 
   div {
-    a {
+    .n-link {
       color: black;
       text-decoration: none;
       font-size: 2rem;
@@ -273,11 +295,6 @@ nav {
         width: 100%;
         height: auto;
       }
-
-      h5 {
-        font-size: 1.6rem;
-        font-weight: bold;
-      }
     }
   }
 }
@@ -328,20 +345,13 @@ nav {
     grid-template-columns: auto auto;
   }
 
-  header {
+  .more-header {
     padding: 0 1rem;
   }
 }
 
 .debate {
   @include section-spacing();
-
-  header {
-    h4 {
-      font-weight: bold;
-      font-size: 1.6rem;
-    }
-  }
 
   .verses {
     color: $body-bg;
@@ -654,28 +664,6 @@ form {
     font-size: 2.5rem;
     color: rgb(39, 37, 37);
   }
-}
-
-.footer-bottom-top a:not(:first-child)::before,
-.footer-bottom-last a:not(:first-child)::before {
-  content: " |  ";
-  color: gray;
-}
-
-.footer-bottom-top a,
-.footer-bottom-last a {
-  color: gray;
-  padding: 0 0.5rem;
-  text-decoration: none;
-}
-
-.footer-bottom-last a {
-  padding-left: 0;
-}
-
-.footer-bottom-top a:hover,
-.footer-bottom-last a:hover {
-  color: #000;
 }
 
 // Nav Menu
