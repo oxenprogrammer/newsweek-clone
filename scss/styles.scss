@@ -705,15 +705,16 @@ nav {
 
         form input,
         form button {
-          width: 16rem;
+          width: 12rem;
+          height: 4rem;
+          padding: 0.5rem;
         }
 
         form button {
           background-color: $bg-primary !important;
-          padding: 0.5rem 1rem;
           color: #fff;
-          font-size: 1.5rem;
-          font-weight: bolder;
+          font-size: 1.2rem;
+          font-weight: bold;
         }
       }
     }
