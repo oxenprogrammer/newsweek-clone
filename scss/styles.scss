@@ -81,7 +81,6 @@ $bg-color: #fff;
 
 @mixin paragraph {
   color: rgb(95, 93, 93);
-  font-size: 1.2rem;
   font-weight: lighter;
 }
 
@@ -89,6 +88,37 @@ $bg-color: #fff;
   content: "";
   display: table;
   clear: both;
+}
+
+h2 {
+  @include h2-style();
+}
+
+h3 {
+  @include h3-style();
+}
+
+h4 {
+  @include h4-style();
+}
+
+h4:hover,
+h5:hover {
+  text-decoration: underline $primary;
+  cursor: pointer;
+  text-decoration-color: $primary;
+}
+
+h5 {
+  @include h5-style();
+}
+
+.paragraph {
+  @include paragraph();
+}
+
+.p-more {
+  padding: 0 2rem;
 }
 
 // header
@@ -129,10 +159,6 @@ nav {
     position: relative;
     margin-left: 30px;
     margin-right: 30px;
-
-    h3 {
-      margin-top: 20px;
-    }
   }
 }
 
@@ -229,22 +255,6 @@ nav {
 .top-story {
   @include section-spacing();
 
-  h4 {
-    @include h4-style();
-  }
-
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-    text-decoration-color: $primary;
-  }
-
-  .paragraph {
-    @include paragraph();
-
-    padding: 0 2rem;
-  }
-
   .top-story-h2 {
     @include h2-style();
   }
@@ -252,11 +262,6 @@ nav {
   .caption {
     @include h3-style();
   }
-
-  // h4:hover {
-  //   text-decoration-color: $primary;
-  //   cursor: pointer;
-  // }
 
   .top-story-sub {
     grid-template-columns: auto auto;
@@ -289,19 +294,6 @@ nav {
   .caption {
     @include h3-style();
   }
-
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
-  h4 {
-    @include h4-style();
-  }
-
-  .paragraph {
-    @include paragraph();
-  }
 }
 
 .my-turn,
@@ -319,10 +311,6 @@ nav {
     color: gray;
     padding: 1rem 0;
   }
-
-  h3 {
-    @include h3-style();
-  }
 }
 
 .editor-pick {
@@ -330,23 +318,6 @@ nav {
 
   h2 {
     @include h2-style();
-  }
-
-  h3 {
-    @include h3-style();
-  }
-
-  h4 {
-    @include h4-style();
-  }
-
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
-  .paragraph {
-    @include paragraph();
   }
 }
 
@@ -359,22 +330,6 @@ nav {
 
   header {
     padding: 0 1rem;
-
-    h4:hover {
-      text-decoration: underline $primary;
-      cursor: pointer;
-    }
-
-    .paragraph {
-      @include paragraph();
-
-      padding: 0 2rem;
-    }
-
-    h4 {
-      font-weight: bold;
-      font-size: 1.6rem;
-    }
   }
 }
 
@@ -426,11 +381,6 @@ nav {
     @include h2-style();
   }
 
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
   p {
     @include paragraph();
   }
@@ -447,16 +397,6 @@ nav {
 
   p:hover {
     cursor: pointer;
-  }
-
-  h3 {
-    @include h3-style();
-  }
-
-  .paragraph {
-    @include paragraph();
-
-    padding: 0 2rem;
   }
 }
 
@@ -480,15 +420,7 @@ nav {
 
     padding: 0 2rem;
   }
-
-  .paragraph {
-    @include paragraph();
-
-    padding: 0 2rem;
-  }
-
 }
-
 
 .form {
   background-color: #f4f5f6;
@@ -502,7 +434,8 @@ nav {
     display: block;
     width: 29px;
     height: 28px;
-    background: url("https://g.newsweek.com/www/images/logo-n1.svg")
+    background:
+      url("https://g.newsweek.com/www/images/logo-n1.svg")
       center/contain no-repeat #f72210;
     // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
     background-position-x: center;
@@ -535,29 +468,11 @@ form {
   background: lightgray;
   margin-bottom: 0;
 }
+
 .magazine {
   @include section-spacing();
 
   .magazine-article {
-    h4 {
-      @include h4-style();
-
-      font-size: 1.6rem;
-
-      h4:hover {
-        text-decoration: underline $primary;
-        cursor: pointer;
-      }
-
-      h3 {
-        @include h3-style();
-      }
-    }
-
-    h3 {
-      @include h3-style();
-    }
-
     .feature {
       font-size: 2rem;
       border: 0;
@@ -590,7 +505,7 @@ form {
     margin-right: 0.8rem;
     width: 2.9rem;
     height: 2.8rem;
-	}
+  }
 }
 
 .opinion {
@@ -599,18 +514,10 @@ form {
     text-align: left;
     // border: 1px solid black
   }
+
   .content {
     grid-template-columns: 10% 85%;
     grid-gap: 5%;
-  }
-
-  h4:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
-  .paragraph {
-    @include paragraph();
   }
 }
 
@@ -623,27 +530,6 @@ form {
     color: $primary;
   }
 
-  h3 {
-    @include h3-style();
-  }
-
-  h4 {
-    @include h4-style();
-  }
-
-  h4:hover,
-  h5:hover {
-    text-decoration: underline $primary;
-    cursor: pointer;
-  }
-
-  h5 {
-    @include h5-style();
-  }
-
-  .paragraph {
-    @include paragraph();
-  }
   .fixed-height {
     height: 25rem;
   }
@@ -750,6 +636,7 @@ form {
     font-size: 12px;
     // top: 2rem;
   }
+
   svg {
     fill: $primary;
     width: 200px;
@@ -818,20 +705,23 @@ form {
       height: 70px;
     }
   }
+
   .footer-left {
     svg {
       width: 400px;
       height: 70px;
     }
-  .p-footer {
-    margin-top: 4.5rem;
+
+    .p-footer {
+      margin-top: 4.5rem;
+    }
   }
-  }
+
   .opinion {
-  .content {
-    grid-template-columns: auto auto;
+    .content {
+      grid-template-columns: auto auto;
+    }
   }
-}
 }
 
 // header
