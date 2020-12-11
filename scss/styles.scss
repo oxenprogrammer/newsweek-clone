@@ -399,7 +399,7 @@ nav {
     border-radius: 100%;
     position: relative;
     top: -3.5rem;
-    left: 14rem;
+    left: 45%;
   }
 
   .content-1 {
@@ -573,10 +573,18 @@ nav {
   }
 }
 
-.news-image {
-  background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
-  color: $primary;
-  background-size: contain;
+.icon-text {
+  font-weight: bolder;
+
+  .news-image {
+    background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+    display: block;
+    background-color: $primary;
+    background-size: contain;
+    margin-right: 0.8rem;
+    width: 2.9rem;
+    height: 2.8rem;
+	}
 }
 
 .opinion {
@@ -601,6 +609,8 @@ nav {
 
   h2 {
     @include h2-style();
+
+    color: $primary;
   }
 
   h3 {
@@ -624,6 +634,15 @@ nav {
   .paragraph {
     @include paragraph();
   }
+  .fixed-height {
+    height: 25rem;
+  }
+
+  .fixed-image {
+    min-width: 13rem;
+    max-width: 13rem;
+    height: 13rem;
+  }
 }
 
 .contact {
@@ -644,7 +663,7 @@ nav {
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
         }
 
         .btn-subscribe {
@@ -668,17 +687,26 @@ nav {
     .newsletter-content {
       border: 1px solid $body-bg;
 
-      img {
-        height: 320px;
+      // img {
+      //   height: 320px;
+      // }
+
+      .my-image {
+        background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        text-align: center;
+        height: 305px;
       }
 
       .letter-text {
-        margin: 3rem;
+        margin: 2rem 5.5rem 2rem 1rem;
 
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 3rem;
+          font-size: 2.4rem;
           overflow-wrap: break-word;
         }
 
@@ -688,15 +716,16 @@ nav {
 
         form input,
         form button {
-          width: 16rem;
+          width: 12rem;
+          height: 4rem;
+          padding: 0.5rem;
         }
 
         form button {
           background-color: $bg-primary !important;
-          padding: 0.5rem 1rem;
           color: #fff;
-          font-size: 1.5rem;
-          font-weight: bolder;
+          font-size: 1.2rem;
+          font-weight: bold;
         }
       }
     }
@@ -751,12 +780,6 @@ nav {
   .content {
     grid-template-columns: 20% auto;
     gap: 2rem;
-  }
-
-  .debate {
-    .verses {
-      left: 32rem;
-    }
   }
 }
 
