@@ -73,6 +73,12 @@ $bg-color: #fff;
 	font-weight: bolder;
 }
 
+@mixin h5-style {
+	color: #000;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
 @mixin paragraph {
 	color: rgb(95, 93, 93);
 	font-size: 1.2rem;
@@ -117,7 +123,7 @@ $bg-color: #fff;
 	}
 
 	h4:hover {
-		text-decoration-color: $primary;
+		text-decoration: underline $primary;
 		cursor: pointer;
 	}
 
@@ -159,6 +165,11 @@ $bg-color: #fff;
 		@include h4-style();
 	}
 
+	h4:hover {
+		text-decoration: underline $primary;
+		cursor: pointer;
+	}
+
 	.paragraph {
 		@include paragraph();
 	}
@@ -181,6 +192,11 @@ $bg-color: #fff;
 	h4 {
 		@include h4-style();
 		padding: 0 2rem;
+	}
+
+	h4:hover {
+		text-decoration: underline $primary;
+		cursor: pointer;
 	}
 
 	.paragraph {
@@ -206,6 +222,11 @@ $bg-color: #fff;
 	h4 {
 		@include h4-style();
 		padding: 0 2rem;
+	}
+
+	h4:hover {
+		text-decoration: underline $primary;
+		cursor: pointer;
 	}
 
 	.paragraph {
@@ -302,6 +323,11 @@ $bg-color: #fff;
 				font-weight: bold;
 				font-size: 1.6rem;
 			}
+
+			h4:hover {
+				text-decoration: underline $primary;
+				cursor: pointer;
+			}
 		}
 	}
 }
@@ -319,6 +345,11 @@ $bg-color: #fff;
 		h4 {
 			font-weight: bold;
 			font-size: 1.6rem;
+		}
+
+		h4:hover {
+			text-decoration: underline $primary;
+			cursor: pointer;
 		}
 
 		p {
@@ -342,6 +373,10 @@ $bg-color: #fff;
 		padding: 1rem 0;
 	}
 
+	p:hover {
+		cursor: pointer;
+	}
+
 	h3 {
 		@include h3-style();
 	}
@@ -354,6 +389,11 @@ $bg-color: #fff;
 		h4 {
 			@include h4-style();
 			font-size: 1.6rem;
+		}
+
+		h4:hover {
+			text-decoration: underline $primary;
+			cursor: pointer;
 		}
 
 		h3 {
@@ -394,6 +434,41 @@ $bg-color: #fff;
 
 	h4 {
 		@include h4-style();
+	}
+
+	h4:hover {
+		text-decoration: underline $primary;
+		cursor: pointer;
+	}
+
+	.paragraph {
+		@include paragraph();
+	}
+}
+
+.sports {
+	@include section-spacing();
+
+	h2 {
+		@include h2-style();
+	}
+
+	h3 {
+		@include h3-style();
+	}
+
+	h4 {
+		@include h4-style();
+	}
+
+	h4:hover,
+	h5:hover {
+		text-decoration: underline $primary;
+		cursor: pointer;
+	}
+
+	h5 {
+		@include h5-style();
 	}
 
 	.paragraph {
@@ -620,7 +695,7 @@ header {
 			left: 32rem;
 		}
 	}
-} 
+}
 
 @media only screen and (min-width: 992px) {
 	.main {
