@@ -589,9 +589,13 @@ nav {
 
 .opinion {
   // @include section-spacing();
-
+  .opinion-text {
+    text-align: left;
+    // border: 1px solid black
+  }
   .content {
-    grid-template-columns: auto auto;
+    grid-template-columns: 10% 85%;
+    grid-gap: 5%;
   }
 
   h4:hover {
@@ -817,6 +821,11 @@ nav {
     margin-top: 4.5rem;
   }
   }
+  .opinion {
+  .content {
+    grid-template-columns: auto auto;
+  }
+}
 }
 
 // header
