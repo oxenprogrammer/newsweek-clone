@@ -487,48 +487,54 @@ nav {
     padding: 0 2rem;
   }
 
-  .form {
-    background-color: #f4f5f6;
-    padding: 2rem;
+}
 
-    .form-icon {
-      flex: none;
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: auto;
-      display: block;
-      width: 29px;
-      height: 28px;
-      background: url("https://g.newsweek.com/www/images/logo-n1.svg")
-        center/contain no-repeat #f72210;
-      // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
-      background-position-x: center;
-      background-position-y: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-attachment: initial;
-      background-origin: initial;
-      background-clip: initial;
-      background-color: rgb(247, 34, 16);
-      margin-right: 10px;
-    }
-  }
 
-  form {
-    input,
-    button {
-      padding: 1rem;
-    }
+.form {
+  background-color: #f4f5f6;
+  padding: 2rem;
 
-    .btn-primary {
-      font-size: 2rem;
-      background-color: $bg-primary;
-      border: 0;
-      font-weight: bold;
-    }
+  .form-icon {
+    flex: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    display: block;
+    width: 29px;
+    height: 28px;
+    background: url("https://g.newsweek.com/www/images/logo-n1.svg")
+      center/contain no-repeat #f72210;
+    // background-image: url("https://g.newsweek.com/www/images/logo-n1.svg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(247, 34, 16);
+    margin-right: 10px;
   }
 }
 
+form {
+  input,
+  button {
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 2rem;
+    background-color: $bg-primary;
+    border: 0;
+    font-weight: bold;
+  }
+}
+
+.see-all {
+  background: lightgray;
+  margin-bottom: 0;
+}
 .magazine {
   @include section-spacing();
 
