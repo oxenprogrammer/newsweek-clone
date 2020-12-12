@@ -1,0 +1,26 @@
+{
+  "name": "newsweek-clone",
+  "version": "1.0.0",
+  "description": "A replica of the www.newsweek.com website for www.microverse.org html and css week 3 project module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oxenprogrammer/newsweek-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oxenprogrammer/newsweek-clone/issues"
+  },
+  "homepage": "https://github.com/oxenprogrammer/newsweek-clone#readme",
+  "devDependencies": {
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.18.0"
+  }
+}

@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="./css/styles.min.css" />
+	<!-- <link rel="stylesheet" href="./scss/styles.css" /> -->
+	<title>newsweb</title>
+</head>
+
+<body>
+	<header>
+		<nav class="d-flex navbar navbar-expand-lg navbar-light nav-menu sticky-top">
+			<div class="temp col-3 d-none d-lg-block">
+				<a href="#" style="color: white; text-decoration: none;"><i class="fas fa-cloud-sun"></i>27&#176; Lagos, NG <i
+						class="fa fa-angle-right" style="font-size: 2rem; font-weight: bolder;"></i></a>
+				<p>Tue, Dec 08, 2020</p>
+			</div>
+			<a class="navbar-brand col-6" href="#">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					viewBox="0 0 396 60" xml:space="preserve">
+					<g>
+						<path class="st0"
+							d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+						</path>
+					</g>
+				</svg> </a>
+			<a><i class="fa fa-user float-right d-md-none"></i></a>
+			<button class="btn ml-auto login d-none d-sm-block" style="color: white;">LOGIN</button>
+			<button class="btn ml-auto sub text-right">SUBSCRIBE <i class="fa fa-angle-right"
+					style="font-size: 1.2rem; font-weight: bolder;"></i></button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</nav>
+		<div class="d-none d-lg-block">
+			<div class="d-flex justify-content nav-second">
+				<div class="col"><a class="n-link" href="">U.S.</a></div>
+				<div class="border-between shift-two"></div>
+				<div><a class="n-link" href="">World</a></div>
+				<div class="border-between shift-three"></div>
+				<div class="col"><a class="n-link" href="">Business</a></div>
+				<div class="border-between"></div>
+				<div class="col-2"><a class="n-link" href="">Tech & Science</a></div>
+				<div class="border-between shift"></div>
+				<div class="col"><a class="n-link" href="">Culture</a></div>
+				<div class="border-between"></div>
+				<div class="col"><a class="n-link" href="">Newsgeek</a></div>
+				<div class="border-between"></div>
+				<div class="col"><a class="n-link" href="">Sports</a></div>
+				<div class="border-between"></div>
+				<div class="col"><a class="n-link" href="">Health</a></div>
+				<div class="border-between"></div>
+				<div class="col-2"><a class="n-link" href="">The Debate</a></div>
+				<div class="border-between shift"></div>
+				<div class="col"><a class="n-link" href="">Vantage</a></div>
+				<div class="border-between"></div>
+				<div class="col"><a class="n-link" href="">Weather</a></div>
+				<div class="col search d-flex">SEARCH&nbsp;&nbsp;<Span class="search-icon"><i class="fa fa-search"></i></Span></div>
+			</div>
+		</div>
+		<hr class="d-none d-lg-block">
+		<div class="nav-bottom d-none d-lg-block">
+			<div class="d-flex justify-content">
+				<div class="col-1"><a href="" id="black-link">TRENDING</a></div>
+				<div class="col-1.5"><a href="" class="other-link">JOE BIDEN</a></div>
+				<div class="col-1"><a href="" class="other-link">TRENDING</a></div>
+				<div class="col-1.5"><a href="" class="other-link">DONALD TRUMP</a></div>
+				<div class="col-1.5" style="margin-left: 10px;"><a href="" class="other-link">2020 ELECTION</a></div>
+				<div class="col-1.5" style="margin-left: 10px;"><a href="" class="other-link">CORONAVIRUS</a></div>
+				<div class="col-3"><a href="" class="other-link">STIMULUS PACKAGE</a></div>
+			</div>
+		</div>
+		<hr class="d-none d-lg-block">
+	</header>
+	<main class="container-fluid d-flex flex-column main">
+		<section class="row scrollable">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-4 mh-100 order-md-2 order-lg-2 top">
+				<div>
+					<article class="top-story">
+						<h2 class="top-story-h2">TOP STORY</h2>
+						<img
+							src="https://d.newsweek.com/en/full/1682046/stimulus-deal-check-congress-covid-jobs-unemployment.jpg?w=591&h=364&f=359f6047dd43aefe438b2f16bd04a6d0"
+							alt="stimulus deal check congress covid jobs unemployment" />
+						<h3 class="caption">POLITICS</h3>
+						<h4 class="content-text">
+							Stimulus Gains Renewed Urgency Amid U.S. COVID Surge, Weak Jobs Data
+						</h4>
+						<p class="paragraph">
+							Lawmakers from both parties stressed the need to pass a stimulus
+							bill by the end of the year as Congress considers a $900 billion
+							bipartisan proposal that does not include checks.
+						</p>
+						<hr />
+						<div class="top-story-sub d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1682823/joe-biden.webp?w=95&h=95&f=e88357799f1ec9bb319b69b6e9496656"
+								alt="Joe Bidens" />
+							<header>
+								<h5>
+									Biden to Impose Mask Mandate on Day One of Presidency By
+									Executive Order
+								</h5>
+								<p class="paragraph">
+									President-elect Joe Biden said he will issue a mask mandate for
+									all federal buildings, planes, trains and buses during his first
+									100 days in office.
+								</p>
+							</header>
+						</div>
+					</article>
+					<article class="my-turn d-none d-lg-block d-md-block">
+						<h2>My Turn</h2>
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1681275/coronavirus-pandemic-mini-stroke-hospitals.jpg?w=397&h=397&f=ece665acb6b840a4ad0d35977b20dfa7"
+									alt="My turn one" />
+								<p class="p-more">'I'm 23, I Had a Mini Stroke Days After Contracting COVID'</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1680326/infant-infant-spasms-medical-emergency-baby.png?w=397&h=397&f=74cebbfc50e69c2f9c4835872defed74"
+									alt="My turn two" />
+								<p class="p-more">'My Baby Had a Medical Emergency During COVID'</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1680598/genius-gifted-child-black-gifted-child.png?w=397&h=397&f=adf39e37173b5b5fdf35fc63cae274a0"
+									alt="My turn three" />
+								<p class="p-more">
+									'I'm 12. Next Year I'm Studying Aerospace Engineering at
+									University'
+								</p>
+							</div>
+						</div>
+					</article>
+					<article class="culture d-none d-lg-block d-md-block">
+						<h2>CULTURE AND TRAVEL</h2>
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682551/suv-micro-rv.webp?w=397&h=397&f=71607eddbf7bb620301976f090cfc8f0"
+									alt="Culture and Travel" />
+								<h3 class="caption">TRAVEL</h3>
+								<p class="p-more">
+									Is Car Glamping the More Accessible Alternative to Van Life?
+								</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1640602/36-dominican-republic.webp?w=397&h=397&f=365c7709609c603fc1b938755877a443"
+									alt="Culture and Travel" />
+								<h3 class="caption">TRAVEL</h3>
+								<p class="p-more">These Countries Are the Most Dependent on Tourism</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1637742/100-best-rock-albums-all-time.webp?w=397&h=397&f=5f1c21a471dc42bcd8301bff02f64462"
+									alt="Culture and Travel" />
+								<h3 class="caption">MUSIC</h3>
+								<p class="p-more">100 Best Rock Albums of All Time</p>
+							</div>
+						</div>
+					</article>
+					<article class="more d-none d-lg-block d-md-block">
+						<h2 class="more-header">MORE STORIES</h2>
+						<div class="more-content">
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681919/joe-biden-covid-inauguration-pandemic-fauci.jpg?w=95&h=95&f=a0da6420fa8cb0a2ca32aef3f9b24ea7"
+									alt="Joe Biden COVID inauguration pandemic Fauci" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Biden Faces Inauguration During Worst of America's COVID
+										Pandemic
+									</h4>
+									<p>
+										U.S. COVID-19 numbers are getting worse by the week and total
+										deaths are projected to surpass 300,000 by the end of December
+										before President-elect Joe Biden takes office.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image" src="https://d.newsweek.com/en/full/1682393/stock.jpg?w=95&h=95&f=987f9690ad4ca59807b6fd41b0b1bbdf"
+									alt="stock" />
+								<header class="more-header">
+									<h4 class="more-h4">Florida Data Scientist's Home Raided by Armed Police</h4>
+									<p>
+										Jones posted a 30-second clip on Twitter, taken from a camera
+										inside her home, that showed the tense moments after she
+										opened the door of her Tallahassee home to officers.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681912/joe-biden.webp?w=95&h=95&f=78e3cf807594da62a7d7e8da7cced0f9"
+									alt="Gordon Chang" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Here Are the Experts Joining Fauci on Biden's Health Team
+									</h4>
+									<p>
+										"This accomplished team of leaders will bring the highest
+										level of integrity, scientific rigor, and crisis-management
+										experience to one of the toughest challenges America has ever
+										faced," Biden said.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1682046/stimulus-deal-check-congress-covid-jobs-unemployment.webp?w=95&h=95&f=b03f22fdd588b9fa9427a3f5d7cae31a"
+									alt="Michael Medved" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Stimulus Gains Renewed Urgency Amid U.S. COVID Surge, Weak
+										Jobs Data
+									</h4>
+									<p>
+										Lawmakers from both parties stressed the need to pass a
+										stimulus bill by the end of the year as Congress considers a
+										$900 billion bipartisan proposal that does not include checks.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681879/brandon-bernard.webp?w=95&h=95&f=1c656e5df58d020d99236652e718f29e"
+									alt="Sam Westrop" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Brandon Bernard to Be Executed, Jurors Urge Trump to Commute
+										Sentence
+									</h4>
+									<p>
+										Bernard was 18 when he was convicted over the 1999 kidnapping
+										and murder of youth ministers Todd and Stacie Bagley at Fort
+										Hood in Texas.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681848/david-perdue.webp?w=95&h=95&f=89caa6adf543a62647783fec368340e8"
+									alt="Abigail Shrier" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										David Perdue's Empty Podium at Georgia Debate Prompts Flurry
+										of Memes
+									</h4>
+									<p>
+										Ossoff led the wave of jokes on Twitter, sharing an image of
+										him gesturing to an empty podium, captioned with a chicken
+										emoji.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681708/rudy-giuliani-covid-19-donald-trump-lawyer.webp?w=95&h=95&f=d1ea6fa51d272dec9fb2873614264eff"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4>
+										Team Trump Tries to Play Down Fears Giuliani Exposed Hundreds
+										to COVID-19
+									</h4>
+									<p>
+										President Donald Trump's lawyer is infected with COVID-19 and
+										reportedly in hospital after traveling to several states and
+										meeting with lawmakers about the 2020 election.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681803/los-angeles.webp?w=95&h=95&f=4928c03d73cf9d11295001a6ae841c21"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										LAPD Strike Lockdown Protesters with Batons Outside Mayor
+										Garcetti's House
+									</h4>
+									<p>
+										Footage shows LAPD officers in riot gear using batons to try
+										and push back protesters during the 13th day of demonstrations
+										outside Mayor Eric Garcetti's house.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681705/dr-jane-m-orient.webp?w=95&h=95&f=1ab2ffa017f687e30ff91f008e388668"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Doctor Against Mandatory Vaccinations to Testify Before Senate
+									</h4>
+									<p>
+										Dr Jane M. Orient has been vocal in her criticism over
+										coronavirus vaccines, instead opting to promote "medical
+										freedom" and the anti-malaria drug hydroxychloroquine as an
+										alternative treatment.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1682106/new-york-city-covid-19-indoor-dining.webp?w=95&h=95&f=b0a4ecfed01e38c62596abc05c651c2e"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Indoor Dining Will Close Again in NYC Unless COVID
+										Hospitalizations Improve
+									</h4>
+									<p>
+										Officials will monitor hospitalization numbers in all New York
+										state regions over the next five days and implement
+										restrictions in areas where rates do not stabilize.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1682139/illustration-twenty-dollar-bills-wallet.webp?w=95&h=95&f=2be1520be86cdfd9246ccf552de3f82b"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										Stimulus Checks Announced in Washington, D.C.—by Mayor, Not
+										Federal Govt
+									</h4>
+									<p>
+										Muriel Bowser announced the $1,200 stimulus payments Monday as
+										Americans continue to wait for Congress to reach a COVID
+										relief deal.
+									</p>
+								</header>
+							</div>
+							<hr />
+							<div class="content d-flex">
+								<img class="more-image"
+									src="https://d.newsweek.com/en/full/1681917/india-health-care-worker.webp?w=95&h=95&f=0dfe5900db6fe3edb34024fd18aedb77"
+									alt="Josh Hammer" />
+								<header class="more-header">
+									<h4 class="more-h4">
+										'Mystery Illness' Kills One and Hospitalizes Hundreds in India
+									</h4>
+									<p>
+										Health experts are now hunting for the source of the sickness,
+										with officials so far ruling out links to COVID..
+									</p>
+								</header>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6 col-lg-4 order-md-1 order-lg-1 feature overflow-auto">
+				<article class="featured-story">
+					<h2 class="top-story-h2">Featured Story</h2>
+					<div class="featured-story-articles d-flex flex-column">
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1682044/anthony-fauci-coronavirus.jpg?w=397&h=265&l=41&t=47&q=90&f=78e9102ab15c8d8943645220efadfaca"
+								alt="anthony fauci coronavirus " />
+							<h3 class="caption">U.S.</h3>
+							<h4 class="content-text">
+								Fauci Not Surprised America's Seeing 200,000 New Cases of
+								Coronavirus a Day
+							</h4>
+							<p class="paragraph">
+								In June, Fauci said it was possible America could reach 100,000
+								cases a day, but he called America doubling that amount
+								"predictable."
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1681804/donald-trump-georgia-loeffler-perdue-senate-republican.jpg?w=397&h=265&q=90&f=4990d7486105d2662a4b8a8fc0305584"
+								alt="Donald Trump Georgia Loeffler Perdue Senate Republican" />
+							<h3 class="caption">POLITICS</h3>
+							<h4 class="content-text">
+								GOP Senate Majority at Risk, Trump Puts His Interests above
+								Party Unity
+							</h4>
+							<p class="paragraph">
+								As the president campaigned for the Republican candidates in
+								Georgia, he continued to denounce the party's own officials in
+								the state over his election defeat to President-elect Joe Biden.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1681919/joe-biden-covid-inauguration-pandemic-fauci.jpg?w=397&h=265&q=90&f=c167d3a30e463dc797eaeb6a19e26e58"
+								alt="Joe Biden COVID inauguration pandemic Fauci" />
+							<h3 class="caption">POLITICS</h3>
+							<h4 class="content-text">
+								Biden Faces Inauguration During Worst of America's COVID
+								Pandemic
+							</h4>
+							<p class="paragraph">
+								U.S. COVID-19 numbers are getting worse by the week and total
+								deaths are projected to surpass 300,000 by the end of December
+								before President-elect Joe Biden takes office.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1681759/covid-19-funeral-new-mexico-december-2020.jpg?w=397&h=265&q=90&f=9fffa1e5b29f0cccbf51dd87c6529bc2"
+								alt="COVID-19 funeral New Mexico December 2020" />
+							<h3 class="caption">NEWS</h3>
+							<h4 class="content-text">
+								More Americans Could Die of COVID Today than Were Killed at
+								Pearl Harbor
+							</h4>
+							<p class="paragraph">
+								Pearl Harbor Up to 19,500 new COVID-19 deaths are likely to be
+								reported in the week ending December 26, according to forecasts
+								received by the U.S. Centers for Disease Control and Prevention.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1681708/rudy-giuliani-covid-19-donald-trump-lawyer.jpg?w=397&h=265&q=90&f=91e09f35a80e92d4bfee8f5e7c74f2eb"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">U.S.</h3>
+							<h4 class="content-text">
+								Team Trump Tries to Play Down Fears Giuliani Exposed Hundreds to
+								COVID-19
+							</h4>
+							<p class="paragraph">
+								President Donald Trump's lawyer is infected with COVID-19 and
+								reportedly in hospital after traveling to several states and
+								meeting with lawmakers about the 2020 election.
+							</p>
+						</article>
+					</div>
+				</article>
+				<article class="sponsored-left d-none d-lg-block d-md-block">
+					<div class="featured-story-articles d-flex flex-column">
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1677225/sampoerna-academy.jpg?w=500&h=333&f=10acfdfa95e4f44c6754e0a2485c417e"
+								alt="anthony fauci coronavirus " />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								What Makes International Schools so Special?
+							</h4>
+							<p class="paragraph p-more">
+								One of the single most important decisions you make for your
+								child is whom to entrust with their education. See why so many
+								parents are turning to International Schools.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1668840/moreland.png?w=500&h=333&f=ae236a69f0a1b702ec5ddeed2bf308cb"
+								alt="Donald Trump Georgia Loeffler Perdue Senate Republican" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Would You Like a Career That Will Make a Real Difference?
+							</h4>
+							<p class="paragraph p-more">
+								Stop thinking about being a teacher and get started on your path
+								to one of the most rewarding careers in the world. Find out
+								where to get qualified.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1664739/nyenrode-business-university.jpg?w=500&h=333&f=1ec27851ba6821e601195cbb20a6335e"
+								alt="Joe Biden COVID inauguration pandemic Fauci" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Why is an EQUIS Accreditation Important for a Business School?
+							</h4>
+							<p class="paragraph p-more">
+								With over 15,000 business schools worldwide, it is increasingly
+								difficult for prospective students, executives, corporate
+								partners and other stakeholders to recognize a quality
+								institution. That’s where an EQUIS Accreditation comes in. Find
+								out more.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1661917/university-jamestown.jpg?w=500&h=333&f=0148dad4302a0ea64df23644c6b01f0b"
+								alt="COVID-19 funeral New Mexico December 2020" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Which Schools Have the Best Healthcare Programs?
+							</h4>
+							<p class="paragraph p-more">
+								If you are thinking about a career in Healthcare, you will want
+								to start with the best qualifications from the top schools.
+								Which ones are at the cutting edge?
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1680316/americas-most-responsible-companies-2021.png?w=500&h=333&f=ae10b886f06d2f293296bc4d2f90dda0"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKING</h3>
+							<h4 class="content-text">
+								America's Most Responsible Companies 2021
+							</h4>
+							<p class="paragraph p-more">
+								We partnered with Statista to rank the country's Most
+								Responsible Companies. They share the values that we all
+								prioritize, and that's worth recognizing in 2021
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1666606/best-stem-2021.png?w=500&h=333&f=880298d0d01b4e21f850884f426ebeba"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">STEM</h3>
+							<h4 class="content-text">Best in STEM 2021</h4>
+							<p class="paragraph p-more">
+								Meet the toymakers and brands who are lending a helping hand to
+								science, technology, engineering and math (STEM) education.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1648617/americas-best-banks-2021.png?w=500&h=333&f=74c82cc715af044c22cf4532a60c043f"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">America's Best Banks 2021</h4>
+							<p class="paragraph p-more">
+								Introducing Newsweek's first ranking of the financial
+								institutions that best serve their customers' needs in today's
+								challenging times.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1641228/worlds-best-specialized-hospitals-2021.png?w=500&h=333&f=78fc1236f2add4e7e946c17e20a9b978"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">
+								World's Best Specialized Hospitals 2021
+							</h4>
+							<p class="paragraph p-more">
+								In the first part of this special, we rank the best hospitals in
+								cardiology, oncology and endocrinology.
+							</p>
+						</article>
+					</div>
+				</article>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4 mh-100 order-md-3 order-lg-3 argument overflow-auto">
+				<article class="debate">
+					<h2 class="debate-header">THE DEBATE</h2>
+					<div class="debate-content">
+						<hr />
+						<div class="content-1 d-grid">
+							<img class="spenser"
+								src="https://d.newsweek.com/en/full/1591836/jonathan-tobin.png?w=63&h=63&f=3de733b09b3c97b87933e4368ae4e559"
+								alt="Jonathan Tobin" />
+							<header>
+								<h4>Should Trump Concede? Yes</h4>
+								<span>BY JONATHAN TOBIN</span>
+							</header>
+						</div>
+						<hr />
+						<div class="verses">VS</div>
+						<div class="content-2 d-flex d-grid">
+							<header>
+								<h4 class="not-yet">Should Trump Concede? Not Yet</h4>
+								<span>BY SPENCER KLAVAN</span>
+							</header>
+							<img class="spenser"
+								src="https://d.newsweek.com/en/full/1611078/spencer-klavan.png?w=63&h=63&f=50a9e9cc8ef45fd2d3ac21f96eb0bd9f"
+								alt="Spencer Klavan" />
+						</div>
+						<hr />
+					</div>
+				</article>
+				
+				<article class="opinion">
+					<h2 class="opinion-header">OPINION</h2>
+					<div class="opinion-content">
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/97976/robert-reich.png?w=63&h=63&f=297351a03eaa549128026042394c9580"
+								alt="Robert Reich" />
+							<header class="opinion-text">
+								<h4>
+									Biden Says He'll Take on Structural Inequality. You Need to
+									Hold Him to It
+								</h4>
+								<span>BY ROBERT REICH</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1682120/colin-clarke.png?w=63&h=63&f=b3744427195cb4cda3629c558bdd4212"
+								alt="colin-clarke" />
+							<header class="opinion-text">
+								<h4>Reports of Al-Qaeda's Demise are Greatly Exaggerated</h4>
+								<span>BY COLIN P. CLARKE</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1595774/gordon-chang.png?w=63&h=63&f=e6ac7c2e3f20ff658db6088a2c2ebef7"
+								alt="Gordon Chang" />
+							<header>
+								<h4>Is the U.S. Justice Department Surrendering To China?</h4>
+								<span>BY GORDON G. CHANG</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1681328/michael-medved.png?w=63&h=63&f=93e1a9beae177066a13a0540ea916e93"
+								alt="Michael Medved" />
+							<header>
+								<h4>An Inauguration Day Tradition too Precious to Sacrifice</h4>
+								<span>BY MICHAEL MEDVED</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1681346/sam-westrop.png?w=63&h=63&f=7a831fc187ba96f267f3ff28cb551e19"
+								alt="Sam Westrop" />
+							<header>
+								<h4>COVID Relief Funds Went to Violent Extremists</h4>
+								<span>BY SAM WESTROP</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1589825/abigail-shrier.png?w=63&h=63&f=1a7aeb15bcc2d4ca108143b6f75cfefa"
+								alt="Abigail Shrier" />
+							<header>
+								<h4>A British Court Breaks Gender Fever</h4>
+								<span>BY ABIGAIL SHRIER</span>
+							</header>
+						</div>
+						<hr />
+						<div class="content d-grid">
+							<img
+								src="https://d.newsweek.com/en/full/1646800/josh-hammer.png?w=63&h=63&f=cd14b8675c99d70b0e9c9d28906c5d29"
+								alt="Josh Hammer" />
+							<header>
+								<h4>There's No Stopping America's Political Realignment</h4>
+								<span>BY JOSH HAMMER</span>
+							</header>
+						</div>
+					</div>
+				</article>
+				<article class="sponsored-left d-md-none d-lg-none">
+					<div class="featured-story-articles d-flex flex-column">
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1677225/sampoerna-academy.jpg?w=500&h=333&f=10acfdfa95e4f44c6754e0a2485c417e"
+								alt="anthony fauci coronavirus " />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								What Makes International Schools so Special?
+							</h4>
+							<p class="paragraph p-more">
+								One of the single most important decisions you make for your
+								child is whom to entrust with their education. See why so many
+								parents are turning to International Schools.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1668840/moreland.png?w=500&h=333&f=ae236a69f0a1b702ec5ddeed2bf308cb"
+								alt="Donald Trump Georgia Loeffler Perdue Senate Republican" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Would You Like a Career That Will Make a Real Difference?
+							</h4>
+							<p class="paragraph p-more">
+								Stop thinking about being a teacher and get started on your path
+								to one of the most rewarding careers in the world. Find out
+								where to get qualified.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1664739/nyenrode-business-university.jpg?w=500&h=333&f=1ec27851ba6821e601195cbb20a6335e"
+								alt="Joe Biden COVID inauguration pandemic Fauci" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Why is an EQUIS Accreditation Important for a Business School?
+							</h4>
+							<p class="paragraph p-more">
+								With over 15,000 business schools worldwide, it is increasingly
+								difficult for prospective students, executives, corporate
+								partners and other stakeholders to recognize a quality
+								institution. That’s where an EQUIS Accreditation comes in. Find
+								out more.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1661917/university-jamestown.jpg?w=500&h=333&f=0148dad4302a0ea64df23644c6b01f0b"
+								alt="COVID-19 funeral New Mexico December 2020" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Which Schools Have the Best Healthcare Programs?
+							</h4>
+							<p class="paragraph p-more">
+								If you are thinking about a career in Healthcare, you will want
+								to start with the best qualifications from the top schools.
+								Which ones are at the cutting edge?
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1680316/americas-most-responsible-companies-2021.png?w=500&h=333&f=ae10b886f06d2f293296bc4d2f90dda0"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKING</h3>
+							<h4 class="content-text">
+								America's Most Responsible Companies 2021
+							</h4>
+							<p class="paragraph p-more">
+								We partnered with Statista to rank the country's Most
+								Responsible Companies. They share the values that we all
+								prioritize, and that's worth recognizing in 2021
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1666606/best-stem-2021.png?w=500&h=333&f=880298d0d01b4e21f850884f426ebeba"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">STEM</h3>
+							<h4 class="content-text">Best in STEM 2021</h4>
+							<p class="paragraph p-more">
+								Meet the toymakers and brands who are lending a helping hand to
+								science, technology, engineering and math (STEM) education.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1648617/americas-best-banks-2021.png?w=500&h=333&f=74c82cc715af044c22cf4532a60c043f"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">America's Best Banks 2021</h4>
+							<p class="paragraph p-more">
+								Introducing Newsweek's first ranking of the financial
+								institutions that best serve their customers' needs in today's
+								challenging times.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1641228/worlds-best-specialized-hospitals-2021.png?w=500&h=333&f=78fc1236f2add4e7e946c17e20a9b978"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">
+								World's Best Specialized Hospitals 2021
+							</h4>
+							<p class="paragraph p-more">
+								In the first part of this special, we rank the best hospitals in
+								cardiology, oncology and endocrinology.
+							</p>
+						</article>
+					</div>
+				</article>
+				<article class="col-md-6 col-lg-12 mx-md-auto sponsored-right">
+					<div class="featured-story-articles d-flex flex-column">
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1681099/netherlands-online-module-amsterdam-photo.jpg?w=500&h=333&l=50&t=51&f=3610bf0950907bb346fc123edc405193"
+								alt="anthony fauci coronavirus " />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								The Netherlands - Home of InnovationThe Netherlands - Home of
+								Innovation
+							</h4>
+							<p class="paragraph p-more">
+								With a reputation as one of Europe’s most connected, digitized,
+								and innovative economies, the Netherlands recently overtook the
+								UK as the top recipient of FDI inflows in Europe.
+							</p>
+						</article>
+						<article class="form d-none d-lg-block d-md-block">
+							<div class="d-flex">
+								<div class="form-icon"></div>
+								<h2 class="form-h2">START YOUR DAY WITH OUR TOP 5 ARTICLES</h2>
+							</div>
+							<form class="d-flex flex-column">
+								<input type="email" placeholder="Email Address" /> <br />
+								<button class="btn btn-primary">FREE SIGN UP ></button>
+							</form>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1671053/nnovate2.jpg?w=500&h=333&f=7c0fd52aaf6156db616eed42842988db"
+								alt="Donald Trump Georgia Loeffler Perdue Senate Republican" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">Berlin Partners Power NNOVATE</h4>
+							<p class="paragraph p-more">
+								Berlin has long been a place where new technologies develop at a
+								particularly rapid pace. In the early years, the city was a
+								special breeding ground for blockchain technology with its
+								subversive flair. Today, the technology has become an important
+								economic factor with countless use-cases. See the latest in
+								crypto + blockchain and business.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1649388/schar-school.jpg?w=500&h=333&f=a4440e7504fefcc9e716a51774592db2"
+								alt="Joe Biden COVID inauguration pandemic Fauci" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								Why are these careers so highly sought after?
+							</h4>
+							<p class="paragraph p-more">
+								These are some of the most highly rated careers areas today. How
+								do you get started in them?
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1644076/americas-best-nursing-homes-2020.png?w=500&h=333&f=111d8839cccafaae6c19be7a5c9267ce"
+								alt="COVID-19 funeral New Mexico December 2020" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">America's Best Nursing Homes 2021</h4>
+							<p class="paragraph p-more">
+								In partnership with Statista, we established a ranking providing
+								information and insights to help you during this challenging
+								time.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1638920/image-3-this-startup-making.jpg?w=500&h=333&f=d3ab894bb4a4f0a8af53551fabfb306d"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">SPONSORED INSIGHT</h3>
+							<h4 class="content-text">
+								This Startup Is Making Long Distance Real Estate Investing
+								Possible for Millennials
+							</h4>
+							<p class="paragraph p-more">
+								75% of Roofstock users are first-time real estate investors, and
+								more than half are under 35.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1621635/americas-best-addiction-treatment-centers-2020.png?w=500&h=333&f=882d6618257cbde5fd5acc54362e6fe9"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">
+								America's Best Addiction Treatment Centers 2020
+							</h4>
+							<p class="paragraph p-more">
+								Newsweek partnered with global market research firm Statista
+								Inc. to rank the best U.S. treatment facilities that focus on
+								addiction.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1639282/worlds-best-hospitals-2021.png?w=500&h=333&f=c972c7df650ba44249ef33dd7ae66b4f"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">SURVEY</h3>
+							<h4 class="content-text">The Best Hospitals in the World</h4>
+							<p class="paragraph">
+								Newsweek has partnered with Statista Inc., the global market
+								research and consumer data firm, to develop the ranking of the
+								world's best hospitals for the third year.
+							</p>
+						</article>
+						<article class="story">
+							<img
+								src="https://d.newsweek.com/en/full/1587568/infection-prevention-products-banner.jpg?w=500&h=333&f=c96d696a017681c45d2f464a2ae0e23d"
+								alt="Rudy Giuliani COVID 19 Donald Trump lawyer" />
+							<h3 class="caption">RANKINGS</h3>
+							<h4 class="content-text">Best Infection Prevention Products</h4>
+							<p class="paragraph p-more">
+								During the coronavirus outbreak, health care is more important
+								than ever. In Newsweek's first Best Health Care series, we
+								highlight the best infection prevention products.
+							</p>
+						</article>
+					</div>
+				</article>
+				
+			</div>
+		</section>
+		<section class="scrollable-mobile">
+
+			<article class="more d-md-none d-lg-none">
+				<h2 class="more-header">MORE STORIES</h2>
+				<div class="more-content">
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681919/joe-biden-covid-inauguration-pandemic-fauci.jpg?w=95&h=95&f=a0da6420fa8cb0a2ca32aef3f9b24ea7"
+							alt="Joe Biden COVID inauguration pandemic Fauci" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Biden Faces Inauguration During Worst of America's COVID
+								Pandemic
+							</h4>
+							<p>
+								U.S. COVID-19 numbers are getting worse by the week and total
+								deaths are projected to surpass 300,000 by the end of December
+								before President-elect Joe Biden takes office.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image" src="https://d.newsweek.com/en/full/1682393/stock.jpg?w=95&h=95&f=987f9690ad4ca59807b6fd41b0b1bbdf"
+							alt="stock" />
+						<header class="more-header">
+							<h4 class="more-h4">Florida Data Scientist's Home Raided by Armed Police</h4>
+							<p>
+								Jones posted a 30-second clip on Twitter, taken from a camera
+								inside her home, that showed the tense moments after she
+								opened the door of her Tallahassee home to officers.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681912/joe-biden.webp?w=95&h=95&f=78e3cf807594da62a7d7e8da7cced0f9"
+							alt="Gordon Chang" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Here Are the Experts Joining Fauci on Biden's Health Team
+							</h4>
+							<p>
+								"This accomplished team of leaders will bring the highest
+								level of integrity, scientific rigor, and crisis-management
+								experience to one of the toughest challenges America has ever
+								faced," Biden said.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1682046/stimulus-deal-check-congress-covid-jobs-unemployment.webp?w=95&h=95&f=b03f22fdd588b9fa9427a3f5d7cae31a"
+							alt="Michael Medved" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Stimulus Gains Renewed Urgency Amid U.S. COVID Surge, Weak
+								Jobs Data
+							</h4>
+							<p>
+								Lawmakers from both parties stressed the need to pass a
+								stimulus bill by the end of the year as Congress considers a
+								$900 billion bipartisan proposal that does not include checks.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681879/brandon-bernard.webp?w=95&h=95&f=1c656e5df58d020d99236652e718f29e"
+							alt="Sam Westrop" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Brandon Bernard to Be Executed, Jurors Urge Trump to Commute
+								Sentence
+							</h4>
+							<p>
+								Bernard was 18 when he was convicted over the 1999 kidnapping
+								and murder of youth ministers Todd and Stacie Bagley at Fort
+								Hood in Texas.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681848/david-perdue.webp?w=95&h=95&f=89caa6adf543a62647783fec368340e8"
+							alt="Abigail Shrier" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								David Perdue's Empty Podium at Georgia Debate Prompts Flurry
+								of Memes
+							</h4>
+							<p>
+								Ossoff led the wave of jokes on Twitter, sharing an image of
+								him gesturing to an empty podium, captioned with a chicken
+								emoji.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681708/rudy-giuliani-covid-19-donald-trump-lawyer.webp?w=95&h=95&f=d1ea6fa51d272dec9fb2873614264eff"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4>
+								Team Trump Tries to Play Down Fears Giuliani Exposed Hundreds
+								to COVID-19
+							</h4>
+							<p>
+								President Donald Trump's lawyer is infected with COVID-19 and
+								reportedly in hospital after traveling to several states and
+								meeting with lawmakers about the 2020 election.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681803/los-angeles.webp?w=95&h=95&f=4928c03d73cf9d11295001a6ae841c21"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								LAPD Strike Lockdown Protesters with Batons Outside Mayor
+								Garcetti's House
+							</h4>
+							<p>
+								Footage shows LAPD officers in riot gear using batons to try
+								and push back protesters during the 13th day of demonstrations
+								outside Mayor Eric Garcetti's house.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681705/dr-jane-m-orient.webp?w=95&h=95&f=1ab2ffa017f687e30ff91f008e388668"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Doctor Against Mandatory Vaccinations to Testify Before Senate
+							</h4>
+							<p>
+								Dr Jane M. Orient has been vocal in her criticism over
+								coronavirus vaccines, instead opting to promote "medical
+								freedom" and the anti-malaria drug hydroxychloroquine as an
+								alternative treatment.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1682106/new-york-city-covid-19-indoor-dining.webp?w=95&h=95&f=b0a4ecfed01e38c62596abc05c651c2e"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Indoor Dining Will Close Again in NYC Unless COVID
+								Hospitalizations Improve
+							</h4>
+							<p>
+								Officials will monitor hospitalization numbers in all New York
+								state regions over the next five days and implement
+								restrictions in areas where rates do not stabilize.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1682139/illustration-twenty-dollar-bills-wallet.webp?w=95&h=95&f=2be1520be86cdfd9246ccf552de3f82b"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								Stimulus Checks Announced in Washington, D.C.—by Mayor, Not
+								Federal Govt
+							</h4>
+							<p>
+								Muriel Bowser announced the $1,200 stimulus payments Monday as
+								Americans continue to wait for Congress to reach a COVID
+								relief deal.
+							</p>
+						</header>
+					</div>
+					<hr />
+					<div class="content d-flex">
+						<img class="more-image"
+							src="https://d.newsweek.com/en/full/1681917/india-health-care-worker.webp?w=95&h=95&f=0dfe5900db6fe3edb34024fd18aedb77"
+							alt="Josh Hammer" />
+						<header class="more-header">
+							<h4 class="more-h4">
+								'Mystery Illness' Kills One and Hospitalizes Hundreds in India
+							</h4>
+							<p>
+								Health experts are now hunting for the source of the sickness,
+								with officials so far ruling out links to COVID..
+							</p>
+						</header>
+					</div>
+				</div>
+			</article>
+			<article class="my-turn d-md-none d-lg-none">
+				<h2>My Turn</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1681275/coronavirus-pandemic-mini-stroke-hospitals.jpg?w=397&h=397&f=ece665acb6b840a4ad0d35977b20dfa7"
+							alt="My turn one" />
+						<p>'I'm 23, I Had a Mini Stroke Days After Contracting COVID'</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1680326/infant-infant-spasms-medical-emergency-baby.png?w=397&h=397&f=74cebbfc50e69c2f9c4835872defed74"
+							alt="My turn two" />
+						<p>'My Baby Had a Medical Emergency During COVID'</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1680598/genius-gifted-child-black-gifted-child.png?w=397&h=397&f=adf39e37173b5b5fdf35fc63cae274a0"
+							alt="My turn three" />
+						<p>
+							'I'm 12. Next Year I'm Studying Aerospace Engineering at
+							University'
+						</p>
+					</div>
+				</div>
+			</article>
+			<article class="culture d-md-none d-lg-none">
+						<h2>CULTURE AND TRAVEL</h2>
+						<div class="row">
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682551/suv-micro-rv.webp?w=397&h=397&f=71607eddbf7bb620301976f090cfc8f0"
+									alt="Culture and Travel" />
+								<h3 class="caption">TRAVEL</h3>
+								<p>
+									Is Car Glamping the More Accessible Alternative to Van Life?
+								</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1640602/36-dominican-republic.webp?w=397&h=397&f=365c7709609c603fc1b938755877a443"
+									alt="Culture and Travel" />
+								<h3 class="caption">TRAVEL</h3>
+								<p>These Countries Are the Most Dependent on Tourism</p>
+							</div>
+							<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+								<img
+									src="https://d.newsweek.com/en/full/1637742/100-best-rock-albums-all-time.webp?w=397&h=397&f=5f1c21a471dc42bcd8301bff02f64462"
+									alt="Culture and Travel" />
+								<h3 class="caption">MUSIC</h3>
+								<p>100 Best Rock Albums of All Time</p>
+							</div>
+						</div>
+			</article>
+			<article class="form d-md-none d-lg-none">
+				<div class="d-flex">
+					<div class="form-icon"></div>
+					<h2>START YOUR DAY WITH OUR TOP 5 ARTICLES</h2>
+				</div>
+				<form class="d-flex flex-column">
+					<input type="email" placeholder="Email Address" /> <br />
+					<button class="btn btn-primary">FREE SIGN UP ></button>
+				</form>
+			</article>
+		</section>
+		
+		<section class="magazine">
+			<div class="row justify-content-center block-title py-3 icon-text">
+				<span class="news-image"></span>IN THE MAGAZINE
+			</div>
+			<article class="magazine-article">
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1683391/cover-december-18-2020.webp?w=290&h=387&q=90&f=015904a01dcde04ae7449a1d6fecbdde" style="width: 100%;" alt="magazine"/>
+						<p class="december" style="color: red; font-weight: 900; font-size: 2rem;">DECEMBER 11 ISSUE</p>
+						<p class="feature text-center see-all">SEE ALL FEATURES ></p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1674257/cover-fe-vaccine-moderna.webp?w=466&h=311&l=49&t=48&q=90&f=b4199882348a460299d282c96d719a51" alt="magazine"/>
+						<div class="caption"><span>COVER</span> HEALTH</div>
+						<h4>
+							Vaccines Won't Sto the Pandemic Until 50 Million US Skeptics
+							Embrace Them
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1675767/per-prisoners-history-01-450090369jpg.webp?w=466&h=311&l=48&t=64&q=90&f=c502a88a280f529b973548b54bda0f49" alt="magazine" />
+						<div class="caption"><span>PERISCOPE</span> US</div>
+						<h4>
+							Understanding the Iwo Jima Memorial's Power and Whether to
+							Topple Monuments
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1675779/per-prisoners-history-04.webp?w=466&h=311&l=60&t=59&q=90&f=55acc462b556fd64fce7064636317f47" alt="magazine"/>
+						<div class="caption"><span>PERISCOPE</span> US</div>
+						<h4>
+							'Some Monuments Really Should Be Torn Down,' Says WWII Historian
+							Keith Lowe
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1674794/cul-map-holiday-food-tang-yuan.webp?w=466&h=311&l=62&t=38&q=90&f=258feff5c6f4dc315f1d67e58f8c5ba3" alt="magazine" />
+						<div class="caption"><span>DOWNTIME</span> CULTURE</div>
+						<h4>Unique Holiday Foods From Around the World</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1676922/christian-serratos-feels-pressure-portraying-selena.webp?w=466&h=311&q=90&f=4d0453f2b4fc906121673befc3e7b6b5" alt="magazine" />
+						<div class="caption"><span>DOWNTIME</span> CULTURE</div>
+						<h4>
+							Christian Serratos Feels the 'Pressure' of Portraying Selena
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-3 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1678160/lineup.jpg?w=480&h=320&q=90&f=967951a3852b2efb2f80b1abcdf1ccce"  alt="magazine"/>
+						<div class="caption">IN FOCUS</div>
+						<h4>LINEUP</h4>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section class="editor-pick">
+			<div class="row justify-content-center block-title py-3 icon-text">
+				<span class="news-image"></span>EDITOR'S PICK
+			</div>
+			<article>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1682397/william-shakespeare.webp?w=397&h=265&f=637229c044054830f652e65ee201fcf9" alt="magazine" />
+						<h3>HEALTH</h3>
+						<h4>
+							William Shakespeare Becomes Second Person to Get Pfizer COVID
+							Vaccine
+						</h4>
+						<p>
+							Shakespeare, who shares his name with the famous English
+							playwright, has made history by becoming one of the first people
+							to have the shot outside of clinical trials.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1681896/covid-19-death-funeral-home-texas-december-2020.webp?w=397&h=265&f=05c7f54460490db7628e26542c963ea8" alt="magazine" />
+						<h3>NEWS</h3>
+						<h4>COVID Deaths Are Highest in These 7 States</h4>
+						<p>
+							The country's total death count is projected to surpass 500,000
+							by the end of January, according to the Institute for Health
+							Metrics and Evaluation.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1682062/anthony-fauci.webp?w=397&h=265&f=1cda2922d9df59bd395f25f2c4d780db" alt="magazine" />
+						<h3>HEALTH</h3>
+						<h4>
+							Fauci Says No One Wants to Shut Down Christmas but Situation is
+							'Critical'
+						</h4>
+						<p>
+							"I think it could be even more of a challenge than what we saw
+							with Thanksgiving," Dr. Fauci stated.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1681857/terre-haute.webp?w=397&h=265&f=ea161e1642b41d6d53482ee9a8143402" alt="magazine" />
+						<h3>U.S.</h3>
+						<h4>
+							Trump Made Firing Squad, Poison Gas Executions Possible—Will
+							They Happen?
+						</h4>
+						<p>
+							President Donald Trump's administration pushed through a
+							"midnight regulation" to allow federal executions to be carried
+							out by methods other than lethal injection.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1681870/meghan-markle-prince-harry-wellchild.webp?w=397&h=265&f=e336e9bcc1614672c2485c1c3294ba6f"  alt="magazine" />
+						<h3>NEWS</h3>
+						<h4>
+							Fact Check: Are Meghan Markle and Prince Harry Launching Awards?
+						</h4>
+						<p>
+							The Duke and Duchess of Sussex have denied claims they are
+							planning an awards system to rival Queen Elizabeth II's U.K.
+							honors list. Here are the facts.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1680836/monolith.webp?w=397&h=265&f=f9b3e02e71f4492564d0fd67f185a61b" alt="magazine" />
+						<h3>NEWS</h3>
+						<h4>
+							Monolith Reportedly Found in Colombia Is Latest to Appear Around
+							The World
+						</h4>
+						<p>
+							A golden monolith has reportedly been found in Chia, Columbia,
+							making it the latest in a string of mysterious discoveries
+							around the world.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1681393/pearl-harbor-uss-nevada.webp?w=397&h=265&f=ad44563ba3807341858657425f896647" alt="magazine" />
+						<h3>CULTURE</h3>
+						<h4>Pearl Harbor Day 2020: Photos from the Attack</h4>
+						<p>
+							It's been 79 years since the attack on Pearl Harbor, which
+							brought the United States into World War II. These photos from
+							the battle are a stark reminder of those lost.
+						</p>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-3">
+						<img
+							src="https://d.newsweek.com/en/full/1681648/mark-warner-speaks-bipartisan-senator-group.webp?w=397&h=265&f=ce358a63927e0a039902c24ed2149a41" alt="magazine" />
+						<h3>POLITICS</h3>
+						<h4>
+							Stimulus Bill Likely to Come in Next Few Days, Dem and GOP
+							Senators Say
+						</h4>
+						<p>
+							"We are working right now on language so that we can have—as
+							early as tomorrow—a piece of legislation," Senator Mark Warner
+							said on Sunday.
+						</p>
+					</div>
+				</div>
+			</article>
+		</section>
+		<section class="sports">
+			<article class="sports-article">
+				<h2 class="text-color font-lg margin-top-md">U.S.</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1682579/seattle-police-clash-protesters.webp?w=397&h=265&f=ffec5d5a2c7e0ac401a272065cffdb3a"
+							alt="Us image one" />
+						<h4>
+							Police Acted Unlawfully by Pepper-Spraying Retreating BLM
+							Protesters
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1682564/tap-water-sink-new-york-city-2003.webp?w=397&h=265&f=14606295aac510fc21c0c3b6b04ee391"
+							alt="Us image one" />
+						<h4>
+							Tampa Boil Water Notice Updates, Residents Advised to Disinfect
+							Tap Water
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1681879/brandon-bernard.webp?w=397&h=265&f=81b99cb4ccf442cb96c7fbd79b4bdf40"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Executioners Tested Positive For COVID After Putting Texas Man
+									to Death
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683186/san-jose-regional-medical-center-may-2020.webp?w=95&h=95&f=4824dc074a3b6d009cd6d5f897e02849"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									One of Silicon Valley's Largest Hospitals Now Full Following COVID Surge
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683146/lancaster-murder.webp?w=95&h=95&f=cd6ce49258a566a89bab2b79f2417843"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									California Father Charged Over Decapitation of Son, 13 and Daughter, 13
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr>
+		</section>
+		<section class="rest">
+			<article class="sports">
+				<h2 class="text-danger font-lg margin-top-md">World</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683209/german-chancellor-angela-merkel-bundestag.webp?w=397&h=265&f=eaae5e726c4bdb10904c6e9226a65cd6"
+							alt="Us image one" />
+						<h4>
+							Merkel Apologizes in Impassioned Christmas Plea About Germany's COVID Rules
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683193/pla-navy-conducts-7-day-maritime-exercise.webp?w=397&h=265&f=901134b4cb276f31fc9957f574a02f29"
+							alt="Us image one" />
+						<h4>
+							Chinese Forces Flex Muscles in South China Sea During U.S. Navy Transit
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex justify-content ">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683162/child-poverty.webp?w=397&h=265&f=4b03b79ea91b193ef04298a3f034fad4"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Half a Million Children Living in Destitution Across U.K.
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683132/chinese-army-tests-heavy-artillery-xinjiang.webp?w=95&h=95&f=f48110310b44946428430e52ade47211"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									China's PLA 'Ready' for Taiwan Resistance After Latest U.S. Arms Sales </h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682987/donald-trump.webp?w=95&h=95&f=d129ad73dbaa50bfb4fa6086f6f6ff42"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Did Trump Nearly Confirm Aliens? Israeli Ex-Space Chief Makes Bizarre Claim </h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr>
+			<article class="sports">
+				<h2 class="text-danger">Business</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683222/bank-england.webp?w=397&h=265&f=3bb3231c80e5005ae1a8a955cd29d6d4"
+							alt="Us image one" />
+						<h4>
+							New York-Based Climate Activists Revealed as Source of Bank of England Hoax
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1682821/guy-fieri-fundraising-congress-host.webp?w=397&h=265&f=7a148416bcdf45b0f4246bcafad7514f"
+							alt="Us image one" />
+						<h4>
+							Guy Fieri Did 'More Than Congress' in Raising $21.5M for Restaurant Workers
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex justify-content ">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682250/goldman-sachs-florida-move.webp?w=397&h=265&f=aba9d669f58af44c3db0fc71bf04d05a"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Miami Mayor Encourages Goldman Sachs to Move to Florida
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1681598/covid-economic-relief-bill.webp?w=95&h=95&f=b7195ca5ae79b52fda86ea0dec5870b0"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									The 10 Best Moves to Make with Your Money Before 2020 Ends </h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1681578/money-fan.webp?w=95&h=95&f=98f1e92779529a9bb8639152ec01adef"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									How to Ask for More Money at Work—Even During a Pandemic </h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</article>
+			<hr>
+			<article class="sports">
+				<h2 class="text-danger">Tech & Science</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683290/ted-cruz.webp?w=397&h=265&f=382016b94a4855b6b7ec3d80e1e88b2d"
+							alt="Us image one" />
+						<h4>
+							Ted Cruz Welcomes Elon Musk to Texas After Tesla Boss Confirms Move
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683161/hawaii-shark-attack-victims-surfboard.webp?w=397&h=265&f=1ea21f0c47ffbc8cec2f9ab64fd31dd5"
+							alt="Us image one" />
+						<h4>
+							Photo of Hawaii Shark Attack Victim's Surf Board Shows Huge Bite Mark
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex justify-content ">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682664/best-secret-santa-gifts.webp?w=397&h=265&f=1a18d39fb42e992c8b65c0a2fc618311"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									27 Perfect Secret Santa Gift Ideas Under $25 and Under $50
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683126/dr-anthony-fauci.webp?w=95&h=95&f=8fd3245fa23b3218953e5b4fc9ffed18"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Fauci on COVID: 'Extraordinary' That Pandemic Still Seen As 'Fake News' </h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682623/airpods-max.webp?w=95&h=95&f=30b6dd1ffb5ebd01f13212a9fe5c092a"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Twitter Reacts to Apple Releasing AirPods Max Headphones Costing $549 </h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr>
+			<article class="sports">
+				<h2 class="text-danger">CULTURE</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683282/reese-witherspoon.webp?w=397&h=265&f=d00669ffd8a016e2cf0c4de782080f0f"
+							alt="Us image one" />
+						<h4>
+							My Elf Challenge Inspires Celebrity Takes on Elf on the Shelf Meme
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683280/queen-elizabeth-ii-zara-tindall-ascot.webp?w=397&h=265&f=0174b35e33acc8752ad706b4dd4fca0f"
+							alt="Us image one" />
+						<h4>
+							Queen Elizabeth II 'Delighted' at Granddaughter Zara Tindall's Pregnancy
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex justify-content ">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683236/watch-let-them-all-talk-online.webp?w=397&h=265&f=12bba06602da478db20884d06eb4dfab"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									How to Watch New Meryl Streep Movie 'Let Them All Talk' Online
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683108/melissa-carone-testifies-about-alleged-voter-fraud.webp?w=95&h=95&f=024fb86d181e948b9676dc14ad75f0ab" alt="Emmanuel" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Team Trump Star Witness Mellissa Carone Says She 'Wasn't Drunk' at Hearing
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683205/zara-tindall-queen-elizabeth-ii-cheltenham.webp?w=95&h=95&f=30ecf01f07969646eb7a1eb7a96c4101"  alt="Emmanuel" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Zara Tindall and Queen Elizabeth II, Cheltenham
+									Queen's Granddaughter Zara Tindall Announces Pregnancy
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr>
+			<article class="sports">
+				<h2>Sports</h2>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683184/patrick-mahomes-kansas-city-chiefs.webp?w=397&h=265&f=a296ea2caf0a834cdd94de79a20cb6fd"
+							alt="Us image one" />
+						<h4>
+							NFL Playoff Bracket: Updated AFC, NFC Standings after Week 13
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4">
+						<img
+							src="https://d.newsweek.com/en/full/1683094/mike-mccarthy-dallas-cowboys.webp?w=397&h=265&f=6bb20e484dee1377193a2112eee58af5"
+							alt="Us image one" />
+						<h4>
+							Stats Reveal How Bad Things Have Been for Mike McCarthy and the Cowboys
+						</h4>
+					</div>
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 us-rows">
+						<div class="d-flex justify-content ">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1683056/lamar-jackson-baltimore-ravens.webp?w=397&h=265&f=a5204e7ccf554dd18696e21c38f6343e"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Lamar Jackson Sets New NFL Record in First Game since Recovering from COVID
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682904/kenny-omega-aew-dynamite-championship-match.webp?w=95&h=95&f=af03f3c15ca3c3aedf3bb25ab34887f6"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Kenny Omega Explains Why He's Appearing on Impact Wrestling
+								</h5>
+							</div>
+						</div>
+						<hr />
+						<div class="d-flex justify-content">
+							<div class="fixed-image col-4">
+								<img
+									src="https://d.newsweek.com/en/full/1682985/dez-bryant-baltimore-ravens.webp?w=95&h=95&f=f49f03af3eb9e6e663d56d82d846806b"
+									alt="Us image one" />
+							</div>
+							<div class="col-7">
+								<h5>
+									Dez Bryant, After Removal For Positive COVID Test, Promotes His Business
+								</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			<hr />
+		</section>
+		<section class="row contact justify-content-between">
+			<article class="col-12 col-md-12 col-lg-6 subscribe">
+				<h2>SUBSCRIBE</h2>
+				<div class="d-flex row subscribe-content mx-auto">
+					<div class="col-12 col-5 col-md-5 col-lg-5 subscribe-image">
+						<img
+							src="https://d.newsweek.com/en/full/1683391/cover-december-18-2020.jpg?w=170&q=95&f=e1f2c45a14354ef38b88aed621a70ef7"
+							alt="brain power">
+					</div>
+					<div class="col-12 col-7 col-md-7 col-lg-7 subscribe-text text-center">
+						<h4>
+							In-depth Stories You Don't See Elsewhere About Topics You Want to Read!
+						</h4>
+						<p>All Access + Weekly Delivery.<br>Choose A Membership That's Perfect for You!</p>
+						<button class="btn btn-subscribe">SUBSCRIBE <span>></span></button>
+					</div>
+				</div>
+			</article>
+			<article class="col-12 col-md-12 col-lg-5 newsletter">
+				<h2>NEWSLETTER</h2>
+				<div class="d-flex row newsletter-content mx-auto">
+					<div class="col-12 col-md-5 col-lg-5 my-image"></div>
+					<div class="col-12 col-md-5 col-lg-5 letter-text text-center ml-4">
+						<h4>The Starting 5</h4>
+						<p>See why nearly a quarter of a million subscribers begin their day with the Starting 5.</p>
+						<form class="letter-form row mt-4 mx-auto">
+							<input class="mb-2 col-6 col-md-6 col-lg-12" type="email" name="email" id="email"
+								placeholder="Email address">
+							<button class="col-6 col-md-6 col-lg-12 border-0" type="submit">FREE SIGN UP ></button>
+						</form>
+					</div>
+				</div>
+			</article>
+		</section>
+		<hr>
+		<section class="footer container-fluid">
+				<div class="row footer-left align-items-center">
+				<!-- <div class="footer-left col-sm-12 col-lg-5"> -->
+					<div class="col-lg-5">
+					<a class="navbar-brand" href="#">
+						<svg class="img-fluid" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 396 60" xml:space="preserve">
+							<g>
+								<path class="st0"
+									d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+								</path>
+							</g>
+						</svg> </a>
+					</div>
+							<div class="p-footer col-sm-12 col-lg-4 text-left align-item-bottom">
+						<p>© 2020 NEWSWEEK DIGITAL LLC</p>
+					</div>
+				<div class="col-sm-12 col-lg-3 footer-top-right footer-right text-left text-md-right text-lg-right">
+					<i class="fa fa-facebook-square" aria-hidden="true"></i>
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					<i class="fa fa-tumblr" aria-hidden="true"></i>
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</div>
+			</div>
+			<hr>
+			<article>
+				<div class="footer-bottom-top">
+					<span>Editions:</span>
+					<a href="#"> U.S. Edition</a>
+					<a href="#">日本</a>
+					<a href="#">Pakistan</a>
+					<a href="#">Polska</a>
+					<a href="#">România</a>
+				</div>
+				<div class="footer-bottom-last">
+					<a href="#"> About Us</a>
+					<a href="#">Corrections</a>
+					<a href="#">Contact Us</a>
+					<a href="#">Editorial Guidelines</a>
+					<a href="#">Advertise</a>
+					<a href="#">Copyright</a>
+					<a href="#">Terms & Conditions</a>
+					<a href="#">Privacy Policy</a>
+					<a href="#">Cookie Policy</a>
+					<a href="#"> Terms of Sale</a>
+					<a href="#">Archive</a>
+					<a href="#">Announcements</a>
+				</div>
+			</article>
+		</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+		</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+		</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+		</script>
+</body>
+
+</html>
