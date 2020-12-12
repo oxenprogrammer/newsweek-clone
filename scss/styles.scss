@@ -338,11 +338,19 @@ nav {
 
 .more {
   .content {
-    grid-template-columns: auto auto;
+    grid-template-columns: 40% 60%;
+  }
+
+  .more-image {
+    height: 12rem;
   }
 
   .more-header {
-    padding: 0 1rem;
+    margin-left: 1.2rem;
+
+    .more-h4 {
+      font-size: 1.8rem;
+    }
   }
 }
 
