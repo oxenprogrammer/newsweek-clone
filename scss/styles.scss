@@ -733,15 +733,24 @@ nav {
 }
 
 .footer-left {
+  // border: 1px solid black;
   .p-footer {
     position: relative;
-    top: 2rem;
+    // margin-left: -10px;
+    font-size: 12px;
+    // top: 2rem;
+  }
+  svg {
+    fill: $primary;
+    width: 200px;
+    height: 50px;
+    // border: 1px solid black;
   }
 }
 
 .footer-right {
   position: relative;
-  top: 1rem;
+  // top: 1rem;
 
   .fa {
     padding: 0.5rem;
@@ -798,6 +807,15 @@ nav {
       width: 550px;
       height: 70px;
     }
+  }
+  .footer-left {
+    svg {
+      width: 400px;
+      height: 70px;
+    }
+  .p-footer {
+    margin-top: 4.5rem;
+  }
   }
 }
 
