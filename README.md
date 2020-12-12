@@ -28,14 +28,8 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
 Checkout the project on your web browser with the provided link.
 
-### Install
-- Clone it
-- run `npm install`
-- run `gulp start` 
-
 ### Deployment
 Deploy on gh pages for testing purposes, please check the live demo
-
 
 
 ## Authors
@@ -48,7 +42,9 @@ Deploy on gh pages for testing purposes, please check the live demo
 
 👤 **Ajanaku Temitope Grace**
 
-- GitHub: [@githubhandle](https://github.com/Gracetemitope)
+- GitHub: [@ox_emmy](https://github.com/Gracetemitope)
+- Twitter: [@DevGrachy](https://twitter.com/DevGrachy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ajanaku-temitope-427778199/)
 
 ## 🤝 Contributing
 
