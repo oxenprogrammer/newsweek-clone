@@ -295,6 +295,16 @@ nav {
   background-color: $bg-color;
 }
 
+.scrollable-mobile {
+  .form {
+    background-color: $bg-color;
+
+    .btn-primary {
+      padding: 1rem 0;
+    }
+  }
+}
+
 // top story
 
 .top-story {
