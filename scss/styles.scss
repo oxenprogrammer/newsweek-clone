@@ -434,6 +434,11 @@ nav {
   background-color: #f4f5f6;
   padding: 2rem;
 
+  .form-h2 {
+    color: #000;
+    line-height: 2.4rem;
+  }
+
   .form-icon {
     flex: none;
     flex-grow: 0;
@@ -454,6 +459,8 @@ nav {
     background-clip: initial;
     background-color: rgb(247, 34, 16);
     margin-right: 10px;
+    position: relative;
+    top: 1rem;
   }
 }
 
