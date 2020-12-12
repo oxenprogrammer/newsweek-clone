@@ -122,10 +122,14 @@ h5:hover {
 }
 
 .body-bg {
-  background-color: rgb(255, 251, 251);
+  background-color: #f4f5f6;
 }
 
 // header
+.top-most-navbar {
+  background-color: #fff;
+}
+
 .nav-menu {
   background: $bg-primary;
 }
@@ -287,6 +291,10 @@ nav {
   display: grid;
 }
 
+.scrollable {
+  background-color: $bg-color;
+}
+
 // top story
 
 .top-story {
@@ -330,6 +338,8 @@ nav {
 
 .my-turn,
 .culture {
+  @include section-spacing();
+
   h2 {
     @include h2-style();
   }
@@ -352,6 +362,8 @@ nav {
 }
 
 .more {
+  @include section-spacing();
+
   .content {
     grid-template-columns: 40% 60%;
   }
@@ -408,6 +420,8 @@ nav {
 }
 
 .sponsored-left {
+  @include section-spacing();
+
   .story {
     border: 1px solid $body-bg;
     margin: 1rem 0;
@@ -437,6 +451,8 @@ nav {
 }
 
 .sponsored-right {
+  @include section-spacing();
+
   .story {
     border: 1px solid $body-bg;
     margin: 1rem 0;
@@ -550,6 +566,8 @@ form {
 }
 
 .opinion {
+  @include section-spacing();
+
   .opinion-text {
     text-align: left;
   }
@@ -581,6 +599,8 @@ form {
 }
 
 .contact {
+  @include section-spacing();
+
   padding: 4rem;
 
   .subscribe {
@@ -661,6 +681,11 @@ form {
       }
     }
   }
+}
+
+.footer {
+  background-color: $bg-color;
+  padding-bottom: 2rem;
 }
 
 .footer-left {
