@@ -69,7 +69,7 @@ $bg-color: #fff;
 
 @mixin h4-style {
   color: #000;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 
@@ -583,7 +583,7 @@ form {
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 2.4rem;
+          font-size: 1.8rem;
         }
 
         .btn-subscribe {
@@ -622,7 +622,7 @@ form {
         h4 {
           font-weight: bolder;
           color: $body-color;
-          font-size: 2.4rem;
+          font-size: 1.8rem;
           overflow-wrap: break-word;
         }
 
@@ -683,7 +683,7 @@ form {
 /** large screen ***/
 @media only screen and (min-width: 992px) {
   .main {
-    max-width: 85%;
+    max-width: 96%;
   }
 
   .navbar-brand {
