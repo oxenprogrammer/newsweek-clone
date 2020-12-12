@@ -196,6 +196,19 @@ nav {
   margin-top: 20px;
   overflow: hidden;
 
+  .search {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: gray;
+    margin-top: 5px;
+
+    .search-icon {
+      font-size: 3.5rem;
+      position: relative;
+      top: -1.5rem;
+    }
+  }
+
   .border-between {
     height: 25px;
     border-right: 1px solid black;
